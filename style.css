@@ -484,9 +484,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .hero-desc {
   font-size: 15px;
   font-weight: 300;
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.5);
   line-height: 1.7;
-  max-width: 480px;
+  max-width: 520px;
+  margin-top: 24px;
 }
 
 .hero-panel-nav { display: flex; flex-direction: column; justify-content: flex-end; gap: 0; }
@@ -523,6 +524,23 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .hero-panel-btn:hover::before { height: 28px; }
 .h-chevron { color: var(--orange); font-size: 12px; margin-left: auto; transition: transform 0.2s; }
 .hero-panel-btn.active .h-chevron { transform: rotate(90deg); }
+
+/* Highlight / stamp line (line 3) */
+.hero-line-highlight { overflow: visible; }
+.hero-line-highlight .hero-line-inner {
+  background: var(--orange);
+  color: var(--ink-block);
+  font-weight: 600;
+  font-size: clamp(44px, 5.208vw, 72px);
+  display: inline-block;
+  padding: 4px 24px 8px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 12px;
+  transform: scale(0.96);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.hero-line-highlight .hero-line-inner.loaded { opacity: 1; transform: scale(1); }
 
 /* ══════════════════════════════════════════════════════════════
    ORANGE COLOR-BLOCK STRIP
@@ -966,6 +984,52 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 .footer-name { font-size: 13px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); }
 .footer-tagline { font-size: 10px; font-weight: 300; color: rgba(255,255,255,0.25); }
+
+/* ══════════════════════════════════════════════════════════════
+   NGD INTRO ANIMATION
+   ══════════════════════════════════════════════════════════════ */
+#ngd-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: var(--ink-block);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ngd-intro-exit 0.5s cubic-bezier(0.4,0,0.2,1) 2.9s forwards;
+}
+#ngd-intro svg {
+  width: 40vw;
+  max-width: 540px;
+  min-width: 180px;
+}
+.ngd-path {
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 8;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+.ngd-n {
+  animation:
+    ngd-draw 0.8s cubic-bezier(0.4,0,0.2,1) 0.2s forwards,
+    ngd-orange 0.3s ease 2.5s forwards;
+}
+.ngd-g {
+  animation:
+    ngd-draw 0.8s cubic-bezier(0.4,0,0.2,1) 0.9s forwards,
+    ngd-orange 0.3s ease 2.5s forwards;
+}
+.ngd-d {
+  animation:
+    ngd-draw 0.8s cubic-bezier(0.4,0,0.2,1) 1.6s forwards,
+    ngd-orange 0.3s ease 2.5s forwards;
+}
+@keyframes ngd-draw  { to { stroke-dashoffset: 0; } }
+@keyframes ngd-orange { to { stroke: var(--orange); } }
+@keyframes ngd-intro-exit {
+  to { opacity: 0; transform: translateY(-100%); pointer-events: none; }
+}
 
 /* ══════════════════════════════════════════════════════════════
    SCROLL REVEAL

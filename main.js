@@ -6,6 +6,22 @@
 
 'use strict';
 
+/* ─── NGD INTRO ANIMATION ────────────────────────────────────── */
+(function initNGDIntro() {
+  const intro = document.getElementById('ngd-intro');
+  if (!intro) return;
+
+  // Set exact dasharray/dashoffset per path using measured length
+  document.querySelectorAll('.ngd-path').forEach(path => {
+    const len = Math.ceil(path.getTotalLength());
+    path.style.strokeDasharray = len;
+    path.style.strokeDashoffset = len;
+  });
+
+  // Remove overlay from layout after exit animation completes (2900ms + 500ms + buffer)
+  setTimeout(() => { intro.style.display = 'none'; }, 3500);
+})();
+
 /* ─── ALL TALENT (for A-Z tab) ──────────────────────────────── */
 const TALENT = [
   // Athletes
@@ -98,14 +114,22 @@ const TALENT = [
   const nav = document.getElementById('top-nav');
   if (nav) requestAnimationFrame(() => nav.classList.add('loaded'));
 
-  const delays = { eyebrow: 100, line1: 200, line2: 350, line3: 500, line4: 650, right: 600 };
+  // Intro overlay exits at 2900ms — hero fires after overlay begins exiting
+  const BASE = 2900;
+  const delays = {
+    eyebrow: BASE + 100,   // 3000ms
+    line1:   BASE + 100,   // 3000ms
+    line2:   BASE + 220,   // 3120ms
+    line3:   BASE + 400,   // 3300ms
+    right:   BASE + 200,   // 3100ms
+  };
 
   const eyebrow = document.querySelector('.hero-eyebrow');
   if (eyebrow) setTimeout(() => eyebrow.classList.add('loaded'), delays.eyebrow);
 
   const lines = document.querySelectorAll('.hero-line-inner');
   lines.forEach((line, i) => {
-    const delay = [delays.line1, delays.line2, delays.line3, delays.line4][i] || (200 + i * 150);
+    const delay = [delays.line1, delays.line2, delays.line3][i] || (BASE + 100 + i * 150);
     setTimeout(() => line.classList.add('loaded'), delay);
   });
 
