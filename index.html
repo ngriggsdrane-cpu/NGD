@@ -4,281 +4,289 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nicholas Griggs-Drane — Impact Strategist</title>
-  <meta name="description" content="Nicholas Griggs-Drane is an impact strategist working at the intersection of culture, celebrity, and conscience. Based in NYC." />
+  <meta name="description" content="Selected client work, campaigns, and partnerships that utilize talent platforms to create impact and accelerate philanthropic missions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- ─── NAV ──────────────────────────────────────────────────── -->
 <nav id="top-nav">
-  <a href="#" class="nav-logo">NGD</a>
-  <a href="mailto:ngriggsdrane@gmail.com" class="nav-contact">Contact</a>
+  <a href="index.html" class="nav-logo">NGD</a>
+
+  <div class="nav-links">
+    <button class="nav-link-btn" data-panel="work">Work <span class="chevron">›</span></button>
+    <button class="nav-link-btn" data-panel="strategy">Strategy <span class="chevron">›</span></button>
+    <button class="nav-link-btn" data-panel="events">Events <span class="chevron">›</span></button>
+    <button class="nav-link-btn" data-panel="talent">Talent <span class="chevron">›</span></button>
+    <button class="nav-link-btn" data-panel="about">About <span class="chevron">›</span></button>
+  </div>
+
+  <a href="mailto:ngriggsdrane@gmail.com" class="nav-contact">Get in touch</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<!-- ─── MEGA PANEL WRAP ───────────────────────────────────────── -->
-<div id="mega-wrap">
+<!-- ─── MEGA PANELS ───────────────────────────────────────────── -->
 
-  <!-- Work Panel -->
-  <div class="mega-panel" id="panel-work">
-    <div class="mega-inner">
-      <div class="work-grid">
-        <div class="work-cat">
-          <div class="work-cat-label">01</div>
-          <div class="work-cat-count">12</div>
-          <div class="work-cat-name">Campaigns</div>
-        </div>
-        <div class="work-cat">
-          <div class="work-cat-label">02</div>
-          <div class="work-cat-count">8</div>
-          <div class="work-cat-name">Foundation Launches</div>
-        </div>
-        <a href="cases/events.html" class="work-cat" style="text-decoration:none;color:inherit;">
-          <div class="work-cat-label">03</div>
-          <div class="work-cat-count">6</div>
-          <div class="work-cat-name">Industry Events →</div>
-        </a>
-        <a href="cases/strategy.html" class="work-cat" style="text-decoration:none;color:inherit;">
-          <div class="work-cat-label">04</div>
-          <div class="work-cat-count">15</div>
-          <div class="work-cat-name">360 Strategy →</div>
-        </a>
-      </div>
+<!-- Work Panel -->
+<div class="mega-panel" id="panel-work">
+  <div class="mega-inner">
+    <div class="work-panel-grid">
+      <a href="#work" class="work-panel-col" data-filter="campaigns" data-close-panel>
+        <div class="wp-num">01</div>
+        <div class="wp-count">13</div>
+        <div class="wp-name">Campaigns</div>
+        <div class="wp-desc">COPY NEEDED</div>
+      </a>
+      <a href="#work" class="work-panel-col" data-filter="foundations" data-close-panel>
+        <div class="wp-num">02</div>
+        <div class="wp-count">8</div>
+        <div class="wp-name">Foundation Launches</div>
+        <div class="wp-desc">COPY NEEDED</div>
+      </a>
+      <a href="cases/events.html" class="work-panel-col">
+        <div class="wp-num">03</div>
+        <div class="wp-count">9</div>
+        <div class="wp-name">Industry Events</div>
+        <div class="wp-desc">COPY NEEDED</div>
+      </a>
+      <a href="cases/strategy.html" class="work-panel-col">
+        <div class="wp-num">04</div>
+        <div class="wp-count">9</div>
+        <div class="wp-name">360 Strategy</div>
+        <div class="wp-desc">COPY NEEDED</div>
+      </a>
     </div>
   </div>
+</div>
 
-  <!-- What I Do Panel -->
-  <div class="mega-panel" id="panel-whatido">
-    <div class="mega-inner">
-      <div class="services-grid">
-        <div class="service-tile">
-          <div class="service-num">01</div>
-          <div class="service-title">360 Degree Impact Strategy</div>
-          <div class="service-desc">End-to-end frameworks that align talent platforms with purpose-driven outcomes across every channel and touchpoint.</div>
-          <span class="service-arrow">→</span>
-        </div>
-        <div class="service-tile">
-          <div class="service-num">02</div>
-          <div class="service-title">Brand Partnerships</div>
-          <div class="service-desc">Brokering high-alignment deals between values-led brands and talent whose audiences move culture.</div>
-          <span class="service-arrow">→</span>
-        </div>
-        <div class="service-tile">
-          <div class="service-num">03</div>
-          <div class="service-title">Campaign Development</div>
-          <div class="service-desc">Designing and executing campaigns that translate advocacy into measurable social, media, and legislative impact.</div>
-          <span class="service-arrow">→</span>
-        </div>
-        <div class="service-tile">
-          <div class="service-num">04</div>
-          <div class="service-title">Live Activations</div>
-          <div class="service-desc">Purpose-driven events and experiential moments that convert audience attention into lasting action.</div>
-          <span class="service-arrow">→</span>
-        </div>
-        <div class="service-tile">
-          <div class="service-num">05</div>
-          <div class="service-title">Foundation Buildouts</div>
-          <div class="service-desc">Building philanthropic infrastructure from concept to launch — strategy, partnerships, programming, and public narrative.</div>
-          <span class="service-arrow">→</span>
-        </div>
-        <div class="service-tile">
-          <div class="service-num">06</div>
-          <div class="service-title">Digital Integration</div>
-          <div class="service-desc">Amplifying campaigns through owned, earned, and paid digital channels to maximize reach and resonance.</div>
-          <span class="service-arrow">→</span>
-        </div>
-      </div>
+<!-- Strategy Panel -->
+<div class="mega-panel" id="panel-strategy">
+  <div class="mega-inner">
+    <p class="strategy-panel-intro">End-to-end strategic frameworks developed in partnership with talent to define, activate, and scale their legacy driven impact.</p>
+    <div class="strategy-panel-grid">
+      <div class="strategy-panel-item">Kwame Onwuachi</div>
+      <div class="strategy-panel-item">Danny Go</div>
+      <div class="strategy-panel-item">Meg Rapino and Sue Bird</div>
+      <div class="strategy-panel-item">The Nader Sisters</div>
+      <div class="strategy-panel-item">LeVar Burton</div>
+      <div class="strategy-panel-item">Madhappy Foundation</div>
+      <div class="strategy-panel-item">Joe Santagato</div>
+      <div class="strategy-panel-item">William Goodge</div>
+      <div class="strategy-panel-item">Kids Outdoors Foundation</div>
     </div>
   </div>
+</div>
 
-  <!-- Talent Panel -->
-  <div class="mega-panel" id="panel-talent">
-    <div class="mega-inner">
-      <div class="talent-tabs">
-        <button class="talent-tab active" data-view="bytype">By Type</button>
-        <button class="talent-tab" data-view="az">A to Z</button>
-      </div>
+<!-- Events Panel -->
+<div class="mega-panel" id="panel-events">
+  <div class="mega-inner">
+    <div class="events-panel-grid">
+      <div class="events-panel-item">Wimbledon Gender Equity Program <span class="ep-arrow">→</span></div>
+      <div class="events-panel-item">NYFW The Talks — Beauty Is Identity <span class="ep-arrow">→</span></div>
+      <div class="events-panel-item">Lunar New Year Dinner <span class="ep-arrow">→</span></div>
+      <div class="events-panel-item">WME Queer Celebration Dinner <span class="ep-arrow">→</span></div>
+      <div class="events-panel-item">Frieze × WME Tastemakers Dinner <span class="ep-arrow">→</span></div>
+      <div class="events-panel-item">Billboard Latin Music Week Happy Hour <span class="ep-arrow">→</span></div>
+      <div class="events-panel-item">BBR Creator Summit <span class="ep-arrow">→</span></div>
+      <div class="events-panel-item">BBR Excellence Luncheon <span class="ep-arrow">→</span></div>
+    </div>
+  </div>
+</div>
 
-      <!-- By Type view -->
-      <div class="talent-view active" id="view-bytype">
-        <div class="talent-by-type">
-          <div class="talent-col">
-            <div class="talent-col-head">Athletes</div>
-            <div class="talent-name">Venus Williams</div>
-            <div class="talent-name">Candace Parker</div>
-            <div class="talent-name">Serena Williams</div>
-            <div class="talent-name">Kevin Durant</div>
-            <div class="talent-name">Megan Rapinoe</div>
-            <div class="talent-name">Naomi Osaka</div>
-            <div class="talent-name">LeBron James</div>
-            <div class="talent-name">Simone Biles</div>
-            <div class="talent-name">Stephen Curry</div>
-            <div class="talent-name">Coco Gauff</div>
-            <div class="talent-name">A'ja Wilson</div>
-            <div class="talent-name">Patrick Mahomes</div>
-          </div>
-          <div class="talent-col">
-            <div class="talent-col-head">Music</div>
-            <div class="talent-name">Sam Smith</div>
-            <div class="talent-name">Lizzo</div>
-            <div class="talent-name">Alicia Keys</div>
-            <div class="talent-name">John Legend</div>
-            <div class="talent-name">Billie Eilish</div>
-            <div class="talent-name">Usher</div>
-            <div class="talent-name">H.E.R.</div>
-            <div class="talent-name">Questlove</div>
-            <div class="talent-name">Lil Nas X</div>
-            <div class="talent-name">Mary J. Blige</div>
-            <div class="talent-name">Common</div>
-            <div class="talent-name">SZA</div>
-          </div>
-          <div class="talent-col">
-            <div class="talent-col-head">Film and TV</div>
-            <div class="talent-name">Lupita Nyong'o</div>
-            <div class="talent-name">Viola Davis</div>
-            <div class="talent-name">Ryan Reynolds</div>
-            <div class="talent-name">Taraji P. Henson</div>
-            <div class="talent-name">Idris Elba</div>
-            <div class="talent-name">Kerry Washington</div>
-            <div class="talent-name">Michael B. Jordan</div>
-            <div class="talent-name">Issa Rae</div>
-            <div class="talent-name">Priyanka Chopra</div>
-            <div class="talent-name">Sterling K. Brown</div>
-            <div class="talent-name">Niecy Nash</div>
-            <div class="talent-name">Mahershala Ali</div>
-          </div>
-          <div class="talent-col">
-            <div class="talent-col-head">Media and Press</div>
-            <div class="talent-name">Taylor Rooks</div>
-            <div class="talent-name">Robin Roberts</div>
-            <div class="talent-name">Van Jones</div>
-            <div class="talent-name">Gayle King</div>
-            <div class="talent-name">Don Lemon</div>
-            <div class="talent-name">Jemele Hill</div>
-            <div class="talent-name">Charlamagne Tha God</div>
-            <div class="talent-name">Rachel Nichols</div>
-            <div class="talent-name">Bomani Jones</div>
-            <div class="talent-name">Sage Steele</div>
-            <div class="talent-name">Michael Strahan</div>
-            <div class="talent-name">Maria Taylor</div>
-          </div>
-          <div class="talent-col">
-            <div class="talent-col-head">Fashion and Creators</div>
-            <div class="talent-name">Karlie Kloss</div>
-            <div class="talent-name">Bethann Hardison</div>
-            <div class="talent-name">Edward Enninful</div>
-            <div class="talent-name">Chidera Eggerue</div>
-            <div class="talent-name">Leandra Medine</div>
-            <div class="talent-name">Paloma Elsesser</div>
-            <div class="talent-name">Sinead Burke</div>
-            <div class="talent-name">Tamu McPherson</div>
-            <div class="talent-name">Elaine Welteroth</div>
-            <div class="talent-name">Aurora James</div>
-            <div class="talent-name">Bethany Mota</div>
-            <div class="talent-name">Telfar Clemens</div>
-          </div>
+<!-- Talent Panel -->
+<div class="mega-panel" id="panel-talent">
+  <div class="mega-inner">
+    <div class="talent-tabs">
+      <button class="talent-tab active" data-view="bytype">By Type</button>
+      <button class="talent-tab" data-view="az">A to Z</button>
+    </div>
+
+    <div class="talent-view active" id="view-bytype">
+      <div class="talent-by-type">
+        <div>
+          <div class="talent-col-head">Athletes</div>
+          <span class="talent-name">Candace Parker</span>
+          <span class="talent-name">Coco Gauff</span>
+          <span class="talent-name">Grant Williams</span>
+          <span class="talent-name">Kelsey Plum</span>
+          <span class="talent-name">Marshawn Lynch</span>
+          <span class="talent-name">Meg Rapino</span>
+          <span class="talent-name">Qinwen Zheng</span>
+          <span class="talent-name">Sabrina Ionescu</span>
+          <span class="talent-name">Serena Williams</span>
+          <span class="talent-name">Sue Bird</span>
+          <span class="talent-name">Sydney McLaughlin</span>
+          <span class="talent-name">Toni Breidinger</span>
+          <span class="talent-name">Venus Williams</span>
         </div>
-      </div>
-
-      <!-- A to Z view -->
-      <div class="talent-view" id="view-az">
-        <div class="talent-az-grid" id="az-grid">
-          <!-- Populated by JS -->
+        <div>
+          <div class="talent-col-head">Music</div>
+          <span class="talent-name">Brothers Osborne</span>
+          <span class="talent-name">Camila Cabello</span>
+          <span class="talent-name">EJAE</span>
+          <span class="talent-name">Esperanza Spalding</span>
+          <span class="talent-name">Grace Bowers</span>
+          <span class="talent-name">King Princess</span>
+          <span class="talent-name">Minus the Bear</span>
+          <span class="talent-name">Myles Smith</span>
+          <span class="talent-name">Portugal the Man</span>
+          <span class="talent-name">Sam Smith</span>
+          <span class="talent-name">Tegan and Sara</span>
+          <span class="talent-name">Teyana Taylor</span>
+          <span class="talent-name">Victoria Monet</span>
+        </div>
+        <div>
+          <div class="talent-col-head">Film and TV</div>
+          <span class="talent-name">Angelina Jolie</span>
+          <span class="talent-name">Ashly Burch</span>
+          <span class="talent-name">Ashlyn Harris</span>
+          <span class="talent-name">Coco Jones</span>
+          <span class="talent-name">Ilana Glazer</span>
+          <span class="talent-name">Keke Palmer</span>
+          <span class="talent-name">Lupita Nyong'o</span>
+          <span class="talent-name">Niecy Nash</span>
+          <span class="talent-name">Renee Rapp</span>
+          <span class="talent-name">Ryan Reynolds</span>
+          <span class="talent-name">Tay Lautner</span>
+          <span class="talent-name">Winnie Harlow</span>
+        </div>
+        <div>
+          <div class="talent-col-head">Media and Press</div>
+          <span class="talent-name">Cari Champion</span>
+          <span class="talent-name">Deux Moi</span>
+          <span class="talent-name">Joe Santagato</span>
+          <span class="talent-name">Julian Shapiro-Barnum</span>
+          <span class="talent-name">LeVar Burton</span>
+          <span class="talent-name">Robin Roberts</span>
+          <span class="talent-name">Steven Bartlett</span>
+          <span class="talent-name">Taylor Rooks</span>
+          <span class="talent-name">Vivian Tu</span>
+          <span class="talent-name">William Goodge</span>
+        </div>
+        <div>
+          <div class="talent-col-head">Fashion and Creators</div>
+          <span class="talent-name">Alex Consani</span>
+          <span class="talent-name">Benito Skinner</span>
+          <span class="talent-name">Bunnie XO</span>
+          <span class="talent-name">Naeemah Lafond</span>
+          <span class="talent-name">Nara Smith</span>
+          <span class="talent-name">Paige Lorenze</span>
+          <span class="talent-name">Pokimane</span>
+          <span class="talent-name">Precious Lee</span>
+          <span class="talent-name">Richie Shazam</span>
+          <span class="talent-name">Tyra Banks</span>
+          <span class="talent-name">Wisdom Kaye</span>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- About Panel -->
-  <div class="mega-panel" id="panel-about">
-    <div class="mega-inner">
-      <div class="about-grid">
-        <div class="about-bio">
-          <p><strong>Nicholas Griggs-Drane</strong> is an impact strategist working at the intersection of culture, celebrity, and conscience. He builds campaigns and philanthropic frameworks that turn talent platforms into engines for lasting change.</p>
-          <br>
-          <p>With experience spanning Capitol Hill advocacy, foundation infrastructure, brand partnerships, and live activations, Nicholas has delivered work that generates hundreds of millions of media impressions while moving real money to real causes.</p>
-          <br>
-          <p>He operates across entertainment, sports, fashion, and media — helping talent, agencies, and brands translate influence into impact that matters.</p>
+    <div class="talent-view" id="view-az">
+      <div class="talent-az-grid" id="az-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Panel -->
+<div class="mega-panel" id="panel-about">
+  <div class="mega-inner">
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>Nicholas Griggs-Drane is an impact strategist working at the intersection of culture, celebrity, and conscience. He builds campaigns and philanthropic frameworks that turn talent platforms into engines for lasting change.</p>
+        <br />
+        <p>With experience spanning Capitol Hill advocacy, foundation infrastructure, brand partnerships, and live activations, Nicholas has delivered work that generates hundreds of millions of media impressions while moving real money to real causes.</p>
+        <br />
+        <p>He operates across entertainment, sports, fashion, and media — helping talent, agencies, and brands translate influence into impact that matters.</p>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-num">$400K</div>
+          <div class="about-stat-label">Mobilized for uterine fibroid research</div>
         </div>
-        <div class="stats-grid">
-          <div class="stat-cell">
-            <div class="stat-num">$2M+</div>
-            <div class="stat-label">Medical debt relieved</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-num">694M</div>
-            <div class="stat-label">Media impressions</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-num">$22.8M</div>
-            <div class="stat-label">Earned media value</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-num">70+</div>
-            <div class="stat-label">Talent supported</div>
-          </div>
+        <div class="about-stat">
+          <div class="about-stat-num">694M</div>
+          <div class="about-stat-label">Media impressions</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">$22.8M</div>
+          <div class="about-stat-label">Earned media value</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">70+</div>
+          <div class="about-stat-label">Talent supported</div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-</div><!-- /mega-wrap -->
+<!-- Dark overlay for closing panels -->
+<div id="mega-overlay"></div>
 
-<!-- Overlay to close panels on outside click -->
-<div id="panel-overlay"></div>
+<!-- Mobile nav overlay -->
+<nav id="mobile-nav">
+  <button class="mobile-nav-item" data-panel="work">Work</button>
+  <button class="mobile-nav-item" data-panel="strategy">Strategy</button>
+  <button class="mobile-nav-item" data-panel="events">Events</button>
+  <button class="mobile-nav-item" data-panel="talent">Talent</button>
+  <button class="mobile-nav-item" data-panel="about">About</button>
+  <a href="mailto:ngriggsdrane@gmail.com" class="mobile-nav-item">Get in touch</a>
+</nav>
 
 <!-- ─── HERO ───────────────────────────────────────────────────── -->
-<section id="hero">
-  <!-- Looping silent background video -->
-  <div class="hero-video-bg">
-    <iframe
-      src="https://www.youtube.com/embed/RSHTE1NeVG4?autoplay=1&mute=1&loop=1&playlist=RSHTE1NeVG4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
-      style="position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;transform:translate(-50%,-50%);border:none;pointer-events:none;"
-      allow="autoplay; encrypted-media"
-      title="background video"></iframe>
-  </div>
-  <div class="hero-video-overlay"></div>
+<div id="hero-wrapper">
+  <section id="hero">
 
-  <div class="hero-left">
-    <div class="hero-eyebrow">Nicholas Griggs-Drane&nbsp;/&nbsp;Impact Strategist</div>
-    <h1 class="hero-headline" id="hero-headline" aria-label="Purpose into culture. Inspiring fans at scale.">
-      <!-- Words injected by JS for staggered animation -->
-    </h1>
-    <p class="hero-desc">
-      Building campaigns and philanthropic frameworks that turn talent platforms into engines for change. Culture, celebrity, and conscience — at scale.
-    </p>
-  </div>
+    <div class="hero-left">
+      <p class="hero-eyebrow">Nicholas Griggs-Drane&nbsp;/&nbsp;Impact Strategist</p>
 
-  <div class="hero-right">
-    <ul class="panel-nav" id="panel-nav">
-      <li>
-        <button class="panel-nav-btn" data-panel="work">
-          Work <span class="chevron">›</span>
-        </button>
-      </li>
-      <li>
-        <button class="panel-nav-btn" data-panel="whatido">
-          What I Do <span class="chevron">›</span>
-        </button>
-      </li>
-      <li>
-        <button class="panel-nav-btn" data-panel="talent">
-          Talent <span class="chevron">›</span>
-        </button>
-      </li>
-      <li>
-        <button class="panel-nav-btn" data-panel="about">
-          About <span class="chevron">›</span>
-        </button>
-      </li>
-    </ul>
+      <h1 class="hero-headline">
+        <span class="hero-line"><span class="hero-line-inner">Purpose</span></span>
+        <span class="hero-line"><span class="hero-line-inner">into culture.</span></span>
+        <span class="hero-line hero-line-muted"><span class="hero-line-inner">Inspiring</span></span>
+        <span class="hero-line hero-line-muted"><span class="hero-line-inner">fans at scale.</span></span>
+      </h1>
 
-    <div class="hero-location-line">
-      <span class="hero-location-dot"></span>NYC&nbsp;·&nbsp;LA&nbsp;·&nbsp;UK
+      <div class="hero-rule"></div>
+
+      <p class="hero-desc">Selected client work, campaigns, and partnerships that utilize talent platforms to create impact and accelerate philanthropic missions.</p>
     </div>
-  </div>
-</section>
 
-<!-- ─── VERTICALS STRIP ────────────────────────────────────────── -->
+    <div class="hero-right">
+      <nav class="hero-panel-nav">
+        <button class="hero-panel-btn" data-panel="work">Work <span class="h-chevron">›</span></button>
+        <button class="hero-panel-btn" data-panel="strategy">Strategy <span class="h-chevron">›</span></button>
+        <button class="hero-panel-btn" data-panel="events">Events <span class="h-chevron">›</span></button>
+        <button class="hero-panel-btn" data-panel="talent">Talent <span class="h-chevron">›</span></button>
+        <button class="hero-panel-btn" data-panel="about">About <span class="h-chevron">›</span></button>
+      </nav>
+
+      <div>
+        <div class="hero-location-label">Based</div>
+        <div class="hero-location-value">New York · Los Angeles · United Kingdom</div>
+      </div>
+
+      <div class="hero-time" id="hero-time">—</div>
+    </div>
+
+  </section>
+</div>
+
+<!-- ─── MARQUEE ────────────────────────────────────────────────── -->
+<div id="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-text">Lupita Nyong'o × Make Fibroids Count · Taylor Rooks Foundation × Medical Debt Relief · Sam Smith × The Pink House Foundation · Venus Williams × Saving Mothers · Candace Parker × Glass Ceiling Grants · WME Fashion Incubator × Est. 2020 · Paige Lorenze and Tommy Paul × Kids Outdoors Foundation · Winnie Harlow × BBR Creator Summit · Grace Bowers × Everytown for Gun Safety · Pokimane × UNICEF · Nara Smith × Save the Children · Coco Jones × Girls Inc · Annie Elise × Child Rescue Coalition · Madhappy × Madhappy Foundation · Tay and Taylor Lautner × The Lemons Foundation ·&nbsp;&nbsp;</span>
+    <span class="marquee-text" aria-hidden="true">Lupita Nyong'o × Make Fibroids Count · Taylor Rooks Foundation × Medical Debt Relief · Sam Smith × The Pink House Foundation · Venus Williams × Saving Mothers · Candace Parker × Glass Ceiling Grants · WME Fashion Incubator × Est. 2020 · Paige Lorenze and Tommy Paul × Kids Outdoors Foundation · Winnie Harlow × BBR Creator Summit · Grace Bowers × Everytown for Gun Safety · Pokimane × UNICEF · Nara Smith × Save the Children · Coco Jones × Girls Inc · Annie Elise × Child Rescue Coalition · Madhappy × Madhappy Foundation · Tay and Taylor Lautner × The Lemons Foundation ·&nbsp;&nbsp;</span>
+  </div>
+</div>
+
+<!-- ─── VERTICALS BAR ──────────────────────────────────────────── -->
 <div id="verticals">
   <div class="vertical-cell"><span class="v-dot"></span>Athletes</div>
   <div class="vertical-cell"><span class="v-dot"></span>Musicians</div>
@@ -289,327 +297,511 @@
 
 <!-- ─── SELECTED WORK ──────────────────────────────────────────── -->
 <section id="work">
-  <div class="work-header">
-    <span class="work-header-label">Selected Work</span>
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="campaigns">Campaigns</button>
-      <button class="filter-btn" data-filter="foundations">Foundations</button>
-      <button class="filter-btn" data-filter="events">Events</button>
-      <button class="filter-btn" data-filter="strategy">Strategy</button>
+  <div class="work-header-wrap">
+    <div class="work-header">
+      <span class="work-header-label">Selected Work</span>
+      <div class="filter-pills">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="campaigns">Campaigns</button>
+        <button class="filter-pill" data-filter="foundations">Foundations</button>
+        <button class="filter-pill" data-filter="events">Events</button>
+        <button class="filter-pill" data-filter="strategy">Strategy</button>
+        <button class="filter-pill" data-filter="mental-health">Mental Health</button>
+      </div>
     </div>
   </div>
-  <div class="work-disclaimer">Open any case study to explore the full campaign.</div>
+  <div class="work-disclaimer-wrap">
+    <p class="work-disclaimer">Open any case study to explore the full campaign.</p>
+  </div>
 
-  <div class="cards-grid" id="cards-grid">
+  <div class="cards-grid-wrap">
+    <div class="cards-grid" id="cards-grid">
 
-    <!-- Card 1: Wide — Lupita / Make Fibroids Count -->
-    <article class="case-card wide" data-category="campaigns foundations" data-href="cases/lupita.html">
-      <div class="card-img">
-        <div class="card-img-bg" style="background-image:url('https://i.ytimg.com/vi/RSHTE1NeVG4/maxresdefault.jpg');"></div>
-        <div class="card-tags">
-          <span class="tag">Campaign</span>
-          <span class="tag">Women's Health</span>
-          <span class="tag">Advocacy</span>
+      <!-- 1 — WIDE — Lupita Nyong'o -->
+      <article class="case-card wide" data-type="campaigns" data-href="cases/lupita.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-020.png');"></div>
+          <div class="card-img-label">Lupita Nyong'o × Make Fibroids Count</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Campaign</span>
+            <span class="card-tag">Women's Health</span>
+            <span class="card-tag">Advocacy</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Mobilizing $400,000 via fan fundraising, brand partnerships and foundation funding to drive awareness for uterine fibroid research.</p>
+          </div>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">Make Fibroids Count.<br>$400K mobilized · 694M impressions<br>Capitol Hill to the TODAY Show.</p>
+        <div class="card-footer">
+          <span class="card-client">Lupita Nyong'o × Foundation for Women's Health</span>
+          <span class="card-arrow">→</span>
         </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/lupita.html" class="card-client" style="text-decoration:none;color:inherit;">Lupita Nyong'o — Foundation for Women's Health</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 2: Half — Taylor Rooks Foundation -->
-    <article class="case-card" data-category="foundations" data-href="cases/taylor-rooks.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Taylor Rooks<br>Foundation</div>
+      <!-- 2 — HALF — Taylor Rooks -->
+      <article class="case-card" data-type="foundations" data-href="cases/taylor-rooks.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-024.png');"></div>
+          <div class="card-img-label">Taylor Rooks Foundation</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Foundation Launch</span>
+            <span class="card-tag">Philanthropy</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Partnered with Undue Medical Debt and relieved over $2,000,000 in medical debt for individuals and families living in her hometown of Georgia.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Foundation Launch</span>
-          <span class="tag">Philanthropy</span>
+        <div class="card-footer">
+          <span class="card-client">Taylor Rooks Foundation</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">$2.1M in medical debt erased<br>for 1,805 Georgia families.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/taylor-rooks.html" class="card-client" style="text-decoration:none;color:inherit;">Taylor Rooks Foundation</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 3: Half — Sam Smith / Pink House Foundation -->
-    <article class="case-card" data-category="foundations" data-href="cases/sam-smith.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Sam Smith<br>Pink House Foundation</div>
+      <!-- 3 — HALF — Sam Smith -->
+      <article class="case-card" data-type="foundations" data-href="cases/sam-smith.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-017.png');"></div>
+          <div class="card-img-label">Sam Smith</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Foundation Launch</span>
+            <span class="card-tag">LGBTQ+</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Launched The Pink House Foundation to support and uplift LGBTQ+ communities, activating their platform to drive funding and visibility for grassroots organizations.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Foundation Launch</span>
-          <span class="tag">LGBTQ+</span>
+        <div class="card-footer">
+          <span class="card-client">Sam Smith</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">The Pink House Foundation.<br>LGBTQ+ grassroots funding via<br>NYC and SF residencies.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/sam-smith.html" class="card-client" style="text-decoration:none;color:inherit;">Sam Smith — Pink House Foundation</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 4: Wide — Venus Williams / Saving Mothers -->
-    <article class="case-card wide" data-category="campaigns strategy" data-href="cases/venus-williams.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Venus Williams<br>× Saving Mothers</div>
+      <!-- 4 — HALF — Venus Williams -->
+      <article class="case-card" data-type="campaigns" data-href="cases/venus-williams.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-008.png');"></div>
+          <div class="card-img-label">Venus Williams × Saving Mothers</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Brand Partnership</span>
+            <span class="card-tag">Women's Health</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Teamed up with Saving Mothers and NYU Langone to advance the organization's mission to reduce maternal mortality and improve health outcomes for underserved women.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Brand Partnership</span>
-          <span class="tag">Women's Health</span>
+        <div class="card-footer">
+          <span class="card-client">Venus Williams × Saving Mothers</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">Saving Mothers × NYU Langone.<br>Advancing equity in maternal health.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/venus-williams.html" class="card-client" style="text-decoration:none;color:inherit;">Venus Williams — Saving Mothers</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 5: Half — Candace Parker Foundation -->
-    <article class="case-card" data-category="foundations" data-href="cases/candace-parker.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Candace Parker<br>× Adidas</div>
+      <!-- 5 — HALF — Candace Parker -->
+      <article class="case-card" data-type="foundations" data-href="cases/candace-parker.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-011.png');"></div>
+          <div class="card-img-label">Candace Parker × Adidas</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Foundation Launch</span>
+            <span class="card-tag">Youth</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Launched the Candace Parker Foundation, with founding partner Adidas, and introduced its inaugural Glass Ceiling Grants, investing over $90,000 in youth-focused organizations that use sport to break barriers.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Foundation Launch</span>
-          <span class="tag">Youth</span>
+        <div class="card-footer">
+          <span class="card-client">Candace Parker × Adidas</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">Candace Parker Foundation.<br>$90K Glass Ceiling Grants<br>with Adidas.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/candace-parker.html" class="card-client" style="text-decoration:none;color:inherit;">Candace Parker — Adidas</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 6: Half — WME Fashion Incubator -->
-    <article class="case-card" data-category="events strategy" data-href="cases/incubator.html">
-      <div class="card-img">
-        <div class="card-img-bg" style="background-image:url('https://i.ytimg.com/vi/spwdzlv88NM/maxresdefault.jpg');"></div>
-        <div class="card-tags">
-          <span class="tag">Incubator</span>
-          <span class="tag">Fashion</span>
-          <span class="tag">Access and Equity</span>
+      <!-- 6 — WIDE — WME Fashion Incubator -->
+      <article class="case-card wide" data-type="events" data-href="cases/incubator.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('https://img.youtube.com/vi/spwdzlv88NM/maxresdefault.jpg');"></div>
+          <div class="card-img-label">WME Fashion Incubator</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Incubator</span>
+            <span class="card-tag">Fashion</span>
+            <span class="card-tag">Access and Equity</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">An annual three-month program designed to expand access across creative and executive fashion careers. Built at the intersection of talent, community, and industry.</p>
+          </div>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">Annual program expanding access to<br>creative and executive fashion careers.<br>Est. 2020.</p>
+        <div class="card-footer">
+          <span class="card-client">WME Fashion Incubator</span>
+          <span class="card-arrow">→</span>
         </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/incubator.html" class="card-client" style="text-decoration:none;color:inherit;">WME Fashion Incubator</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 7: Wide — Winnie Harlow / BBR Creator Summit -->
-    <article class="case-card wide" data-category="events strategy" data-href="cases/winnie-harlow.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Winnie Harlow<br>BBR Creator Summit</div>
+      <!-- 7 — HALF — Winnie Harlow -->
+      <article class="case-card" data-type="events" data-href="cases/winnie-harlow.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-023.png');"></div>
+          <div class="card-img-label">Winnie Harlow × BBR Creator Summit</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Speaking</span>
+            <span class="card-tag">Entrepreneurship</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Headlined Black Beauty Roster's Creator Summit as keynote speaker, with her conversation filmed by Amazon for its docuseries The CEO Club.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Keynote</span>
-          <span class="tag">Creator Economy</span>
-          <span class="tag">Amazon</span>
+        <div class="card-footer">
+          <span class="card-client">Winnie Harlow × BBR Creator Summit</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">BBR Creator Summit keynote.<br>Amazon The CEO Club.<br>NYFW brand strategy.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/winnie-harlow.html" class="card-client" style="text-decoration:none;color:inherit;">Winnie Harlow — BBR Creator Summit</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 8: Half — Grace Bowers / We All Gotta Live Together -->
-    <article class="case-card" data-category="events campaigns" data-href="cases/grace-bowers.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Grace Bowers<br>We All Gotta Live Together</div>
+      <!-- 8 — HALF — Paige Lorenze and Tommy Paul -->
+      <article class="case-card" data-type="foundations" data-href="cases/kids-outdoors.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-004.png');"></div>
+          <div class="card-img-label">Paige Lorenze and Tommy Paul</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Foundation Launch</span>
+            <span class="card-tag">Youth</span>
+            <span class="card-tag">Sport</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Launched the Kids Outdoors Foundation, expanding access to high-barrier sports like tennis, skiing, and horseback riding.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Benefit Concert</span>
-          <span class="tag">Gun Safety</span>
+        <div class="card-footer">
+          <span class="card-client">Paige Lorenze and Tommy Paul</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">$30K+ raised.<br>Everytown + MusiCares.<br>3rd annual concert.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/grace-bowers.html" class="card-client" style="text-decoration:none;color:inherit;">Grace Bowers — Everytown for Gun Safety</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 9: Half — Pokimane / UNICEF -->
-    <article class="case-card" data-category="campaigns" data-href="cases/pokimane.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Pokimane<br>UNICEF Play For Every Child</div>
+      <!-- 9 — HALF — Grace Bowers -->
+      <article class="case-card" data-type="foundations" data-href="cases/grace-bowers.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-014.png');"></div>
+          <div class="card-img-label">Grace Bowers</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Live Event</span>
+            <span class="card-tag">Fundraiser</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Raised over $30,000 in support of Everytown for Gun Safety and MusiCares at her third annual We All Gotta Live Together benefit concert.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">UNICEF</span>
-          <span class="tag">Gaming</span>
-          <span class="tag">Children</span>
+        <div class="card-footer">
+          <span class="card-client">Grace Bowers</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">UNICEF Play For Every Child.<br>40M+ gaming audience.<br>UNICEF Gala appearance.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/pokimane.html" class="card-client" style="text-decoration:none;color:inherit;">Pokimane — UNICEF</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 10: Half — Nara Smith / Erewhon × Save the Children -->
-    <article class="case-card" data-category="campaigns" data-href="cases/nara-smith.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Nara Smith<br>Erewhon × Save the Children</div>
+      <!-- 10 — HALF — Pokimane -->
+      <article class="case-card" data-type="campaigns" data-href="cases/pokimane.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-025.png');"></div>
+          <div class="card-img-label">Pokimane × UNICEF</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Partnership</span>
+            <span class="card-tag">Youth Advocacy</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Attended the UNICEF gala and participated in Play For Every Child, a content series featuring celebrity reflections on the role of play in childhood and development.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Partnership</span>
-          <span class="tag">Wellness</span>
-          <span class="tag">Philanthropy</span>
+        <div class="card-footer">
+          <span class="card-client">Pokimane × UNICEF</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">$30K+ raised for Save the Children.<br>Erewhon signature smoothie.<br>Wellness meets global impact.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/nara-smith.html" class="card-client" style="text-decoration:none;color:inherit;">Nara Smith — Save the Children</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 11: Half — Coco Jones / Girls Inc. -->
-    <article class="case-card" data-category="campaigns events" data-href="cases/coco-jones.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Coco Jones<br>Girls Inc.</div>
+      <!-- 11 — HALF — Nara Smith -->
+      <article class="case-card" data-type="campaigns" data-href="cases/nara-smith.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-003.png');"></div>
+          <div class="card-img-label">Nara Smith × Save the Children</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Brand Partnership</span>
+            <span class="card-tag">Fundraiser</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Raised over $30,000 to support Save the Children through her Erewhon smoothie partnership.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Girls Inc.</span>
-          <span class="tag">Concert</span>
-          <span class="tag">Lyft</span>
+        <div class="card-footer">
+          <span class="card-client">Nara Smith × Save the Children</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">VIP access for Girls Inc. participants.<br>Why Not More tour.<br>Meet-and-greets + Lyft transport.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/coco-jones.html" class="card-client" style="text-decoration:none;color:inherit;">Coco Jones — Girls Inc.</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 12: Wide — Annie Elise / Child Rescue Coalition -->
-    <article class="case-card wide" data-category="campaigns" data-href="cases/annie-elise.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Annie Elise<br>Child Rescue Coalition</div>
+      <!-- 12 — HALF — Coco Jones -->
+      <article class="case-card" data-type="events" data-href="cases/coco-jones.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-002.png');"></div>
+          <div class="card-img-label">Coco Jones × Girls Inc.</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Artist Partnership</span>
+            <span class="card-tag">Youth</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Partnered with Girls Inc. to create memorable experiences for young girls in select cities by donating VIP tickets, private meet-and-greets and transportation.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Podcast</span>
-          <span class="tag">Child Protection</span>
-          <span class="tag">CrimeCon</span>
+        <div class="card-footer">
+          <span class="card-client">Coco Jones × Girls Inc.</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">SERIALously podcast + CrimeCon.<br>Child Rescue Coalition partnership.<br>Protecting children online.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/annie-elise.html" class="card-client" style="text-decoration:none;color:inherit;">Annie Elise — Child Rescue Coalition</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 13: Half — Industry Events -->
-    <article class="case-card" data-category="events" data-href="cases/events.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Industry Events<br>Wimbledon · NYC · Nashville</div>
+      <!-- 13 — WIDE — Annie Elise -->
+      <article class="case-card wide" data-type="campaigns" data-href="cases/annie-elise.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p1-001.png');"></div>
+          <div class="card-img-label">Annie Elise × Child Rescue Coalition</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Podcast</span>
+            <span class="card-tag">Child Safety</span>
+            <span class="card-tag">Awareness</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Launched a partnership with Child Rescue Coalition to amplify their mission of protecting children from exploitation on the internet.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Events</span>
-          <span class="tag">Wimbledon</span>
-          <span class="tag">LGBTQ+</span>
+        <div class="card-footer">
+          <span class="card-client">Annie Elise × Child Rescue Coalition</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">Wimbledon. WME Queer Dinner.<br>Lunar New Year. BBR Summit.<br>$300K+ raised across events.</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <a href="cases/events.html" class="card-client" style="text-decoration:none;color:inherit;">Industry Events</a>
-        <span class="card-arrow">→</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 14: Half — 360 Strategy -->
-    <article class="case-card" data-category="strategy" data-href="cases/strategy.html">
-      <div class="card-img">
-        <div class="card-img-bg text-card"></div>
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">360 Strategy<br>Define · Activate · Scale</div>
+      <!-- 14 — HALF — Madhappy -->
+      <article class="case-card" data-type="mental-health" data-href="cases/madhappy.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p2-013.png');"></div>
+          <div class="card-img-label">Madhappy × Madhappy Foundation</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Foundation</span>
+            <span class="card-tag">Mental Health</span>
+            <span class="card-tag">Brand</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Through the Madhappy Foundation, deploys over $300,000 annually to advance mental health initiatives.</p>
+          </div>
         </div>
-        <div class="card-tags">
-          <span class="tag">Strategy</span>
-          <span class="tag">Framework</span>
-          <span class="tag">Legacy</span>
+        <div class="card-footer">
+          <span class="card-client">Madhappy × Madhappy Foundation</span>
+          <span class="card-arrow">→</span>
         </div>
-        <div class="card-reveal">
-          <p class="reveal-text">Kwame Onwuachi. Danny Go.<br>LeVar Burton. Kids Outdoors.<br>10+ talent in active strategy.</p>
+      </article>
+
+      <!-- 15 — HALF — Tay and Taylor Lautner -->
+      <article class="case-card" data-type="mental-health" data-href="cases/lemons-foundation.html">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-image:url('images/p2-010.png');"></div>
+          <div class="card-img-label">Tay and Taylor Lautner</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-tags">
+            <span class="card-tag">Foundation Launch</span>
+            <span class="card-tag">Mental Health</span>
+          </div>
+          <div class="card-hover">
+            <p class="card-hover-text">Launched The Lemons Foundation to drive awareness and support around mental health, leveraging their platform, podcast, and live events.</p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="card-client">Tay and Taylor Lautner</span>
+          <span class="card-arrow">→</span>
+        </div>
+      </article>
+
+    </div><!-- /cards-grid -->
+  </div><!-- /cards-grid-wrap -->
+</section>
+
+<!-- ─── INDUSTRY EVENTS STRIP ─────────────────────────────────── -->
+<section id="events-strip" class="reveal">
+  <div class="events-strip-header">
+    <span class="events-strip-label">Industry Events</span>
+    <a href="cases/events.html" class="events-strip-all">View all →</a>
+  </div>
+  <div class="events-scroll-outer">
+    <div class="events-scroll-inner">
+      <div class="events-scroll-row">
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-image:url('images/p2-000.png');"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">Wimbledon: Influence Is Power. Power Is Responsibility.</div>
+            <div class="event-card-desc">Convened leaders at the All England Club for the tournament's first official gender equity program. Hosted by IMG.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-image:url('images/p1-023.png');"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">BBR Creator Summit</div>
+            <div class="event-card-desc">Winnie Harlow headlined as keynote speaker, with her conversation filmed by Amazon for its docuseries The CEO Club.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-image:url('images/p2-017.png');"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">Ciara Beauty Icon Award</div>
+            <div class="event-card-desc">Ciara was honored with the Beauty Icon Award by Black Beauty Roster during New York Fashion Week. Sponsored by Virgin Hotels.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-image:url('images/p2-009.png');"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">Dapper Dan and Symone Sanders-Townsend</div>
+            <div class="event-card-desc">Led a featured conversation at Black Beauty Roster's Excellence Luncheon during New York Fashion Week. Sponsored by Yahoo's Makers.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-image:url('images/p2-008.png');"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">Lunar New Year Dinner</div>
+            <div class="event-card-desc">Hosted by Daniel Martin, Meghan Markle's makeup artist. In partnership with Apex for Youth, raised over $20,000.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-image:url('images/p2-016.png');"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">WME Queer Celebration Dinner</div>
+            <div class="event-card-desc">Convened 40+ LGBTQ+ talent, executives, and rising voices for an intimate evening at Musso and Frank Grill.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-color:var(--paper);"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">Frieze × WME Tastemakers Dinner</div>
+            <div class="event-card-desc">Convened leading and emerging voices to celebrate women of color in art and fashion during The Armory Show and New York Fashion Week.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-color:var(--paper);"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">WME Billboard Latin Music Week Happy Hour</div>
+            <div class="event-card-desc">Brought together 200+ industry leaders and talent including J Balvin, Mike Bahia, Greeicy, and Guaynaa. Combined social reach of 85M+.</div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-card-img" style="background-color:var(--paper);"></div>
+          <div class="event-card-body">
+            <div class="event-card-name">NYFW: The Talks — Beauty Is Identity</div>
+            <div class="event-card-desc">Brought together Alex Consani, Daniel Martin, Richie Shazam, and Connie Flemming. In partnership with Ali Forney Center.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 360 STRATEGY SECTION ──────────────────────────────────── -->
+<section id="strategy" class="reveal">
+  <div class="strategy-section-inner">
+
+    <div class="strategy-left">
+      <div class="strategy-label">360 Strategy</div>
+      <h2 class="strategy-headline">End-to-end strategic frameworks developed in partnership with talent to define, activate, and scale their legacy driven impact.</h2>
+      <p class="strategy-body">Each strategy integrates deep research, tailored recommendations, fundraising architecture, communications and rollout planning, content integration, strategic partnerships, and foundation buildouts.</p>
+      <a href="cases/strategy.html" class="strategy-view-all">View all strategies →</a>
+    </div>
+
+    <div class="strategy-clients-grid">
+      <div class="strategy-client">
+        <span class="sc-num">01</span>
+        <div>
+          <div class="sc-name">Kwame Onwuachi</div>
+          <span class="sc-tag">Culinary / Author</span>
         </div>
       </div>
-      <div class="card-footer">
-        <a href="cases/strategy.html" class="card-client" style="text-decoration:none;color:inherit;">360 Strategy</a>
-        <span class="card-arrow">→</span>
+      <div class="strategy-client">
+        <span class="sc-num">02</span>
+        <div>
+          <div class="sc-name">Danny Go</div>
+          <span class="sc-tag">Children's Creator</span>
+        </div>
       </div>
-    </article>
+      <div class="strategy-client">
+        <span class="sc-num">03</span>
+        <div>
+          <div class="sc-name">Meg Rapino and Sue Bird</div>
+          <span class="sc-tag">Athletes / Advocates</span>
+        </div>
+      </div>
+      <div class="strategy-client">
+        <span class="sc-num">04</span>
+        <div>
+          <div class="sc-name">The Nader Sisters</div>
+          <span class="sc-tag">Creators</span>
+        </div>
+      </div>
+      <div class="strategy-client">
+        <span class="sc-num">05</span>
+        <div>
+          <div class="sc-name">LeVar Burton</div>
+          <span class="sc-tag">Actor / Author / Advocate</span>
+        </div>
+      </div>
+      <div class="strategy-client">
+        <span class="sc-num">06</span>
+        <div>
+          <div class="sc-name">Madhappy Foundation</div>
+          <span class="sc-tag">Brand Foundation</span>
+        </div>
+      </div>
+      <div class="strategy-client">
+        <span class="sc-num">07</span>
+        <div>
+          <div class="sc-name">Joe Santagato</div>
+          <span class="sc-tag">Creator / Podcast</span>
+        </div>
+      </div>
+      <div class="strategy-client">
+        <span class="sc-num">08</span>
+        <div>
+          <div class="sc-name">William Goodge</div>
+          <span class="sc-tag">50 Marathons in 20 Days for Cancer</span>
+        </div>
+      </div>
+      <div class="strategy-client">
+        <span class="sc-num">09</span>
+        <div>
+          <div class="sc-name">Kids Outdoors Foundation</div>
+          <span class="sc-tag">Foundation</span>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
 
 <!-- ─── CONTACT ────────────────────────────────────────────────── -->
-<section id="contact">
-  <h2 class="contact-headline">Let's build something<br>that lasts.</h2>
-  <div class="contact-right">
-    <a href="mailto:ngriggsdrane@gmail.com" class="contact-email">ngriggsdrane@gmail.com</a>
-    <p class="contact-location">New York City · Los Angeles · United Kingdom</p>
-    <a href="mailto:ngriggsdrane@gmail.com" class="contact-btn">Get in touch</a>
+<section id="contact" class="reveal">
+  <div class="contact-inner">
+    <h2 class="contact-headline">Let's build something that lasts.</h2>
+    <div class="contact-right">
+      <a href="mailto:ngriggsdrane@gmail.com" class="contact-email">ngriggsdrane@gmail.com</a>
+      <p class="contact-location">NYC · LA · UK</p>
+      <a href="mailto:ngriggsdrane@gmail.com" class="contact-btn">Get in touch</a>
+    </div>
   </div>
 </section>
 
