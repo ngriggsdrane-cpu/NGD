@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make Fibroids Count — Lupita Nyong'o × NGD</title>
+  <meta name="description" content="How Lupita Nyong'o turned a lifetime of silent suffering into a global campaign for uterine fibroid research." />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    /* ─── Mediga display font (Lupita page only) ─── */
+    @font-face {
+      font-family: 'Mediga';
+      src: url('../Mediga.otf') format('opentype');
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    /* ─── Lupita color skin ─── */
+    :root {
+      --cs-bg:     #181818;
+      --cs-accent: #6e32f6;
+      --cs-text:   #ffffff;
+      --cs-muted:  #7a7875;
+      --cs-border: #242424;
+      --cs-next-accent: #C4341A; /* Taylor Rooks red */
+    }
+
+    .mediga { font-family: 'Mediga', 'DM Sans', sans-serif; font-weight: 400; }
+
+    /* ─── Hero specifics ─── */
+    .cs-hero-bg {
+      background-image: url('../images/lupita/Fruit2.png');
+      /* REPLACE: Fruit2.png — campaign visual identity, dark painterly still-life fruit */
+    }
+
+    /* ─── Visual break specifics ─── */
+    .cs-vb-img-left  { background-image: url('../images/lupita/Fruit1.png'); /* REPLACE: Fruit1.png */ }
+    .cs-vb-img-right { background-image: url('../images/lupita/Fruit2.png'); /* REPLACE: Fruit2.png */ }
+
+    .vb-number {
+      font-family: 'Mediga', 'DM Sans', sans-serif;
+      font-size: clamp(80px, 14vw, 180px);
+      color: var(--cs-accent);
+      line-height: 1;
+      display: block;
+    }
+    .vb-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.1em;
+      display: block;
+      margin-top: 8px;
+    }
+
+    /* ─── Pull quote Mediga ─── */
+    .cs-pullquote { background: #0d0d0d; }
+    .cs-pullquote-text { font-family: 'Mediga', 'DM Sans', sans-serif; color: var(--cs-accent); }
+
+    /* ─── CTA deep purple ─── */
+    .cs-cta { background: #2a1060; }
+    .cs-cta-title { font-family: 'Mediga', 'DM Sans', sans-serif; }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ─────────────────────────────────────────────── -->
+<nav class="cs-nav">
+  <a href="../index.html" class="cs-nav-logo">NGD</a>
+  <span class="cs-nav-campaign mediga" style="font-size:15px;color:#fff;letter-spacing:0.04em;">Make Fibroids Count</span>
+  <a href="https://donate.foundationwomenshealth.org/campaign/768054/landing"
+     target="_blank" rel="noopener" class="cs-nav-action">Donate</a>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────── -->
+<section class="cs-hero">
+  <div class="cs-hero-bg"></div>
+  <div class="cs-hero-overlay"></div>
+  <div class="cs-hero-content">
+    <p class="cs-hero-eyebrow hero-anim-1">Foundation for Women's Health</p>
+    <h1 class="cs-hero-title mediga hero-anim-2">Make Fibroids Count</h1>
+    <p class="cs-hero-sub hero-anim-3">Turning personal pain into global purpose.</p>
+  </div>
+  <div class="cs-hero-scroll hero-anim-5">
+    <span>Scroll</span>
+    <div class="cs-hero-scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ─── IMPACT BAR ───────────────────────────────────────── -->
+<div class="cs-impact-bar stagger">
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num" data-count="400" data-prefix="$" data-suffix="K">$0K</div>
+    <div class="cs-stat-label">Mobilized for fibroid research</div>
+  </div>
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num" data-count="694" data-suffix="M">0M</div>
+    <div class="cs-stat-label">Media and social impressions</div>
+  </div>
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num" data-count="22.8" data-prefix="$" data-suffix="M" data-decimal="1">$0M</div>
+    <div class="cs-stat-label">Earned media value</div>
+  </div>
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num" data-count="26" data-suffix="M">0M</div>
+    <div class="cs-stat-label">Women affected by fibroids in the US</div>
+  </div>
+</div>
+
+<!-- ─── NARRATIVE ────────────────────────────────────────── -->
+<section class="cs-narrative">
+  <div class="cs-narrative-img-wrap reveal">
+    <!--
+      REPLACE: Capitol Hill roundtable image
+      File: ../images/lupita/8-1024x683.jpg
+      Caption: Lupita Nyong'o alongside Senator Angela Alsobrooks and Mandy Moore at
+               a Capitol Hill roundtable on uterine fibroid research funding, March 2026.
+    -->
+    <img src="../images/lupita/8-1024x683.jpg"
+         alt="Lupita Nyong'o alongside Senator Angela Alsobrooks and Mandy Moore at a Capitol Hill roundtable on uterine fibroid research funding, March 2026"
+         onerror="this.style.display='none'" />
+    <div class="cs-img-placeholder">Capitol Hill roundtable — March 2026</div>
+    <div class="cs-img-caption">
+      Lupita Nyong'o alongside Senator Angela Alsobrooks and Mandy Moore at a Capitol Hill
+      roundtable on uterine fibroid research funding, March 2026.
+    </div>
+  </div>
+
+  <div class="cs-narrative-text reveal">
+    <h2>The Campaign</h2>
+    <p>
+      In 2014, the same year she accepted an Academy Award, <strong>Lupita Nyong'o</strong>
+      was diagnosed with uterine fibroids. Surgery removed 25 of them. A decade later, they
+      returned — more than doubling. By 2026, Nyong'o carried <strong>77 fibroids</strong>
+      in total: 25 removed, over 50 still growing, the largest the size of an orange.
+    </p>
+    <p>
+      For years she said nothing. "It looked like shame," she told ABC News anchor Linsey Davis.
+      "I was hiding in plain sight." But on her 43rd birthday, March 1, 2026, she chose
+      visibility over silence. She posted a photograph of herself holding <strong>77 pieces
+      of fruit</strong> — blueberries, grapes, lemons, oranges, grapefruit, cantaloupe — each
+      one representing a fibroid. The image became a symbol. Her caption read: "This is not a
+      rare story, just a rarely told one."
+    </p>
+    <p>
+      The same week, she announced the <strong>Make Fibroids Count</strong> campaign with the
+      Foundation for Women's Health, including the <em>FWH × Lupita Nyong'o Uterine Fibroid
+      Grant</em> — a $200,000 initiative funding cutting-edge research into minimally invasive
+      and non-invasive treatments for a condition that affects <strong>26 million</strong>
+      American women.
+    </p>
+    <p>
+      The numbers behind the silence are staggering: 80% of all women will develop fibroids
+      in their lifetime. Women make up 51% of the population, yet receive only 8% of NIH
+      research dollars — and just 0.03% of that goes to fibroid research. In March 2026,
+      Nyong'o brought that data to Washington alongside fellow advocate <strong>Mandy Moore</strong>
+      and Senator <strong>Angela Alsobrooks</strong> (D-MD), advocating for the bipartisan
+      <em>U-FIGHT Act</em>, which would expand early screening, detection, and intervention
+      access for patients diagnosed with uterine fibroids.
+    </p>
+  </div>
+</section>
+
+<!-- ─── VISUAL BREAK ──────────────────────────────────────── -->
+<div class="cs-visual-break">
+  <div class="cs-vb-img cs-vb-img-left"></div>
+  <div class="cs-vb-img cs-vb-img-right"></div>
+  <div class="cs-vb-center reveal-scale">
+    <span class="vb-number">77</span>
+    <span class="vb-sub">fibroids. One campaign.</span>
+  </div>
+</div>
+
+<!-- ─── PULL QUOTE ────────────────────────────────────────── -->
+<section class="cs-pullquote reveal-scale">
+  <span class="cs-pullquote-mark">"</span>
+  <blockquote class="cs-pullquote-text">
+    As women, we are conditioned from when we're in our adolescent years to expect pain,
+    to expect discomfort. And we're not taught how to observe our bodies.
+  </blockquote>
+  <p class="cs-pullquote-attr">Lupita Nyong'o &mdash; People Magazine, 2026</p>
+</section>
+
+<!-- ─── PHOTO GALLERY ─────────────────────────────────────── -->
+<section class="cs-gallery">
+  <div class="cs-gallery-label">Campaign Gallery</div>
+  <div class="cs-gallery-grid stagger">
+
+    <!-- REPLACE: ../images/lupita/ABC-News-Linsey-Davis-Lupita-Nyongo-2-032326-7e78c931493e49aa98522a63659124e0.jpg -->
+    <div class="cs-gallery-item wide">
+      <img src="../images/lupita/ABC-News-Linsey-Davis-Lupita-Nyongo-2-032326-7e78c931493e49aa98522a63659124e0.jpg"
+           alt="Lupita Nyong'o on ABC News Live Prime with Linsey Davis"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">ABC News Live Prime — Linsey Davis Interview</div>
+      <div class="cs-gallery-cap">ABC News Live Prime with Linsey Davis · March 23, 2026</div>
+    </div>
+
+    <!-- REPLACE: ../images/lupita/8-1024x683.jpg -->
+    <div class="cs-gallery-item">
+      <img src="../images/lupita/8-1024x683.jpg"
+           alt="Capitol Hill roundtable, Lupita Nyong'o, Senator Alsobrooks, Mandy Moore"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">Capitol Hill Roundtable</div>
+      <div class="cs-gallery-cap">Capitol Hill · March 2026</div>
+    </div>
+
+    <!-- REPLACE: ../images/lupita/5-scaled.jpg -->
+    <div class="cs-gallery-item">
+      <img src="../images/lupita/5-scaled.jpg"
+           alt="Lupita Nyong'o, candid moment at Capitol Hill"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">Capitol Hill — Candid</div>
+      <div class="cs-gallery-cap">Capitol Hill advocacy day · March 2026</div>
+    </div>
+
+    <!-- REPLACE: ../images/lupita/images-1.jpeg -->
+    <div class="cs-gallery-item">
+      <img src="../images/lupita/images-1.jpeg"
+           alt="Lupita Nyong'o and Mandy Moore, People Magazine"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">Lupita &amp; Mandy Moore — People</div>
+      <div class="cs-gallery-cap">People Magazine exclusive · 2026</div>
+    </div>
+
+    <!-- REPLACE: ../images/lupita/b68c9ce40e18d75e0699acb927ef6d8a.webp -->
+    <div class="cs-gallery-item">
+      <img src="../images/lupita/b68c9ce40e18d75e0699acb927ef6d8a.webp"
+           alt="Mandy Moore, host, and Lupita Nyong'o from press appearance"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">Press Appearance</div>
+      <div class="cs-gallery-cap">Press appearance · 2026</div>
+    </div>
+
+    <!-- REPLACE: ../images/lupita/aq9bFJ3m-1280.jpg -->
+    <div class="cs-gallery-item">
+      <img src="../images/lupita/aq9bFJ3m-1280.jpg"
+           alt="Lupita Nyong'o in intimate interview setting, ABC News"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">ABC News — Interview</div>
+      <div class="cs-gallery-cap">ABC News · 2026</div>
+    </div>
+
+    <!-- REPLACE: ../images/lupita/sddefault.jpg -->
+    <div class="cs-gallery-item">
+      <img src="../images/lupita/sddefault.jpg"
+           alt="TODAY Show — Lupita Nyong'o"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">TODAY Show</div>
+      <div class="cs-gallery-cap">TODAY Show · Feb 25, 2026</div>
+    </div>
+
+    <!-- REPLACE: ../images/lupita/images-2.jpeg -->
+    <div class="cs-gallery-item">
+      <img src="../images/lupita/images-2.jpeg"
+           alt="TODAY Show screenshot"
+           onerror="this.style.display='none'" />
+      <div class="cs-gallery-placeholder">TODAY Show 3rd Hour</div>
+      <div class="cs-gallery-cap">TODAY 3rd Hour · Feb 25, 2026</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── MEDIA APPEARANCES TIMELINE ───────────────────────── -->
+<section class="cs-timeline">
+  <div class="cs-timeline-label">Media Appearances</div>
+  <div class="cs-timeline-list">
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Feb 25</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">TODAY Show</div>
+        <div class="cs-timeline-desc">Lupita advocates for new fibroid treatments</div>
+        <a href="https://www.today.com/video/lupita-nyong-o-talks-advocating-for-new-treatments-for-fibroids-258273861867"
+           target="_blank" rel="noopener" class="cs-timeline-link">Watch ↗</a>
+      </div>
+    </div>
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Feb 25</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">TODAY Show 3rd Hour</div>
+        <div class="cs-timeline-desc">Exclusive: Lupita Nyong'o says fibroids have returned</div>
+        <a href="https://www.today.com/health/womens-health/lupita-nyongo-fibroids-rcna260617"
+           target="_blank" rel="noopener" class="cs-timeline-link">Read ↗</a>
+      </div>
+    </div>
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Mar 8</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">MS Now — The Weekend</div>
+        <div class="cs-timeline-desc">"We cannot politicize this health crisis" — Lupita urges lawmakers on fibroid awareness</div>
+        <a href="https://www.ms.now/the-weekend/watch/we-cannot-politicize-this-health-crisis-lupita-nyong-o-urges-lawmakers-to-push-fibroid-awareness-2491141699831"
+           target="_blank" rel="noopener" class="cs-timeline-link">Watch ↗</a>
+      </div>
+    </div>
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Mar 8</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">Makers Digital</div>
+        <div class="cs-timeline-desc">Make Fibroids Count — campaign feature</div>
+        <a href="https://www.youtube.com/watch?v=RSHTE1NeVG4"
+           target="_blank" rel="noopener" class="cs-timeline-link">Watch ↗</a>
+      </div>
+    </div>
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Mar 20</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">The Dose Podcast</div>
+        <div class="cs-timeline-desc">Lupita Nyong'o is done accepting fibroids as normal</div>
+        <a href="https://podcasts.apple.com/us/podcast/lupita-nyongo-is-done-accepting-fibroids-as-normal/id1437924056?i=1000756304798"
+           target="_blank" rel="noopener" class="cs-timeline-link">Listen ↗</a>
+      </div>
+    </div>
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Mar 23</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">ABC News Live Prime with Linsey Davis</div>
+        <div class="cs-timeline-desc">In-depth interview on diagnosis, shame, and the campaign</div>
+        <a href="https://abcnews.com/video/131335681/"
+           target="_blank" rel="noopener" class="cs-timeline-link">Watch ↗</a>
+      </div>
+    </div>
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Mar 25</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">Woman Evolve Podcast</div>
+        <div class="cs-timeline-desc">"Your body is trying to tell you something" — with Lupita Nyong'o</div>
+        <a href="https://podcasts.apple.com/ca/podcast/your-body-is-trying-to-tell-you-something-w-lupita-nyongo/id1316294579?i=1000757366697"
+           target="_blank" rel="noopener" class="cs-timeline-link">Listen ↗</a>
+      </div>
+    </div>
+
+    <div class="cs-timeline-item">
+      <span class="cs-timeline-date">Sep 16</span>
+      <div class="cs-timeline-content">
+        <div class="cs-timeline-outlet">ABC News Live Prime with Linsey Davis</div>
+        <div class="cs-timeline-desc">Capitol Hill advocacy follow-up — U-FIGHT Act progress</div>
+        <a href="https://abcnews.com/video/125646028/"
+           target="_blank" rel="noopener" class="cs-timeline-link">Watch ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── PRESS ─────────────────────────────────────────────── -->
+<section class="cs-press">
+  <div class="cs-press-label">Press Coverage</div>
+  <div class="cs-press-grid stagger">
+    <a href="https://abcnews.go.com" target="_blank" rel="noopener" class="cs-press-pill">ABC News</a>
+    <a href="https://www.today.com/health/womens-health/lupita-nyongo-fibroids-rcna260617" target="_blank" rel="noopener" class="cs-press-pill">TODAY</a>
+    <a href="https://people.com/lupita-nyong-o-women-conditioned-to-expect-pain-fibroids-exclusive-11932770" target="_blank" rel="noopener" class="cs-press-pill">People</a>
+    <a href="https://theroot.com" target="_blank" rel="noopener" class="cs-press-pill">The Root</a>
+    <a href="https://www.primetimer.com/features/lupita-nyong-o-turns-personal-pain-into-global-purpose-with-new-fibroids-campaign" target="_blank" rel="noopener" class="cs-press-pill">Primetimer</a>
+    <a href="https://www.eonline.com/news/1428979/lupita-nyongo-on-fibroid-diagnosis-shame" target="_blank" rel="noopener" class="cs-press-pill">E! Online</a>
+    <a href="https://nbcnews.com" target="_blank" rel="noopener" class="cs-press-pill">NBC News Now</a>
+    <a href="https://usatoday.com" target="_blank" rel="noopener" class="cs-press-pill">USA Today</a>
+    <a href="https://parade.com/news/lupita-nyongo-fibroids-shame-hiding-in-plain-sight" target="_blank" rel="noopener" class="cs-press-pill">Parade</a>
+    <a href="https://thegrio.com/2026/03/01/lupita-nyongo-shares-powerful-birthday-post-holding-77-fruits-to-represent-struggle-with-fibroids/" target="_blank" rel="noopener" class="cs-press-pill">The Grio</a>
+    <a href="https://dailymail.co.uk" target="_blank" rel="noopener" class="cs-press-pill">Daily Mail</a>
+    <a href="https://www.ms.now/the-weekend/watch/we-cannot-politicize-this-health-crisis-lupita-nyong-o-urges-lawmakers-to-push-fibroid-awareness-2491141699831" target="_blank" rel="noopener" class="cs-press-pill">MS Now</a>
+    <a href="https://podcasts.apple.com/ca/podcast/your-body-is-trying-to-tell-you-something-w-lupita-nyongo/id1316294579?i=1000757366697" target="_blank" rel="noopener" class="cs-press-pill">Woman Evolve</a>
+    <a href="https://podcasts.apple.com/us/podcast/lupita-nyongo-is-done-accepting-fibroids-as-normal/id1437924056?i=1000756304798" target="_blank" rel="noopener" class="cs-press-pill">The Dose</a>
+    <a href="https://blackhealthmatters.com" target="_blank" rel="noopener" class="cs-press-pill">Black Health Matters</a>
+    <a href="https://theconversation.com" target="_blank" rel="noopener" class="cs-press-pill">The Conversation</a>
+    <a href="https://femalefirst.co.uk" target="_blank" rel="noopener" class="cs-press-pill">Female First</a>
+    <a href="https://thefemalelead.com" target="_blank" rel="noopener" class="cs-press-pill">The Female Lead</a>
+    <a href="https://gbcghana.com" target="_blank" rel="noopener" class="cs-press-pill">GBC Ghana</a>
+    <a href="https://holrmagazine.com" target="_blank" rel="noopener" class="cs-press-pill">HOLR Magazine</a>
+    <a href="https://justjared.com" target="_blank" rel="noopener" class="cs-press-pill">Just Jared</a>
+    <a href="https://news18.com" target="_blank" rel="noopener" class="cs-press-pill">News 18</a>
+    <a href="https://tribune.com.pk/story/2599046/lupita-nyongo-opens-up-about-shame-and-fibroids" target="_blank" rel="noopener" class="cs-press-pill">Express Tribune</a>
+  </div>
+</section>
+
+<!-- ─── CTA ───────────────────────────────────────────────── -->
+<section class="cs-cta reveal">
+  <h2 class="cs-cta-title mediga">Support the research.</h2>
+  <p class="cs-cta-body">
+    Uterine fibroids affect 26 million women in the US — and only 0.03% of NIH research
+    dollars go to studying them. Your donation funds the research that could change that.
+  </p>
+  <a href="https://donate.foundationwomenshealth.org/campaign/768054/landing"
+     target="_blank" rel="noopener" class="cs-cta-btn">Donate Now</a>
+</section>
+
+<!-- ─── NEXT CASE ─────────────────────────────────────────── -->
+<a href="taylor-rooks.html" class="cs-next" style="--cs-next-accent: #C4341A;">
+  <div>
+    <div class="cs-next-label">Next Case Study</div>
+    <div class="cs-next-title">Taylor Rooks Foundation</div>
+    <div class="cs-next-desc">$2.1M in medical debt erased for 1,805 Georgia families.</div>
+  </div>
+  <span class="cs-next-arrow">→</span>
+</a>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer class="cs-footer">
+  <a href="../index.html" class="cs-footer-back">← NGD Portfolio</a>
+  <span class="cs-footer-copy">Nicholas Griggs-Drane</span>
+</footer>
+
+<script src="case.js"></script>
+</body>
+</html>

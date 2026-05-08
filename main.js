@@ -1,3 +1,15 @@
+/* ─── CARD CLICK NAVIGATION ───────────────────────────────── */
+(function initCardNav() {
+  document.querySelectorAll('.case-card[data-href]').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', e => {
+      // Don't navigate if clicking the footer link directly
+      if (e.target.closest('a')) return;
+      window.location.href = card.dataset.href;
+    });
+  });
+})();
+
 /* ─── HERO HEADLINE ANIMATION ─────────────────────────────── */
 (function buildHeadline() {
   const el = document.getElementById('hero-headline');
