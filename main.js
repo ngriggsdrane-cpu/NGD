@@ -95,12 +95,10 @@ const TALENT = [
 
 /* ─── PAGE LOAD ANIMATIONS ───────────────────────────────────── */
 (function initLoadAnimations() {
-  // Nav
   const nav = document.getElementById('top-nav');
   if (nav) requestAnimationFrame(() => nav.classList.add('loaded'));
 
-  // Hero elements — staggered
-  const delays = { eyebrow: 100, line1: 200, line2: 350, line3: 500, line4: 650, rule: 800, right: 600 };
+  const delays = { eyebrow: 100, line1: 200, line2: 350, line3: 500, line4: 650, right: 600 };
 
   const eyebrow = document.querySelector('.hero-eyebrow');
   if (eyebrow) setTimeout(() => eyebrow.classList.add('loaded'), delays.eyebrow);
@@ -110,9 +108,6 @@ const TALENT = [
     const delay = [delays.line1, delays.line2, delays.line3, delays.line4][i] || (200 + i * 150);
     setTimeout(() => line.classList.add('loaded'), delay);
   });
-
-  const rule = document.querySelector('.hero-rule');
-  if (rule) setTimeout(() => rule.classList.add('loaded'), delays.rule);
 
   const heroRight = document.querySelector('.hero-right');
   if (heroRight) setTimeout(() => heroRight.classList.add('loaded'), delays.right);
@@ -204,6 +199,15 @@ function setFilter(value) {
       if (tab.dataset.view === 'az') buildAZ();
     });
   });
+})();
+
+/* ─── PARALLAX — interstitial bg text ───────────────────────── */
+(function initParallax() {
+  const bgText = document.querySelector('.interstitial-bg-text');
+  if (!bgText) return;
+  window.addEventListener('scroll', () => {
+    bgText.style.transform = 'translateX(' + (window.scrollY * 0.3) + 'px)';
+  }, { passive: true });
 })();
 
 /* ─── A-TO-Z BUILDER ─────────────────────────────────────────── */
