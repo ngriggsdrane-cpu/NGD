@@ -315,17 +315,38 @@ body {
   line-height: 1.4;
 }
 
+/* ─── HERO VIDEO BACKGROUND ───────────────────────────── */
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.65);
+  z-index: 1;
+}
+
 /* ─── HERO ────────────────────────────────────────────── */
 #hero {
-  padding-top: calc(var(--nav-h) + 80px);
-  padding-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(var(--nav-h) + 36px);
+  padding-bottom: 32px;
   padding-left: 40px;
   padding-right: 40px;
   display: grid;
   grid-template-columns: 1fr 340px;
-  gap: 80px;
-  min-height: 100vh;
+  gap: 60px;
   align-content: start;
+}
+
+.hero-left, .hero-right {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-eyebrow {
@@ -333,14 +354,15 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 28px;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .hero-headline {
-  font-size: clamp(48px, 6vw, 88px);
+  font-size: clamp(40px, 5vw, 74px);
   font-weight: 500;
   line-height: 1.05;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   overflow: hidden;
 }
 
@@ -387,14 +409,14 @@ body {
 
 /* Right column */
 .hero-right {
-  padding-top: 36px;
+  align-self: start;
   border-left: 1px solid var(--border);
   padding-left: 40px;
 }
 
 .panel-nav {
   list-style: none;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .panel-nav li {
@@ -437,37 +459,23 @@ body {
   color: var(--red);
 }
 
-.hero-based {
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 12px;
-}
-
-.location-list {
-  list-style: none;
-}
-
-.location-item {
+.hero-location-line {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13px;
+  gap: 8px;
+  font-size: 11px;
   font-weight: 300;
   color: var(--muted);
-  padding: 5px 0;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
 }
 
-.location-dot {
-  width: 6px;
-  height: 6px;
+.hero-location-dot {
+  width: 4px;
+  height: 4px;
   background: var(--red);
   flex-shrink: 0;
-}
-
-.location-item.primary {
-  color: var(--text);
+  border-radius: 50%;
 }
 
 /* ─── VERTICALS STRIP ─────────────────────────────────── */
@@ -482,13 +490,14 @@ body {
 .vertical-cell {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 20px 40px;
+  gap: 6px;
+  padding: 10px 40px;
   border-right: 1px solid var(--border);
-  font-size: 12px;
+  font-size: 9px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
+  line-height: 1.2;
 }
 
 .vertical-cell:last-child {
@@ -496,43 +505,51 @@ body {
 }
 
 .v-dot {
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   background: var(--red);
   flex-shrink: 0;
 }
 
 /* ─── SELECTED WORK ───────────────────────────────────── */
 #work {
-  padding: 80px 40px;
+  padding: 0 40px 0;
 }
 
-.section-label {
-  font-size: 11px;
+/* Slim header strip: label left, filters right, 40px tall */
+.work-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.work-header-label {
+  font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 32px;
+  line-height: 1.2;
 }
 
 .filter-bar {
   display: flex;
   gap: 0;
-  margin-bottom: 40px;
-  border-bottom: 1px solid var(--border);
+  height: 100%;
 }
 
 .filter-btn {
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 10px 20px 10px 0;
+  padding: 0 16px 0 0;
   cursor: pointer;
   color: var(--muted);
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
+  height: 100%;
   transition: color 0.2s, border-color 0.2s;
 }
 
@@ -543,6 +560,18 @@ body {
 
 .filter-btn:hover:not(.active) {
   color: var(--text);
+}
+
+/* One-line disclaimer above card grid */
+.work-disclaimer {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  padding: 10px 0;
+  line-height: 1.2;
+  border-bottom: 1px solid var(--border);
 }
 
 .cards-grid {
@@ -569,13 +598,33 @@ body {
 .card-img {
   position: relative;
   background: var(--card-bg);
-  aspect-ratio: 16/9;
+  height: 160px;
   overflow: hidden;
-  /* REPLACE: add img src here */
 }
 
 .case-card.wide .card-img {
-  aspect-ratio: 21/9;
+  height: 200px;
+}
+
+/* Background image layer — sits behind all overlays */
+.card-img-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.85) contrast(1.05);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+}
+
+.case-card:hover .card-img-bg {
+  filter: brightness(0.7) contrast(1.1);
+  transform: scale(1.03);
+}
+
+/* For cards without a photo: show a readable editorial style */
+.card-img-bg.text-card {
+  background: linear-gradient(160deg, #1a1a1a 0%, #0d0d0d 100%);
+  filter: none;
 }
 
 .card-img-inner {
@@ -584,21 +633,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.case-card:hover .card-img-inner {
-  transform: scale(1.03);
 }
 
 .card-placeholder-text {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #2a2a2a;
+  color: #3a3a3a;
   text-align: center;
   padding: 0 20px;
-  /* REPLACE: remove this element when real image is added */
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
 }
 
 .card-tags {
@@ -608,6 +654,7 @@ body {
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
+  z-index: 2;
 }
 
 .tag {
@@ -631,6 +678,7 @@ body {
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.3s, transform 0.3s;
+  z-index: 3;
 }
 
 .case-card:hover .card-reveal {
@@ -654,14 +702,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 20px;
+  padding: 10px 16px;
   border-top: 1px solid var(--border);
 }
 
 .card-client {
-  font-size: 13px;
+  font-size: 9px;
   font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text);
+  line-height: 1.2;
 }
 
 .card-arrow {
@@ -695,15 +746,15 @@ body {
 /* ─── CONTACT SECTION ─────────────────────────────────── */
 #contact {
   border-top: 1px solid var(--border);
-  padding: 80px 40px;
+  padding: 36px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 60px;
   align-items: end;
 }
 
 .contact-headline {
-  font-size: clamp(32px, 4vw, 56px);
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 300;
   line-height: 1.1;
   color: var(--text);
@@ -793,16 +844,16 @@ body {
   #hero {
     grid-template-columns: 1fr;
     padding: 0 24px;
-    padding-top: calc(var(--nav-h) + 48px);
-    padding-bottom: 48px;
-    gap: 48px;
+    padding-top: calc(var(--nav-h) + 24px);
+    padding-bottom: 32px;
+    gap: 32px;
   }
 
   .hero-right {
     border-left: none;
     padding-left: 0;
     border-top: 1px solid var(--border);
-    padding-top: 32px;
+    padding-top: 24px;
   }
 
   #top-nav {
@@ -840,11 +891,11 @@ body {
   }
 
   .vertical-cell {
-    padding: 16px 24px;
+    padding: 10px 24px;
   }
 
   #work {
-    padding: 48px 24px;
+    padding: 0 24px;
   }
 
   .cards-grid {
@@ -855,10 +906,14 @@ body {
     grid-column: auto;
   }
 
+  .case-card.wide .card-img {
+    height: 160px;
+  }
+
   #contact {
     grid-template-columns: 1fr;
-    padding: 48px 24px;
-    gap: 40px;
+    padding: 36px 24px;
+    gap: 32px;
   }
 
   #footer-bar {

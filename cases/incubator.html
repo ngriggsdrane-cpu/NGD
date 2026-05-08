@@ -16,8 +16,9 @@
       --cs-next-accent: #2D6A4F; /* Kids Outdoors green */
     }
     .cs-hero-bg {
-      background-color: #111;
-      /* REPLACE: add hero image */
+      background-image: url('https://i.ytimg.com/vi/spwdzlv88NM/maxresdefault.jpg');
+      background-size: cover;
+      background-position: center;
     }
     .cs-cta { background: #0a0a08; }
   </style>
@@ -64,14 +65,10 @@
 </div>
 
 <section class="cs-narrative">
-  <div class="cs-narrative-img-wrap reveal">
-    <!--
-      REPLACE: WME Fashion Incubator program image
-      Add image to ../images/incubator/ and update src below
-      Reference video: https://www.youtube.com/watch?v=spwdzlv88NM
-    -->
-    <div class="cs-img-placeholder">WME Fashion Incubator<br>Program Showcase</div>
-    <div class="cs-img-caption">WME Fashion Incubator · New York</div>
+  <div class="cs-narrative-img-wrap reveal" style="overflow:hidden;position:relative;">
+    <img src="https://i.ytimg.com/vi/spwdzlv88NM/maxresdefault.jpg"
+         alt="WME Fashion Incubator cohort showcase, New York"
+         style="width:100%;height:100%;object-fit:cover;display:block;" />
   </div>
 
   <div class="cs-narrative-text reveal">

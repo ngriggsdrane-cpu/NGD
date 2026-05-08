@@ -228,6 +228,16 @@
 
 <!-- ─── HERO ───────────────────────────────────────────────────── -->
 <section id="hero">
+  <!-- Looping silent background video -->
+  <div class="hero-video-bg">
+    <iframe
+      src="https://www.youtube.com/embed/RSHTE1NeVG4?autoplay=1&mute=1&loop=1&playlist=RSHTE1NeVG4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      style="position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;transform:translate(-50%,-50%);border:none;pointer-events:none;"
+      allow="autoplay; encrypted-media"
+      title="background video"></iframe>
+  </div>
+  <div class="hero-video-overlay"></div>
+
   <div class="hero-left">
     <div class="hero-eyebrow">Nicholas Griggs-Drane&nbsp;/&nbsp;Impact Strategist</div>
     <h1 class="hero-headline" id="hero-headline" aria-label="Purpose into culture. Inspiring fans at scale.">
@@ -262,18 +272,9 @@
       </li>
     </ul>
 
-    <div class="hero-based">Based</div>
-    <ul class="location-list">
-      <li class="location-item primary">
-        <span class="location-dot"></span>New York City
-      </li>
-      <li class="location-item">
-        <span class="location-dot"></span>Los Angeles
-      </li>
-      <li class="location-item">
-        <span class="location-dot"></span>United Kingdom
-      </li>
-    </ul>
+    <div class="hero-location-line">
+      <span class="hero-location-dot"></span>NYC&nbsp;·&nbsp;LA&nbsp;·&nbsp;UK
+    </div>
   </div>
 </section>
 
@@ -288,31 +289,31 @@
 
 <!-- ─── SELECTED WORK ──────────────────────────────────────────── -->
 <section id="work">
-  <div class="section-label">Selected Work</div>
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="campaigns">Campaigns</button>
-    <button class="filter-btn" data-filter="foundations">Foundations</button>
-    <button class="filter-btn" data-filter="events">Events</button>
-    <button class="filter-btn" data-filter="strategy">Strategy</button>
+  <div class="work-header">
+    <span class="work-header-label">Selected Work</span>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="campaigns">Campaigns</button>
+      <button class="filter-btn" data-filter="foundations">Foundations</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="strategy">Strategy</button>
+    </div>
   </div>
+  <div class="work-disclaimer">Open any case study to explore the full campaign.</div>
 
   <div class="cards-grid" id="cards-grid">
 
-    <!-- Card 1: Wide (full-width) -->
+    <!-- Card 1: Wide — Lupita / Make Fibroids Count -->
     <article class="case-card wide" data-category="campaigns foundations" data-href="cases/lupita.html">
       <div class="card-img">
-        <!-- REPLACE: add img src here -->
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">Lupita Nyong'o<br>Foundation for Women's Health</div>
-        </div>
+        <div class="card-img-bg" style="background-image:url('https://i.ytimg.com/vi/RSHTE1NeVG4/maxresdefault.jpg');"></div>
         <div class="card-tags">
           <span class="tag">Campaign</span>
           <span class="tag">Women's Health</span>
           <span class="tag">Advocacy</span>
         </div>
         <div class="card-reveal">
-          <p class="reveal-text">Make Fibroids Count.<br>$400K mobilized, 694M impressions,<br>Capitol Hill to the TODAY Show.</p>
+          <p class="reveal-text">Make Fibroids Count.<br>$400K mobilized · 694M impressions<br>Capitol Hill to the TODAY Show.</p>
         </div>
       </div>
       <div class="card-footer">
@@ -321,19 +322,19 @@
       </div>
     </article>
 
-    <!-- Card 2: Half-width -->
+    <!-- Card 2: Half — Taylor Rooks Foundation -->
     <article class="case-card" data-category="foundations" data-href="cases/taylor-rooks.html">
       <div class="card-img">
-        <!-- REPLACE: add img src here -->
+        <div class="card-img-bg text-card"></div>
         <div class="card-img-inner">
-          <div class="card-placeholder-text">Taylor Rooks Foundation</div>
+          <div class="card-placeholder-text">Taylor Rooks<br>Foundation</div>
         </div>
         <div class="card-tags">
           <span class="tag">Foundation Launch</span>
           <span class="tag">Philanthropy</span>
         </div>
         <div class="card-reveal">
-          <p class="reveal-text">$2M in Medical Debt Relieved<br>for Georgia families.</p>
+          <p class="reveal-text">$2.1M in medical debt erased<br>for 1,805 Georgia families.</p>
         </div>
       </div>
       <div class="card-footer">
@@ -342,12 +343,12 @@
       </div>
     </article>
 
-    <!-- Card 3: Half-width -->
+    <!-- Card 3: Half — Sam Smith / Pink House Foundation -->
     <article class="case-card" data-category="foundations">
       <div class="card-img">
-        <!-- REPLACE: add img src here -->
+        <div class="card-img-bg text-card"></div>
         <div class="card-img-inner">
-          <div class="card-placeholder-text">Sam Smith<br>The Pink House Foundation</div>
+          <div class="card-placeholder-text">Sam Smith<br>Pink House Foundation</div>
         </div>
         <div class="card-tags">
           <span class="tag">Foundation Launch</span>
@@ -358,24 +359,24 @@
         </div>
       </div>
       <div class="card-footer">
-        <span class="card-client">Sam Smith</span>
+        <span class="card-client">Sam Smith — Pink House Foundation</span>
         <span class="card-arrow">→</span>
       </div>
     </article>
 
-    <!-- Card 4: Wide (full-width) -->
+    <!-- Card 4: Wide — Venus Williams / Saving Mothers -->
     <article class="case-card wide" data-category="campaigns strategy" data-href="cases/venus-williams.html">
       <div class="card-img">
-        <!-- REPLACE: add img src here -->
+        <div class="card-img-bg text-card"></div>
         <div class="card-img-inner">
-          <div class="card-placeholder-text">Venus Williams<br>Saving Mothers</div>
+          <div class="card-placeholder-text">Venus Williams<br>× Saving Mothers</div>
         </div>
         <div class="card-tags">
           <span class="tag">Brand Partnership</span>
           <span class="tag">Women's Health</span>
         </div>
         <div class="card-reveal">
-          <p class="reveal-text">Saving Mothers and NYU Langone.<br>Advancing equity in maternal health.</p>
+          <p class="reveal-text">Saving Mothers × NYU Langone.<br>Advancing equity in maternal health.</p>
         </div>
       </div>
       <div class="card-footer">
@@ -384,12 +385,12 @@
       </div>
     </article>
 
-    <!-- Card 5: Half-width -->
+    <!-- Card 5: Half — Candace Parker Foundation -->
     <article class="case-card" data-category="foundations" data-href="cases/candace-parker.html">
       <div class="card-img">
-        <!-- REPLACE: add img src here -->
+        <div class="card-img-bg text-card"></div>
         <div class="card-img-inner">
-          <div class="card-placeholder-text">Candace Parker<br>Adidas</div>
+          <div class="card-placeholder-text">Candace Parker<br>× Adidas</div>
         </div>
         <div class="card-tags">
           <span class="tag">Foundation Launch</span>
@@ -405,13 +406,10 @@
       </div>
     </article>
 
-    <!-- Card 6: Half-width -->
+    <!-- Card 6: Half — WME Fashion Incubator -->
     <article class="case-card" data-category="events strategy" data-href="cases/incubator.html">
       <div class="card-img">
-        <!-- REPLACE: add img src here -->
-        <div class="card-img-inner">
-          <div class="card-placeholder-text">WME Fashion Incubator</div>
-        </div>
+        <div class="card-img-bg" style="background-image:url('https://i.ytimg.com/vi/spwdzlv88NM/maxresdefault.jpg');"></div>
         <div class="card-tags">
           <span class="tag">Incubator</span>
           <span class="tag">Fashion</span>

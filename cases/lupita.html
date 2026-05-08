@@ -29,13 +29,14 @@
 
     /* ─── Hero specifics ─── */
     .cs-hero-bg {
-      background-image: url('../images/lupita/Fruit2.png');
-      /* REPLACE: Fruit2.png — campaign visual identity, dark painterly still-life fruit */
+      background-image: url('../images/lupita/Fruit2.png'),
+                        url('https://i.ytimg.com/vi/RSHTE1NeVG4/maxresdefault.jpg');
+      /* Primary: Fruit2.png local file. Fallback: YouTube thumbnail if local missing */
     }
 
     /* ─── Visual break specifics ─── */
-    .cs-vb-img-left  { background-image: url('../images/lupita/Fruit1.png'); /* REPLACE: Fruit1.png */ }
-    .cs-vb-img-right { background-image: url('../images/lupita/Fruit2.png'); /* REPLACE: Fruit2.png */ }
+    .cs-vb-img-left  { background-image: url('../images/lupita/Fruit1.png'); }
+    .cs-vb-img-right { background-image: url('../images/lupita/Fruit2.png'); }
 
     .vb-number {
       font-family: 'Mediga', 'DM Sans', sans-serif;
