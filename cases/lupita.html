@@ -10,7 +10,7 @@
     /* ─── Mediga display font (Lupita page only) ─── */
     @font-face {
       font-family: 'Mediga';
-      src: url('../Mediga.otf') format('opentype');
+      src: url('../fonts/Mediga.otf') format('opentype');
       font-weight: 400;
       font-display: swap;
     }
@@ -109,21 +109,15 @@
 
 <!-- ─── NARRATIVE ────────────────────────────────────────── -->
 <section class="cs-narrative">
-  <div class="cs-narrative-img-wrap reveal">
-    <!--
-      REPLACE: Capitol Hill roundtable image
-      File: ../images/lupita/8-1024x683.jpg
-      Caption: Lupita Nyong'o alongside Senator Angela Alsobrooks and Mandy Moore at
-               a Capitol Hill roundtable on uterine fibroid research funding, March 2026.
-    -->
-    <img src="../images/lupita/8-1024x683.jpg"
-         alt="Lupita Nyong'o alongside Senator Angela Alsobrooks and Mandy Moore at a Capitol Hill roundtable on uterine fibroid research funding and the U-FIGHT Act, March 2026"
-         onerror="this.style.display='none'" />
-    <div class="cs-img-placeholder">Capitol Hill Roundtable — March 2026</div>
-    <div class="cs-img-caption">
-      Lupita Nyong'o alongside Senator Angela Alsobrooks and Mandy Moore at a Capitol Hill
-      roundtable on uterine fibroid research funding and the U-FIGHT Act, March 2026.
-    </div>
+  <div class="cs-narrative-img-wrap reveal" style="position:relative;">
+    <a href="https://thehill.com/policy/healthcare/5214127-lupita-nyongo-fibroids-capitol-hill-u-fight-act/"
+       target="_blank" rel="noopener" class="cs-press-img-card" style="position:absolute;inset:0;">
+      <div>
+        <div class="pi-outlet">Capitol Hill · March 2026</div>
+        <div class="pi-headline">Lupita Nyong'o, Senator Angela Alsobrooks, and Mandy Moore advocate for the U-FIGHT Act — expanding fibroid screening and intervention access.</div>
+      </div>
+      <div class="pi-cta">Read coverage</div>
+    </a>
   </div>
 
   <div class="cs-narrative-text reveal">
@@ -186,120 +180,122 @@
   <div class="cs-gallery-label">Campaign Gallery</div>
   <div class="cs-gallery-grid stagger">
 
-    <!--
-      IMAGE 1 (WIDE) — Capitol Hill roundtable
-      File: ../images/lupita/8-1024x683.jpg
-      What's in it: Lupita Nyong'o (nameplate visible, seated second from left), Senator Angela
-      Alsobrooks speaking at mic, Mandy Moore far left. Six participants around a conference
-      table, American flag and portrait painting behind them.
-    -->
+    <!-- TODAY Show YouTube thumbnail (wide hero) -->
     <div class="cs-gallery-item wide">
-      <img src="../images/lupita/8-1024x683.jpg"
-           alt="Lupita Nyong'o alongside Senator Angela Alsobrooks and Mandy Moore at a Capitol Hill roundtable on uterine fibroid research funding, March 2026"
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">Capitol Hill Roundtable · March 2026</div>
-      <div class="cs-gallery-cap">Senator Alsobrooks, Lupita Nyong'o, and Mandy Moore — U-FIGHT Act roundtable · Capitol Hill, March 2026</div>
-    </div>
-
-    <!--
-      IMAGE 2 — Capitol Hill hug (candid)
-      File: ../images/lupita/5-scaled.jpg
-      What's in it: Lupita smiling broadly, hugging Senator Alsobrooks (braids, blue blazer).
-      Mandy Moore visible over Lupita's shoulder on the right. Red-walled Capitol hallway,
-      photographer and onlookers in background.
-    -->
-    <div class="cs-gallery-item">
-      <img src="../images/lupita/5-scaled.jpg"
-           alt="Lupita Nyong'o embracing Senator Angela Alsobrooks at Capitol Hill, Mandy Moore visible in background, March 2026"
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">Capitol Hill — Candid</div>
-      <div class="cs-gallery-cap">Lupita with Senator Alsobrooks · Capitol Hill, March 2026</div>
-    </div>
-
-    <!--
-      IMAGE 3 — ABC News Live Prime interview
-      File: ../images/lupita/aq9bFJ3m-1280.jpg
-      What's in it: Lupita in blue/black printed dress, animated, hands raised. Linsey Davis
-      with back to camera in dark top. Warm amber leather chairs, moody bookshelf set.
-      ABC News interview setting.
-    -->
-    <div class="cs-gallery-item">
-      <img src="../images/lupita/aq9bFJ3m-1280.jpg"
-           alt="Lupita Nyong'o in conversation with ABC News anchor Linsey Davis, gesturing expressively. ABC News Live Prime interview, March 23, 2026."
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">ABC News Live Prime</div>
-      <div class="cs-gallery-cap">ABC News Live Prime with Linsey Davis · March 23, 2026</div>
-    </div>
-
-    <!--
-      IMAGE 4 — TODAY Show live interview
-      File: ../images/lupita/images-2.jpeg
-      What's in it: Lupita and Katy Brodsky Falco (Foundation for Women's Health founder/ED)
-      seated side-by-side on cream couch. Both in dark tops. TODAY orange logo bottom-left.
-      "LIVE INTERVIEW" banner top-left.
-    -->
-    <div class="cs-gallery-item">
-      <img src="../images/lupita/images-2.jpeg"
-           alt="Lupita Nyong'o and Katy Brodsky Falco, Foundation for Women's Health Executive Director, on the TODAY Show couch. Live interview, February 25, 2026."
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">TODAY Show — Live Interview</div>
-      <div class="cs-gallery-cap">Lupita + Katy Brodsky Falco (FWH) · TODAY Show, Feb 25, 2026</div>
-    </div>
-
-    <!--
-      IMAGE 5 — TODAY Show thumbnail
-      File: ../images/lupita/sddefault.jpg
-      What's in it: Portrait-format thumbnail. Lupita in Studio 1A lower-third graphic.
-      Title: "Lupita Nyong'o Talks Struggle With Fibroids, Advocating for Women."
-      TODAY peacock logo top-left.
-    -->
-    <div class="cs-gallery-item">
-      <img src="../images/lupita/sddefault.jpg"
-           alt="TODAY Show — Lupita Nyong'o Talks Struggle With Fibroids, Advocating for Women. Studio 1A, February 25, 2026."
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">TODAY Show · Studio 1A</div>
+      <img src="https://i.ytimg.com/vi/JEXX4ox3G1g/maxresdefault.jpg"
+           alt="Lupita Nyong'o on TODAY Show discussing fibroids campaign, Feb 25, 2026" />
       <div class="cs-gallery-cap">TODAY Show · "Lupita Nyong'o Talks Struggle With Fibroids" · Feb 25, 2026</div>
     </div>
 
-    <!--
-      IMAGE 6 — ABC News wide shot (Linsey Davis)
-      File: ../images/lupita/ABC-News-Linsey-Davis-Lupita-Nyongo-2-032326-7e78c931493e49aa98522a63659124e0.jpg
-      STILL NEEDED — save from press coverage
-    -->
+    <!-- Makers Digital / Foundation for Women's Health YouTube -->
     <div class="cs-gallery-item">
-      <img src="../images/lupita/ABC-News-Linsey-Davis-Lupita-Nyongo-2-032326-7e78c931493e49aa98522a63659124e0.jpg"
-           alt="Lupita Nyong'o on ABC News Live Prime with anchor Linsey Davis, March 2026"
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">ABC News Live Prime</div>
-      <div class="cs-gallery-cap">ABC News Live Prime · March 23, 2026</div>
+      <img src="https://i.ytimg.com/vi/RSHTE1NeVG4/maxresdefault.jpg"
+           alt="Make Fibroids Count — campaign feature, Makers Digital, March 8, 2026" />
+      <div class="cs-gallery-cap">Makers Digital · Make Fibroids Count · Mar 8, 2026</div>
     </div>
 
-    <!--
-      IMAGE 7 — People Magazine exclusive
-      File: ../images/lupita/images-1.jpeg
-      STILL NEEDED — save from People Magazine coverage
-    -->
-    <div class="cs-gallery-item">
-      <img src="../images/lupita/images-1.jpeg"
-           alt="Lupita Nyong'o and Mandy Moore, People Magazine exclusive, 2026"
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">People Magazine Exclusive</div>
-      <div class="cs-gallery-cap">People Magazine · Lupita &amp; Mandy Moore · 2026</div>
+    <!-- ABC News Live Prime — Mar 23 (play card, not embeddable) -->
+    <div class="cs-gallery-item" style="position:relative;background:#0a0a0a;">
+      <a href="https://abcnews.go.com/video/131335681/"
+         target="_blank" rel="noopener" class="cs-play-card">
+        <span class="cs-play-btn"></span>
+        <span class="cs-play-outlet">ABC News Live Prime · Mar 23, 2026</span>
+      </a>
+      <div class="cs-gallery-cap">Linsey Davis interviews Lupita Nyong'o on diagnosis, shame, and the campaign</div>
     </div>
 
-    <!--
-      IMAGE 8 — Three-person press appearance
-      File: ../images/lupita/b68c9ce40e18d75e0699acb927ef6d8a.webp
-      STILL NEEDED — save from press coverage
-    -->
-    <div class="cs-gallery-item">
-      <img src="../images/lupita/b68c9ce40e18d75e0699acb927ef6d8a.webp"
-           alt="Lupita Nyong'o and Mandy Moore at a press appearance, 2026"
-           onerror="this.style.display='none'" />
-      <div class="cs-gallery-placeholder">Press Appearance</div>
-      <div class="cs-gallery-cap">Press Appearance · 2026</div>
+    <!-- ABC News Live Prime — Sep 16 (Capitol Hill follow-up) -->
+    <div class="cs-gallery-item" style="position:relative;background:#0a0a0a;">
+      <a href="https://abcnews.go.com/video/125646028/"
+         target="_blank" rel="noopener" class="cs-play-card">
+        <span class="cs-play-btn"></span>
+        <span class="cs-play-outlet">ABC News Live Prime · Sep 16, 2025</span>
+      </a>
+      <div class="cs-gallery-cap">Capitol Hill advocacy follow-up — U-FIGHT Act progress</div>
     </div>
 
+    <!-- People Magazine press card -->
+    <div class="cs-gallery-item" style="position:relative;">
+      <a href="https://people.com/lupita-nyong-o-women-conditioned-to-expect-pain-fibroids-exclusive-11932770"
+         target="_blank" rel="noopener" class="cs-press-img-card">
+        <div>
+          <div class="pi-outlet">People Magazine</div>
+          <div class="pi-headline">"As women, we are conditioned from when we're in our adolescent years to expect pain, to expect discomfort."</div>
+        </div>
+        <div class="pi-cta">Read exclusive</div>
+      </a>
+    </div>
+
+    <!-- Capitol Hill / The Grio press card -->
+    <div class="cs-gallery-item" style="position:relative;">
+      <a href="https://thegrio.com/2026/03/01/lupita-nyongo-shares-powerful-birthday-post-holding-77-fruits-to-represent-struggle-with-fibroids/"
+         target="_blank" rel="noopener" class="cs-press-img-card">
+        <div>
+          <div class="pi-outlet">The Grio</div>
+          <div class="pi-headline">Lupita Nyong'o shares powerful birthday post holding 77 fruits to represent her struggle with fibroids</div>
+        </div>
+        <div class="pi-cta">Read coverage</div>
+      </a>
+    </div>
+
+    <!-- Primetimer press card -->
+    <div class="cs-gallery-item" style="position:relative;">
+      <a href="https://www.primetimer.com/features/lupita-nyong-o-turns-personal-pain-into-global-purpose-with-new-fibroids-campaign"
+         target="_blank" rel="noopener" class="cs-press-img-card">
+        <div>
+          <div class="pi-outlet">Primetimer</div>
+          <div class="pi-headline">Lupita Nyong'o Turns Personal Pain Into Global Purpose With New Fibroids Campaign</div>
+        </div>
+        <div class="pi-cta">Read feature</div>
+      </a>
+    </div>
+
+    <!-- Parade press card -->
+    <div class="cs-gallery-item" style="position:relative;">
+      <a href="https://parade.com/news/lupita-nyongo-fibroids-shame-hiding-in-plain-sight"
+         target="_blank" rel="noopener" class="cs-press-img-card">
+        <div>
+          <div class="pi-outlet">Parade</div>
+          <div class="pi-headline">Lupita Nyong'o on Fibroids and Shame: "I Was Hiding in Plain Sight"</div>
+        </div>
+        <div class="pi-cta">Read interview</div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── VIDEO EMBEDS ───────────────────────────────────────── -->
+<section class="cs-videos">
+  <div class="cs-videos-label">Featured Video</div>
+  <div class="cs-video-grid">
+    <div class="cs-video-item wide">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/JEXX4ox3G1g"
+                title="Lupita Nyong'o on TODAY Show — Make Fibroids Count campaign"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <div class="cs-video-cap">TODAY Show — Lupita Nyong'o advocates for new fibroid treatments · Feb 25, 2026</div>
+    </div>
+    <div class="cs-video-item">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/RSHTE1NeVG4"
+                title="Make Fibroids Count — Makers Digital campaign feature"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <div class="cs-video-cap">Makers Digital — Make Fibroids Count campaign feature · Mar 8, 2026</div>
+    </div>
+    <div class="cs-video-item">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/_rDDLpiyVI0"
+                title="Lupita Nyong'o — Make Fibroids Count"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <div class="cs-video-cap">Make Fibroids Count — campaign video · 2026</div>
+    </div>
   </div>
 </section>
 
