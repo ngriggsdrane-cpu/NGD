@@ -14,14 +14,20 @@
 
 <!-- ─── INTRO ANIMATION ───────────────────────────────────────── -->
 <div id="ngd-intro" aria-hidden="true">
-  <svg viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NGD">
-    <!-- N: starts bottom-left, draws up, diagonal, up -->
-    <path class="ngd-path ngd-n" d="M 5,100 L 5,10 L 65,100 L 65,10" />
-    <!-- G: starts at bottom of arc, sweeps CCW (large arc) to opening at right, then bar -->
-    <path class="ngd-path ngd-g" d="M 133,98 A 43,43 0 1 0 176,55 L 152,55" />
-    <!-- D: starts bottom-left, draws up, curves right and back -->
-    <path class="ngd-path ngd-d" d="M 195,100 L 195,10 C 278,10 278,100 195,100" />
-  </svg>
+  <div id="ngd-letters">
+    <svg viewBox="0 0 330 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NGD">
+      <!-- N: left vertical ↑, diagonal ↘, right vertical ↑ -->
+      <path class="ngd-path ngd-n-left"  d="M 10,110 L 10,10" />
+      <path class="ngd-path ngd-n-diag"  d="M 10,10 L 68,110" />
+      <path class="ngd-path ngd-n-right" d="M 68,110 L 68,10" />
+      <!-- G: arc CW from top → right (270°), then bar ← to center -->
+      <path class="ngd-path ngd-g-arc"   d="M 143,15 A 50,50 0 1 1 193,65" />
+      <path class="ngd-path ngd-g-bar"   d="M 193,65 L 158,65" />
+      <!-- D: left vertical ↑, curve CW top → right → bottom -->
+      <path class="ngd-path ngd-d-left"  d="M 222,110 L 222,10" />
+      <path class="ngd-path ngd-d-curve" d="M 222,10 C 318,10 318,110 222,110" />
+    </svg>
+  </div>
 </div>
 
 <!-- ─── NAV ──────────────────────────────────────────────────── -->
@@ -265,8 +271,6 @@
     <span class="hero-line hero-line-highlight"><span class="hero-line-inner">Inspiring fans at scale.</span></span>
   </h1>
 
-  <div class="hero-deco" aria-hidden="true">70+</div>
-
   <div class="hero-right">
     <div class="hero-location-wrap">
       <span class="hero-location">NYC · LA · UK</span>
@@ -274,20 +278,18 @@
     </div>
   </div>
 
-  <div class="hero-bottom">
-    <div>
-      <div class="hero-name">Nicholas Griggs-Drane</div>
-      <p class="hero-desc">Utilizing talent, campaigns, and partnerships that accelerate philanthropic missions and brand recognition.</p>
-    </div>
-    <nav class="hero-panel-nav">
-      <button class="hero-panel-btn" data-panel="work">Work <span class="h-chevron">›</span></button>
-      <button class="hero-panel-btn" data-panel="strategy">Strategy <span class="h-chevron">›</span></button>
-      <button class="hero-panel-btn" data-panel="events">Events <span class="h-chevron">›</span></button>
-      <button class="hero-panel-btn" data-panel="talent">Talent <span class="h-chevron">›</span></button>
-      <button class="hero-panel-btn" data-panel="about">About <span class="h-chevron">›</span></button>
-    </nav>
-  </div>
+</section>
 
+<!-- ─── ORANGE INTRO SECTION ──────────────────────────────────── -->
+<section id="ngd-intro-section">
+  <div class="intro-section-inner">
+    <div class="intro-name reveal-from-left">
+      <div>Nicholas</div>
+      <div>Griggs-Drane</div>
+      <div class="intro-name-rule"></div>
+    </div>
+    <p class="intro-desc reveal-from-right">Utilizing talent, campaigns, and partnerships that accelerate philanthropic missions and brand recognition.</p>
+  </div>
 </section>
 
 <!-- ─── SELECTED WORK ──────────────────────────────────────────── -->

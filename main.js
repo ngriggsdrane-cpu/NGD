@@ -11,15 +11,16 @@
   const intro = document.getElementById('ngd-intro');
   if (!intro) return;
 
-  // Set exact dasharray/dashoffset per path using measured length
+  // Set exact strokeDasharray/strokeDashoffset for each stroke path via measured length.
+  // Must run before any CSS animation fires (all animations have ≥0.1s delay).
   document.querySelectorAll('.ngd-path').forEach(path => {
     const len = Math.ceil(path.getTotalLength());
     path.style.strokeDasharray = len;
     path.style.strokeDashoffset = len;
   });
 
-  // Remove overlay from layout after exit animation completes (2900ms + 500ms + buffer)
-  setTimeout(() => { intro.style.display = 'none'; }, 3500);
+  // Remove overlay after exit animations complete: bg-exit starts at 3.0s, lasts 0.5s
+  setTimeout(() => { intro.style.display = 'none'; }, 3600);
 })();
 
 /* ─── ALL TALENT (for A-Z tab) ──────────────────────────────── */
@@ -114,14 +115,14 @@ const TALENT = [
   const nav = document.getElementById('top-nav');
   if (nav) requestAnimationFrame(() => nav.classList.add('loaded'));
 
-  // Intro overlay exits at 2900ms — hero fires after overlay begins exiting
-  const BASE = 2900;
+  // Bg-exit starts 3.0s, letters-exit starts 3.0s — hero fires as overlay fades
+  const BASE = 3100;
   const delays = {
-    eyebrow: BASE + 100,   // 3000ms
-    line1:   BASE + 100,   // 3000ms
-    line2:   BASE + 220,   // 3120ms
-    line3:   BASE + 400,   // 3300ms
-    right:   BASE + 200,   // 3100ms
+    eyebrow: BASE,          // 3100ms
+    line1:   BASE + 100,   // 3200ms
+    line2:   BASE + 220,   // 3320ms
+    line3:   BASE + 420,   // 3520ms
+    right:   BASE + 50,    // 3150ms
   };
 
   const eyebrow = document.querySelector('.hero-eyebrow');
@@ -158,7 +159,7 @@ const TALENT = [
 
 /* ─── SCROLL REVEALS (IntersectionObserver) ──────────────────── */
 (function initReveal() {
-  const items = document.querySelectorAll('.reveal');
+  const items = document.querySelectorAll('.reveal, .reveal-from-left, .reveal-from-right');
   if (!items.length) return;
 
   const observer = new IntersectionObserver((entries) => {
@@ -168,7 +169,7 @@ const TALENT = [
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.15 });
 
   items.forEach(el => observer.observe(el));
 })();
