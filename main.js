@@ -125,9 +125,6 @@ const TALENT = [
     right:   BASE + 50,    // 3150ms
   };
 
-  const eyebrow = document.querySelector('.hero-eyebrow');
-  if (eyebrow) setTimeout(() => eyebrow.classList.add('loaded'), delays.eyebrow);
-
   const lines = document.querySelectorAll('.hero-line-inner');
   lines.forEach((line, i) => {
     const delay = [delays.line1, delays.line2, delays.line3][i] || (BASE + 100 + i * 150);

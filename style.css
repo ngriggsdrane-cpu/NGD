@@ -81,7 +81,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 #top-nav.loaded { opacity: 1; transform: none; }
 
 .nav-logo {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.2em;
   color: var(--white);
@@ -1015,8 +1015,8 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .ngd-path {
   fill: none;
   stroke: var(--white);
-  stroke-width: 5;
-  stroke-linecap: butt;
+  stroke-width: 10;
+  stroke-linecap: square;
   stroke-linejoin: miter;
 }
 /* N strokes */
