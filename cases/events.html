@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry Events — NGD</title>
+  <meta name="description" content="Nicholas Griggs-Drane — industry events spanning Wimbledon, LGBTQ+ celebrations, cultural dinners, and award ceremonies." />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    :root {
+      --cs-bg:          #0a0a0a;
+      --cs-accent:      #B8A47A;
+      --cs-text:        #F2F0EC;
+      --cs-muted:       #6B6966;
+      --cs-border:      #1C1C1C;
+      --cs-next-accent: #4A7C59;
+    }
+    .cs-hero-bg {
+      background-image: url('../images/events/p2-000.png');
+      background-size: cover;
+      background-position: center top;
+    }
+    .cs-cta { background: #080704; }
+
+    /* Events grid layout */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2px;
+      padding: 0 40px 80px;
+    }
+    .event-card {
+      background: var(--cs-border);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      transition: background 0.2s;
+    }
+    .event-card:hover { background: #242424; }
+    .event-card-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: brightness(0.85);
+      transition: filter 0.3s, transform 0.4s;
+    }
+    .event-card:hover .event-card-img {
+      filter: brightness(0.7);
+      transform: scale(1.02);
+    }
+    .event-card-img-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+    .event-card-body {
+      padding: 20px 24px 24px;
+    }
+    .event-card-label {
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cs-accent);
+      margin-bottom: 8px;
+    }
+    .event-card-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--cs-text);
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+    .event-card-desc {
+      font-size: 13px;
+      color: var(--cs-muted);
+      line-height: 1.6;
+    }
+    .event-card-stat {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cs-text);
+      border: 1px solid var(--cs-border);
+      padding: 4px 10px;
+    }
+    .event-card.wide {
+      grid-column: 1 / -1;
+    }
+    .event-card.wide .event-card-img {
+      height: 300px;
+    }
+    .events-section-label {
+      padding: 60px 40px 24px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cs-muted);
+      border-bottom: 1px solid var(--cs-border);
+      margin-bottom: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="cs-nav">
+  <a href="../index.html" class="cs-nav-logo">NGD</a>
+  <span class="cs-nav-campaign" style="color:var(--cs-text);">Industry Events</span>
+  <a href="../index.html" class="cs-nav-action">Portfolio</a>
+</nav>
+
+<section class="cs-hero">
+  <div class="cs-hero-bg"></div>
+  <div class="cs-hero-overlay"></div>
+  <div class="cs-hero-content">
+    <p class="cs-hero-eyebrow hero-anim-1">Industry Events</p>
+    <h1 class="cs-hero-title hero-anim-2" style="font-family:'DM Sans',sans-serif;font-weight:300;">Where Culture<br>Gets Activated</h1>
+    <p class="cs-hero-sub hero-anim-3">Dinners, summits, galas, and live moments that move people and money.</p>
+  </div>
+  <div class="cs-hero-scroll hero-anim-5">
+    <span>Scroll</span>
+    <div class="cs-hero-scroll-arrow"></div>
+  </div>
+</section>
+
+<div class="cs-impact-bar stagger">
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num">8+</div>
+    <div class="cs-stat-label">Signature events produced or supported</div>
+  </div>
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num">$300K+</div>
+    <div class="cs-stat-label">Funds raised across events annually</div>
+  </div>
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num">Global</div>
+    <div class="cs-stat-label">Wimbledon, NYC, LA, SF, Nashville</div>
+  </div>
+  <div class="cs-stat-cell">
+    <div class="cs-stat-num">40+</div>
+    <div class="cs-stat-label">LGBTQ+ talent and executives convened</div>
+  </div>
+</div>
+
+<div class="events-section-label">All Events</div>
+
+<div class="events-grid">
+
+  <!-- Wimbledon — wide -->
+  <div class="event-card wide reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-000.png"
+           alt="Wimbledon Influence is Power event"
+           class="event-card-img"
+           style="object-position: center 20%;"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">Wimbledon · London</div>
+      <div class="event-card-title">Influence is Power</div>
+      <div class="event-card-desc">
+        An invitation-only gathering at Wimbledon bringing together talent, executives, and changemakers
+        to explore the intersection of sport, culture, and influence. Held during the most iconic
+        tennis tournament on the planet — where access itself communicates value.
+      </div>
+      <span class="event-card-stat">Wimbledon · Annual</span>
+    </div>
+  </div>
+
+  <!-- Lunar New Year -->
+  <div class="event-card reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-008.png"
+           alt="Lunar New Year dinner by Daniel Martin"
+           class="event-card-img"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">Lunar New Year · NYC</div>
+      <div class="event-card-title">Lunar New Year Dinner<br>by Daniel Martin</div>
+      <div class="event-card-desc">
+        A culturally grounded celebration dinner curated by makeup artist and cultural ambassador
+        <strong>Daniel Martin</strong> — raising over $20,000 for <strong>Apex for Youth</strong>,
+        a nonprofit empowering underserved Asian-American youth in New York City.
+      </div>
+      <span class="event-card-stat">$20K+ for Apex for Youth</span>
+    </div>
+  </div>
+
+  <!-- Lemons Foundation -->
+  <div class="event-card reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-010.png"
+           alt="Tay and Taylor Lautner Lemons Foundation event"
+           class="event-card-img"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">Mental Health · Advocacy</div>
+      <div class="event-card-title">Lemons Foundation<br>Tay + Taylor Lautner</div>
+      <div class="event-card-desc">
+        Supporting <strong>Tay Lautner</strong> and <strong>Taylor Lautner</strong>'s
+        Lemons Foundation — a mental health advocacy organization bringing frank,
+        stigma-free conversations about psychological wellness to mainstream pop culture audiences.
+      </div>
+      <span class="event-card-stat">Mental Health Advocacy</span>
+    </div>
+  </div>
+
+  <!-- WME Queer Celebration Dinner -->
+  <div class="event-card reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-016.png"
+           alt="WME Queer Celebration Dinner"
+           class="event-card-img"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">LGBTQ+ · Industry</div>
+      <div class="event-card-title">WME Queer<br>Celebration Dinner</div>
+      <div class="event-card-desc">
+        An annual celebration convening <strong>40+ LGBTQ+ talent and entertainment
+        executives</strong> in a private, purpose-built environment. A rare moment in the
+        industry where community comes before commerce — and the room itself is the statement.
+      </div>
+      <span class="event-card-stat">40+ LGBTQ+ Talent + Execs</span>
+    </div>
+  </div>
+
+  <!-- Madhappy Foundation -->
+  <div class="event-card reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-013.png"
+           alt="Madhappy Foundation event"
+           class="event-card-img"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">Mental Health · Brand</div>
+      <div class="event-card-title">Madhappy Foundation</div>
+      <div class="event-card-desc">
+        Supporting the <strong>Madhappy Foundation's</strong> mission to advance mental health
+        awareness and research. The Madhappy Foundation invests in science, creates community,
+        and advances the cultural conversation around mental wellness — raising over
+        <strong>$300,000 annually</strong>.
+      </div>
+      <span class="event-card-stat">$300K Annual Impact</span>
+    </div>
+  </div>
+
+  <!-- BBR Creator Summit / Ciara -->
+  <div class="event-card reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-017.png"
+           alt="BBR Creator Summit and Ciara Beauty Icon Award"
+           class="event-card-img"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">BBR Creator Summit · Nashville</div>
+      <div class="event-card-title">Ciara — Beauty<br>Icon Award</div>
+      <div class="event-card-desc">
+        Keynote programming and strategic support at the <strong>BBR Creator Summit</strong>
+        in Nashville — culminating in the presentation of the <strong>Beauty Icon Award</strong>
+        to <strong>Ciara</strong>, recognizing her cultural influence across music, beauty, and
+        business.
+      </div>
+      <span class="event-card-stat">BBR Creator Summit</span>
+    </div>
+  </div>
+
+  <!-- Dapper Dan at BBR Excellence Luncheon -->
+  <div class="event-card reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-009.png"
+           alt="Dapper Dan at BBR Excellence Luncheon"
+           class="event-card-img"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">BBR Excellence Luncheon</div>
+      <div class="event-card-title">Dapper Dan —<br>Excellence Luncheon</div>
+      <div class="event-card-desc">
+        Supporting <strong>Dapper Dan</strong>'s participation in the <strong>BBR Excellence
+        Luncheon</strong> — honoring one of fashion's most transformative figures and architects
+        of streetwear culture at a gathering of the industry's leading voices.
+      </div>
+      <span class="event-card-stat">Cultural Excellence Award</span>
+    </div>
+  </div>
+
+  <!-- WME Fashion Incubator Editorial -->
+  <div class="event-card reveal">
+    <div class="event-card-img-wrap">
+      <img src="../images/events/p2-002.png"
+           alt="WME Fashion Incubator editorial photoshoot"
+           class="event-card-img"
+           onerror="this.style.display='none'" />
+    </div>
+    <div class="event-card-body">
+      <div class="event-card-label">WME Fashion Incubator</div>
+      <div class="event-card-title">Editorial Photoshoot<br>+ Program Activation</div>
+      <div class="event-card-desc">
+        The editorial photoshoot produced for the <strong>WME Fashion Incubator</strong> —
+        documenting a program that has expanded access to creative and executive fashion careers
+        since its launch in 2020. Black and white imagery that captures the gravity and
+        ambition of the work.
+      </div>
+      <span class="event-card-stat">WME Fashion Incubator · Est. 2020</span>
+    </div>
+  </div>
+
+</div>
+
+<section class="cs-cta reveal">
+  <h2 class="cs-cta-title">Every room tells a story.</h2>
+  <p class="cs-cta-body">
+    From Wimbledon to Nashville to New York City — purpose-driven events that bring the right
+    people together to move culture forward. Let's build the next one.
+  </p>
+  <a href="mailto:ngriggsdrane@gmail.com" class="cs-cta-btn">Get in touch</a>
+</section>
+
+<a href="strategy.html" class="cs-next" style="--cs-next-accent: #4A7C59;">
+  <div>
+    <div class="cs-next-label">Next</div>
+    <div class="cs-next-title">360 Strategy</div>
+    <div class="cs-next-desc">End-to-end strategic frameworks for talent defining, activating, and scaling their legacy-driven impact.</div>
+  </div>
+  <span class="cs-next-arrow" style="color:#4A7C59;">→</span>
+</a>
+
+<footer class="cs-footer">
+  <a href="../index.html" class="cs-footer-back">← NGD Portfolio</a>
+  <span class="cs-footer-copy">Nicholas Griggs-Drane</span>
+</footer>
+
+<script src="case.js"></script>
+</body>
+</html>
