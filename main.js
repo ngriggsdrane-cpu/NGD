@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    NGD — main.js
-   Mega panels · Hero animations · Live time · Scroll reveals
-   Filter pills · Talent tabs · A-to-Z · Card navigation
+   Hero animations · Live time · Scroll reveals · Scroll nav
+   Filter pills · Work scroll arrows · Card navigation
    ═══════════════════════════════════════════════════════════════ */
 
 'use strict';
@@ -23,79 +23,6 @@
   setTimeout(() => { intro.style.display = 'none'; }, 3600);
 })();
 
-/* ─── ALL TALENT (for A-Z tab) ──────────────────────────────── */
-const TALENT = [
-  // Athletes
-  'Candace Parker','Coco Gauff','Grant Williams','Kelsey Plum','Marshawn Lynch',
-  'Meg Rapino','Qinwen Zheng','Sabrina Ionescu','Serena Williams','Sue Bird',
-  'Sydney McLaughlin','Toni Breidinger','Venus Williams',
-  // Music
-  'Brothers Osborne','Camila Cabello','EJAE','Esperanza Spalding','Grace Bowers',
-  'King Princess','Minus the Bear','Myles Smith','Portugal the Man','Sam Smith',
-  'Tegan and Sara','Teyana Taylor','Victoria Monet',
-  // Film and TV
-  'Angelina Jolie','Ashly Burch','Ashlyn Harris','Coco Jones','Ilana Glazer',
-  'Keke Palmer','Lupita Nyong\'o','Niecy Nash','Renee Rapp','Ryan Reynolds',
-  'Tay Lautner','Winnie Harlow',
-  // Media and Press
-  'Cari Champion','Deux Moi','Joe Santagato','Julian Shapiro-Barnum','LeVar Burton',
-  'Robin Roberts','Steven Bartlett','Taylor Rooks','Vivian Tu','William Goodge',
-  // Fashion and Creators
-  'Alex Consani','Benito Skinner','Bunnie XO','Naeemah Lafond','Nara Smith',
-  'Paige Lorenze','Pokimane','Precious Lee','Richie Shazam','Tyra Banks','Wisdom Kaye',
-];
-
-/* ─── MEGA PANEL SYSTEM ─────────────────────────────────────── */
-(function initMegaPanels() {
-  const overlay   = document.getElementById('mega-overlay');
-  const panels    = document.querySelectorAll('.mega-panel');
-  const navBtns   = document.querySelectorAll('.nav-link-btn[data-panel]');
-  const heroBtns  = document.querySelectorAll('.hero-panel-btn[data-panel]');
-  let   activeId  = null;
-
-  function openPanel(id) {
-    if (activeId === id) { closeAll(); return; }
-    closeAll(false);
-    activeId = id;
-    const panel = document.getElementById('panel-' + id);
-    if (!panel) return;
-    panel.classList.add('open');
-    overlay.classList.add('visible');
-    document.querySelectorAll('[data-panel="' + id + '"]').forEach(b => b.classList.add('active'));
-  }
-
-  function closeAll(reset = true) {
-    if (reset) activeId = null;
-    panels.forEach(p => p.classList.remove('open'));
-    overlay.classList.remove('visible');
-    document.querySelectorAll('[data-panel]').forEach(b => b.classList.remove('active'));
-  }
-
-  navBtns.forEach(btn => {
-    btn.addEventListener('click', () => openPanel(btn.dataset.panel));
-  });
-  heroBtns.forEach(btn => {
-    btn.addEventListener('click', () => openPanel(btn.dataset.panel));
-  });
-
-  overlay.addEventListener('click', closeAll);
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeAll();
-  });
-
-  // Work panel filter links
-  document.querySelectorAll('[data-filter][data-close-panel]').forEach(el => {
-    el.addEventListener('click', () => {
-      const filter = el.dataset.filter;
-      setTimeout(() => {
-        closeAll();
-        setFilter(filter);
-      }, 0);
-    });
-  });
-})();
-
 /* ─── HAMBURGER / MOBILE NAV ─────────────────────────────────── */
 (function initMobileNav() {
   const hamburger = document.getElementById('hamburger');
@@ -103,10 +30,22 @@ const TALENT = [
   if (!hamburger || !mobileNav) return;
 
   let open = false;
+
+  function closeNav() {
+    open = false;
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
   hamburger.addEventListener('click', () => {
     open = !open;
     mobileNav.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close when any link is clicked
+  mobileNav.querySelectorAll('.mobile-nav-item').forEach(item => {
+    item.addEventListener('click', closeNav);
   });
 })();
 
@@ -118,11 +57,10 @@ const TALENT = [
   // Bg-exit starts 3.0s, letters-exit starts 3.0s — hero fires as overlay fades
   const BASE = 3100;
   const delays = {
-    eyebrow: BASE,          // 3100ms
-    line1:   BASE + 100,   // 3200ms
-    line2:   BASE + 220,   // 3320ms
-    line3:   BASE + 420,   // 3520ms
-    right:   BASE + 50,    // 3150ms
+    line1: BASE + 100,   // 3200ms
+    line2: BASE + 220,   // 3320ms
+    line3: BASE + 420,   // 3520ms
+    right: BASE + 50,    // 3150ms
   };
 
   const lines = document.querySelectorAll('.hero-line-inner');
@@ -171,6 +109,27 @@ const TALENT = [
   items.forEach(el => observer.observe(el));
 })();
 
+/* ─── SCROLL-BASED NAV ACTIVE STATE ──────────────────────────── */
+(function initScrollNav() {
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  const sectionIds = ['work', 'talent', 'brands', 'events', 'about'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  if (!sections.length || !navLinks.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.nav-link[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(s => observer.observe(s));
+})();
+
 /* ─── FILTER PILLS ───────────────────────────────────────────── */
 function setFilter(value) {
   const pills = document.querySelectorAll('.filter-pill');
@@ -204,61 +163,33 @@ function setFilter(value) {
   });
 })();
 
-/* ─── TALENT TABS ────────────────────────────────────────────── */
-(function initTalentTabs() {
-  const tabs  = document.querySelectorAll('.talent-tab');
-  const views = document.querySelectorAll('.talent-view');
+/* ─── WORK SECTION SCROLL ARROWS ────────────────────────────── */
+(function initWorkScroll() {
+  const track      = document.getElementById('cards-scroll-track');
+  const leftArrow  = document.getElementById('work-arrow-left');
+  const rightArrow = document.getElementById('work-arrow-right');
+  if (!track || !leftArrow || !rightArrow) return;
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t  => t.classList.remove('active'));
-      views.forEach(v => v.classList.remove('active'));
-      tab.classList.add('active');
-      const target = document.getElementById('view-' + tab.dataset.view);
-      if (target) target.classList.add('active');
+  function getStepWidth() {
+    const card = track.querySelector('.case-card');
+    return card ? card.offsetWidth + 1 : Math.round(track.clientWidth / 4);
+  }
 
-      // Build A-Z on first open
-      if (tab.dataset.view === 'az') buildAZ();
-    });
+  function updateArrows() {
+    const atStart = track.scrollLeft <= 0;
+    const atEnd   = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
+    leftArrow.classList.toggle('hidden', atStart);
+    rightArrow.classList.toggle('hidden', atEnd);
+  }
+
+  leftArrow.addEventListener('click', () => {
+    track.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
   });
+  rightArrow.addEventListener('click', () => {
+    track.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
+  });
+
+  track.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
 })();
-
-/* ─── PARALLAX — interstitial bg text ───────────────────────── */
-(function initParallax() {
-  const bgText = document.querySelector('.interstitial-bg-text');
-  if (!bgText) return;
-  window.addEventListener('scroll', () => {
-    bgText.style.transform = 'translateX(' + (window.scrollY * 0.3) + 'px)';
-  }, { passive: true });
-})();
-
-/* ─── A-TO-Z BUILDER ─────────────────────────────────────────── */
-let azBuilt = false;
-function buildAZ() {
-  if (azBuilt) return;
-  azBuilt = true;
-
-  const grid = document.getElementById('az-grid');
-  if (!grid) return;
-
-  const sorted = [...TALENT].sort((a, b) => a.localeCompare(b));
-
-  // Group by first letter
-  const groups = {};
-  sorted.forEach(name => {
-    const letter = name[0].toUpperCase();
-    if (!groups[letter]) groups[letter] = [];
-    groups[letter].push(name);
-  });
-
-  // Flatten into cells: one cell per name, with letter header as first in each group
-  // Use 4-col grid — insert letter headers inline
-  let html = '';
-  Object.keys(groups).sort().forEach(letter => {
-    const cell = document.createElement('div');
-    cell.className = 'az-cell';
-    cell.innerHTML = '<span class="az-letter">' + letter + '</span>' +
-      groups[letter].map(n => '<span class="talent-name">' + n + '</span>').join('');
-    grid.appendChild(cell);
-  });
-}

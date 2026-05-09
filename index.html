@@ -16,14 +16,11 @@
 <div id="ngd-intro" aria-hidden="true">
   <div id="ngd-letters">
     <svg viewBox="0 0 330 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NGD">
-      <!-- N: left vertical ↑, diagonal ↘, right vertical ↑ -->
       <path class="ngd-path ngd-n-left"  d="M 10,110 L 10,10" />
       <path class="ngd-path ngd-n-diag"  d="M 10,10 L 68,110" />
       <path class="ngd-path ngd-n-right" d="M 68,110 L 68,10" />
-      <!-- G: arc CW from top → right (270°), then bar ← to center -->
       <path class="ngd-path ngd-g-arc"   d="M 143,15 A 50,50 0 1 1 193,65" />
       <path class="ngd-path ngd-g-bar"   d="M 193,65 L 158,65" />
-      <!-- D: left vertical ↑, curve CW top → right → bottom -->
       <path class="ngd-path ngd-d-left"  d="M 222,110 L 222,10" />
       <path class="ngd-path ngd-d-curve" d="M 222,10 C 318,10 318,110 222,110" />
     </svg>
@@ -35,225 +32,26 @@
   <a href="index.html" class="nav-logo">NGD</a>
 
   <div class="nav-links">
-    <button class="nav-link-btn" data-panel="work">Work <span class="chevron">›</span></button>
-    <button class="nav-link-btn" data-panel="strategy">Strategy <span class="chevron">›</span></button>
-    <button class="nav-link-btn" data-panel="events">Events <span class="chevron">›</span></button>
-    <button class="nav-link-btn" data-panel="talent">Talent <span class="chevron">›</span></button>
-    <button class="nav-link-btn" data-panel="about">About <span class="chevron">›</span></button>
+    <a href="#work"   class="nav-link">Work</a>
+    <a href="#talent" class="nav-link">Talent</a>
+    <a href="#brands" class="nav-link">Brands</a>
+    <a href="#events" class="nav-link">Events</a>
+    <a href="#about"  class="nav-link">About</a>
   </div>
 
   <a href="mailto:ngriggsdrane@gmail.com" class="nav-contact">Contact</a>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- ─── MEGA PANELS ───────────────────────────────────────────── -->
-
-<!-- Work Panel -->
-<div class="mega-panel" id="panel-work">
-  <div class="mega-inner">
-    <div class="work-panel-grid">
-      <a href="#work" class="work-panel-col" data-filter="campaigns" data-close-panel>
-        <div class="wp-num">01</div>
-        <div class="wp-count">13</div>
-        <div class="wp-name">Campaigns</div>
-        <div class="wp-desc">COPY NEEDED</div>
-      </a>
-      <a href="#work" class="work-panel-col" data-filter="foundations" data-close-panel>
-        <div class="wp-num">02</div>
-        <div class="wp-count">8</div>
-        <div class="wp-name">Foundation Launches</div>
-        <div class="wp-desc">COPY NEEDED</div>
-      </a>
-      <a href="cases/events.html" class="work-panel-col">
-        <div class="wp-num">03</div>
-        <div class="wp-count">9</div>
-        <div class="wp-name">Industry Events</div>
-        <div class="wp-desc">COPY NEEDED</div>
-      </a>
-      <a href="cases/strategy.html" class="work-panel-col">
-        <div class="wp-num">04</div>
-        <div class="wp-count">9</div>
-        <div class="wp-name">360 Strategy</div>
-        <div class="wp-desc">COPY NEEDED</div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Strategy Panel -->
-<div class="mega-panel" id="panel-strategy">
-  <div class="mega-inner">
-    <p class="strategy-panel-intro">End-to-end strategic frameworks developed in partnership with talent to define, activate, and scale their legacy driven impact.</p>
-    <div class="strategy-panel-grid">
-      <div class="strategy-panel-item">Kwame Onwuachi</div>
-      <div class="strategy-panel-item">Danny Go</div>
-      <div class="strategy-panel-item">Meg Rapino and Sue Bird</div>
-      <div class="strategy-panel-item">The Nader Sisters</div>
-      <div class="strategy-panel-item">LeVar Burton</div>
-      <div class="strategy-panel-item">Madhappy Foundation</div>
-      <div class="strategy-panel-item">Joe Santagato</div>
-      <div class="strategy-panel-item">William Goodge</div>
-      <div class="strategy-panel-item">Kids Outdoors Foundation</div>
-    </div>
-  </div>
-</div>
-
-<!-- Events Panel -->
-<div class="mega-panel" id="panel-events">
-  <div class="mega-inner">
-    <div class="events-panel-grid">
-      <div class="events-panel-item">Wimbledon Gender Equity Program <span class="ep-arrow">→</span></div>
-      <div class="events-panel-item">NYFW The Talks — Beauty Is Identity <span class="ep-arrow">→</span></div>
-      <div class="events-panel-item">Lunar New Year Dinner <span class="ep-arrow">→</span></div>
-      <div class="events-panel-item">WME Queer Celebration Dinner <span class="ep-arrow">→</span></div>
-      <div class="events-panel-item">Frieze × WME Tastemakers Dinner <span class="ep-arrow">→</span></div>
-      <div class="events-panel-item">Billboard Latin Music Week Happy Hour <span class="ep-arrow">→</span></div>
-      <div class="events-panel-item">BBR Creator Summit <span class="ep-arrow">→</span></div>
-      <div class="events-panel-item">BBR Excellence Luncheon <span class="ep-arrow">→</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- Talent Panel -->
-<div class="mega-panel" id="panel-talent">
-  <div class="mega-inner">
-    <div class="talent-tabs">
-      <button class="talent-tab active" data-view="bytype">By Type</button>
-      <button class="talent-tab" data-view="az">A to Z</button>
-    </div>
-
-    <div class="talent-view active" id="view-bytype">
-      <div class="talent-by-type">
-        <div>
-          <div class="talent-col-head">Athletes</div>
-          <span class="talent-name">Candace Parker</span>
-          <span class="talent-name">Coco Gauff</span>
-          <span class="talent-name">Grant Williams</span>
-          <span class="talent-name">Kelsey Plum</span>
-          <span class="talent-name">Marshawn Lynch</span>
-          <span class="talent-name">Meg Rapino</span>
-          <span class="talent-name">Qinwen Zheng</span>
-          <span class="talent-name">Sabrina Ionescu</span>
-          <span class="talent-name">Serena Williams</span>
-          <span class="talent-name">Sue Bird</span>
-          <span class="talent-name">Sydney McLaughlin</span>
-          <span class="talent-name">Toni Breidinger</span>
-          <span class="talent-name">Venus Williams</span>
-        </div>
-        <div>
-          <div class="talent-col-head">Music</div>
-          <span class="talent-name">Brothers Osborne</span>
-          <span class="talent-name">Camila Cabello</span>
-          <span class="talent-name">EJAE</span>
-          <span class="talent-name">Esperanza Spalding</span>
-          <span class="talent-name">Grace Bowers</span>
-          <span class="talent-name">King Princess</span>
-          <span class="talent-name">Minus the Bear</span>
-          <span class="talent-name">Myles Smith</span>
-          <span class="talent-name">Portugal the Man</span>
-          <span class="talent-name">Sam Smith</span>
-          <span class="talent-name">Tegan and Sara</span>
-          <span class="talent-name">Teyana Taylor</span>
-          <span class="talent-name">Victoria Monet</span>
-        </div>
-        <div>
-          <div class="talent-col-head">Film and TV</div>
-          <span class="talent-name">Angelina Jolie</span>
-          <span class="talent-name">Ashly Burch</span>
-          <span class="talent-name">Ashlyn Harris</span>
-          <span class="talent-name">Coco Jones</span>
-          <span class="talent-name">Ilana Glazer</span>
-          <span class="talent-name">Keke Palmer</span>
-          <span class="talent-name">Lupita Nyong'o</span>
-          <span class="talent-name">Niecy Nash</span>
-          <span class="talent-name">Renee Rapp</span>
-          <span class="talent-name">Ryan Reynolds</span>
-          <span class="talent-name">Tay Lautner</span>
-          <span class="talent-name">Winnie Harlow</span>
-        </div>
-        <div>
-          <div class="talent-col-head">Media and Press</div>
-          <span class="talent-name">Cari Champion</span>
-          <span class="talent-name">Deux Moi</span>
-          <span class="talent-name">Joe Santagato</span>
-          <span class="talent-name">Julian Shapiro-Barnum</span>
-          <span class="talent-name">LeVar Burton</span>
-          <span class="talent-name">Robin Roberts</span>
-          <span class="talent-name">Steven Bartlett</span>
-          <span class="talent-name">Taylor Rooks</span>
-          <span class="talent-name">Vivian Tu</span>
-          <span class="talent-name">William Goodge</span>
-        </div>
-        <div>
-          <div class="talent-col-head">Fashion and Creators</div>
-          <span class="talent-name">Alex Consani</span>
-          <span class="talent-name">Benito Skinner</span>
-          <span class="talent-name">Bunnie XO</span>
-          <span class="talent-name">Naeemah Lafond</span>
-          <span class="talent-name">Nara Smith</span>
-          <span class="talent-name">Paige Lorenze</span>
-          <span class="talent-name">Pokimane</span>
-          <span class="talent-name">Precious Lee</span>
-          <span class="talent-name">Richie Shazam</span>
-          <span class="talent-name">Tyra Banks</span>
-          <span class="talent-name">Wisdom Kaye</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="talent-view" id="view-az">
-      <div class="talent-az-grid" id="az-grid">
-        <!-- Populated by JS -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- About Panel -->
-<div class="mega-panel" id="panel-about">
-  <div class="mega-inner">
-    <div class="about-grid">
-      <div class="about-bio">
-        <p>Nicholas Griggs-Drane is an impact strategist working at the intersection of culture, celebrity, and conscience. He builds campaigns and philanthropic frameworks that turn talent platforms into engines for lasting change.</p>
-        <br />
-        <p>With experience spanning Capitol Hill advocacy, foundation infrastructure, brand partnerships, and live activations, Nicholas has delivered work that generates hundreds of millions of media impressions while moving real money to real causes.</p>
-        <br />
-        <p>He operates across entertainment, sports, fashion, and media — helping talent, agencies, and brands translate influence into impact that matters.</p>
-      </div>
-      <div class="about-stats">
-        <div class="about-stat">
-          <div class="about-stat-num">$400K</div>
-          <div class="about-stat-label">Mobilized for uterine fibroid research</div>
-        </div>
-        <div class="about-stat">
-          <div class="about-stat-num">694M</div>
-          <div class="about-stat-label">Media impressions</div>
-        </div>
-        <div class="about-stat">
-          <div class="about-stat-num">$22.8M</div>
-          <div class="about-stat-label">Earned media value</div>
-        </div>
-        <div class="about-stat">
-          <div class="about-stat-num">70+</div>
-          <div class="about-stat-label">Talent supported</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Dark overlay for closing panels -->
-<div id="mega-overlay"></div>
-
-<!-- Mobile nav overlay -->
+<!-- Mobile nav -->
 <nav id="mobile-nav">
-  <button class="mobile-nav-item" data-panel="work">Work</button>
-  <button class="mobile-nav-item" data-panel="strategy">Strategy</button>
-  <button class="mobile-nav-item" data-panel="events">Events</button>
-  <button class="mobile-nav-item" data-panel="talent">Talent</button>
-  <button class="mobile-nav-item" data-panel="about">About</button>
+  <a href="#work"   class="mobile-nav-item">Work</a>
+  <a href="#talent" class="mobile-nav-item">Talent</a>
+  <a href="#brands" class="mobile-nav-item">Brands</a>
+  <a href="#events" class="mobile-nav-item">Events</a>
+  <a href="#about"  class="mobile-nav-item">About</a>
   <a href="mailto:ngriggsdrane@gmail.com" class="mobile-nav-item">Get in touch</a>
 </nav>
 
@@ -278,12 +76,25 @@
 <!-- ─── ORANGE INTRO SECTION ──────────────────────────────────── -->
 <section id="ngd-intro-section">
   <div class="intro-section-inner">
+
     <div class="intro-name reveal-from-left">
       <div>Nicholas</div>
       <div>Griggs-Drane</div>
       <div class="intro-name-rule"></div>
     </div>
-    <p class="intro-desc reveal-from-right">Utilizing talent, campaigns, and partnerships that accelerate philanthropic missions and brand recognition.</p>
+
+    <div class="intro-right reveal-from-right">
+      <p class="intro-desc">Utilizing talent, campaigns, and partnerships that accelerate philanthropic missions and brand recognition.</p>
+      <div class="intro-caps-rule"></div>
+      <div class="intro-caps">
+        <span class="cap-tag">Talent Partnerships</span>
+        <span class="cap-tag">Brand Advisory</span>
+        <span class="cap-tag">Event Creative Production</span>
+        <span class="cap-tag">360 Strategy</span>
+        <span class="cap-tag">Campaign Development</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -308,11 +119,12 @@
     <p class="work-disclaimer">Open any case study to explore the full campaign.</p>
   </div>
 
-  <div class="cards-grid-wrap">
-    <div class="cards-grid" id="cards-grid">
+  <div class="work-scroll-wrap">
+    <button class="work-arrow work-arrow-left hidden" id="work-arrow-left" aria-label="Previous">&#8592;</button>
+    <div class="cards-scroll-track" id="cards-scroll-track">
 
-      <!-- 1 — WIDE — Lupita Nyong'o -->
-      <article class="case-card wide" data-type="campaigns" data-href="cases/lupita.html">
+      <!-- 1 — FEATURED — Lupita Nyong'o -->
+      <article class="case-card card-featured" data-type="campaigns" data-href="cases/lupita.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-020.png');"></div>
           <div class="card-img-label">Lupita Nyong'o × Make Fibroids Count</div>
@@ -332,7 +144,7 @@
         </div>
       </article>
 
-      <!-- 2 — HALF — Taylor Rooks -->
+      <!-- 2 — Taylor Rooks -->
       <article class="case-card" data-type="foundations" data-href="cases/taylor-rooks.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-024.png');"></div>
@@ -352,7 +164,7 @@
         </div>
       </article>
 
-      <!-- 3 — HALF — Sam Smith -->
+      <!-- 3 — Sam Smith -->
       <article class="case-card" data-type="foundations" data-href="cases/sam-smith.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-017.png');"></div>
@@ -372,7 +184,7 @@
         </div>
       </article>
 
-      <!-- 4 — HALF — Venus Williams -->
+      <!-- 4 — Venus Williams -->
       <article class="case-card" data-type="campaigns" data-href="cases/venus-williams.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-008.png');"></div>
@@ -392,7 +204,7 @@
         </div>
       </article>
 
-      <!-- 5 — HALF — Candace Parker -->
+      <!-- 5 — Candace Parker -->
       <article class="case-card" data-type="foundations" data-href="cases/candace-parker.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-011.png');"></div>
@@ -412,8 +224,8 @@
         </div>
       </article>
 
-      <!-- 6 — WIDE — WME Fashion Incubator -->
-      <article class="case-card wide" data-type="events" data-href="cases/incubator.html">
+      <!-- 6 — WME Fashion Incubator -->
+      <article class="case-card" data-type="events" data-href="cases/incubator.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('https://img.youtube.com/vi/spwdzlv88NM/maxresdefault.jpg');"></div>
           <div class="card-img-label">WME Fashion Incubator</div>
@@ -433,7 +245,7 @@
         </div>
       </article>
 
-      <!-- 7 — HALF — Winnie Harlow -->
+      <!-- 7 — Winnie Harlow -->
       <article class="case-card" data-type="events" data-href="cases/winnie-harlow.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-023.png');"></div>
@@ -453,7 +265,7 @@
         </div>
       </article>
 
-      <!-- 8 — HALF — Paige Lorenze and Tommy Paul -->
+      <!-- 8 — Paige Lorenze and Tommy Paul -->
       <article class="case-card" data-type="foundations" data-href="cases/kids-outdoors.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-004.png');"></div>
@@ -474,7 +286,7 @@
         </div>
       </article>
 
-      <!-- 9 — HALF — Grace Bowers -->
+      <!-- 9 — Grace Bowers -->
       <article class="case-card" data-type="foundations" data-href="cases/grace-bowers.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-014.png');"></div>
@@ -494,7 +306,7 @@
         </div>
       </article>
 
-      <!-- 10 — HALF — Pokimane -->
+      <!-- 10 — Pokimane -->
       <article class="case-card" data-type="campaigns" data-href="cases/pokimane.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-025.png');"></div>
@@ -514,7 +326,7 @@
         </div>
       </article>
 
-      <!-- 11 — HALF — Nara Smith -->
+      <!-- 11 — Nara Smith -->
       <article class="case-card" data-type="campaigns" data-href="cases/nara-smith.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-003.png');"></div>
@@ -534,7 +346,7 @@
         </div>
       </article>
 
-      <!-- 12 — HALF — Coco Jones -->
+      <!-- 12 — Coco Jones -->
       <article class="case-card" data-type="events" data-href="cases/coco-jones.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-002.png');"></div>
@@ -554,8 +366,8 @@
         </div>
       </article>
 
-      <!-- 13 — WIDE — Annie Elise -->
-      <article class="case-card wide" data-type="campaigns" data-href="cases/annie-elise.html">
+      <!-- 13 — Annie Elise -->
+      <article class="case-card" data-type="campaigns" data-href="cases/annie-elise.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p1-001.png');"></div>
           <div class="card-img-label">Annie Elise × Child Rescue Coalition</div>
@@ -575,7 +387,7 @@
         </div>
       </article>
 
-      <!-- 14 — HALF — Madhappy -->
+      <!-- 14 — Madhappy -->
       <article class="case-card" data-type="mental-health" data-href="cases/madhappy.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p2-013.png');"></div>
@@ -596,7 +408,7 @@
         </div>
       </article>
 
-      <!-- 15 — HALF — Tay and Taylor Lautner -->
+      <!-- 15 — Tay and Taylor Lautner -->
       <article class="case-card" data-type="mental-health" data-href="cases/lemons-foundation.html">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/p2-010.png');"></div>
@@ -616,18 +428,151 @@
         </div>
       </article>
 
-    </div><!-- /cards-grid -->
-  </div><!-- /cards-grid-wrap -->
+    </div><!-- /cards-scroll-track -->
+    <button class="work-arrow work-arrow-right" id="work-arrow-right" aria-label="Next">&#8594;</button>
+  </div><!-- /work-scroll-wrap -->
 </section>
 
-<!-- ─── GEO DIVIDER ────────────────────────────────────────────── -->
+<!-- ─── TALENT SECTION ─────────────────────────────────────────── -->
 <div class="geo-divider"></div>
+<section id="talent">
+  <div class="talent-section-inner">
+    <div class="section-header-row">
+      <div class="section-label">Talent</div>
+      <h2 class="section-headline">70+ talent supported across every vertical.</h2>
+    </div>
+    <div class="talent-roster-grid">
 
-<!-- ─── INDUSTRY EVENTS STRIP ─────────────────────────────────── -->
-<section id="events-strip" class="reveal">
-  <div class="events-strip-header">
-    <span class="events-strip-title">Events.</span>
-    <a href="cases/events.html" class="events-strip-all">View all →</a>
+      <div class="talent-roster-col">
+        <div class="talent-roster-head">Athletes</div>
+        <span class="talent-roster-name">Candace Parker</span>
+        <span class="talent-roster-name">Coco Gauff</span>
+        <span class="talent-roster-name">Grant Williams</span>
+        <span class="talent-roster-name">Kelsey Plum</span>
+        <span class="talent-roster-name">Marshawn Lynch</span>
+        <span class="talent-roster-name">Meg Rapino</span>
+        <span class="talent-roster-name">Qinwen Zheng</span>
+        <span class="talent-roster-name">Sabrina Ionescu</span>
+        <span class="talent-roster-name">Serena Williams</span>
+        <span class="talent-roster-name">Sue Bird</span>
+        <span class="talent-roster-name">Sydney McLaughlin</span>
+        <span class="talent-roster-name">Toni Breidinger</span>
+        <span class="talent-roster-name">Venus Williams</span>
+      </div>
+
+      <div class="talent-roster-col">
+        <div class="talent-roster-head">Music</div>
+        <span class="talent-roster-name">Brothers Osborne</span>
+        <span class="talent-roster-name">Camila Cabello</span>
+        <span class="talent-roster-name">EJAE</span>
+        <span class="talent-roster-name">Esperanza Spalding</span>
+        <span class="talent-roster-name">Grace Bowers</span>
+        <span class="talent-roster-name">King Princess</span>
+        <span class="talent-roster-name">Minus the Bear</span>
+        <span class="talent-roster-name">Myles Smith</span>
+        <span class="talent-roster-name">Portugal the Man</span>
+        <span class="talent-roster-name">Sam Smith</span>
+        <span class="talent-roster-name">Tegan and Sara</span>
+        <span class="talent-roster-name">Teyana Taylor</span>
+        <span class="talent-roster-name">Victoria Monet</span>
+      </div>
+
+      <div class="talent-roster-col">
+        <div class="talent-roster-head">Film and TV</div>
+        <span class="talent-roster-name">Angelina Jolie</span>
+        <span class="talent-roster-name">Ashly Burch</span>
+        <span class="talent-roster-name">Ashlyn Harris</span>
+        <span class="talent-roster-name">Coco Jones</span>
+        <span class="talent-roster-name">Ilana Glazer</span>
+        <span class="talent-roster-name">Keke Palmer</span>
+        <span class="talent-roster-name">Lupita Nyong'o</span>
+        <span class="talent-roster-name">Niecy Nash</span>
+        <span class="talent-roster-name">Renee Rapp</span>
+        <span class="talent-roster-name">Ryan Reynolds</span>
+        <span class="talent-roster-name">Tay Lautner</span>
+        <span class="talent-roster-name">Winnie Harlow</span>
+      </div>
+
+      <div class="talent-roster-col">
+        <div class="talent-roster-head">Media and Press</div>
+        <span class="talent-roster-name">Cari Champion</span>
+        <span class="talent-roster-name">Deux Moi</span>
+        <span class="talent-roster-name">Joe Santagato</span>
+        <span class="talent-roster-name">Julian Shapiro-Barnum</span>
+        <span class="talent-roster-name">LeVar Burton</span>
+        <span class="talent-roster-name">Robin Roberts</span>
+        <span class="talent-roster-name">Steven Bartlett</span>
+        <span class="talent-roster-name">Taylor Rooks</span>
+        <span class="talent-roster-name">Vivian Tu</span>
+        <span class="talent-roster-name">William Goodge</span>
+      </div>
+
+      <div class="talent-roster-col">
+        <div class="talent-roster-head">Fashion and Creators</div>
+        <span class="talent-roster-name">Alex Consani</span>
+        <span class="talent-roster-name">Benito Skinner</span>
+        <span class="talent-roster-name">Bunnie XO</span>
+        <span class="talent-roster-name">Naeemah Lafond</span>
+        <span class="talent-roster-name">Nara Smith</span>
+        <span class="talent-roster-name">Paige Lorenze</span>
+        <span class="talent-roster-name">Pokimane</span>
+        <span class="talent-roster-name">Precious Lee</span>
+        <span class="talent-roster-name">Richie Shazam</span>
+        <span class="talent-roster-name">Tyra Banks</span>
+        <span class="talent-roster-name">Wisdom Kaye</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── BRANDS SECTION ─────────────────────────────────────────── -->
+<div class="geo-divider"></div>
+<section id="brands">
+  <div class="brands-section-inner">
+    <div class="section-label">Brands</div>
+    <h2 class="section-headline">Brand partnerships built on shared mission.</h2>
+  </div>
+  <div class="brands-scroll-outer">
+    <div class="brands-scroll">
+      <span class="brand-name">Adidas</span>
+      <span class="brand-name">Save the Children</span>
+      <span class="brand-name">Undue Medical Debt</span>
+      <span class="brand-name">Saving Mothers</span>
+      <span class="brand-name">NYU Langone</span>
+      <span class="brand-name">Girls Inc.</span>
+      <span class="brand-name">Child Rescue Coalition</span>
+      <span class="brand-name">UNICEF</span>
+      <span class="brand-name">Everytown for Gun Safety</span>
+      <span class="brand-name">MusiCares</span>
+      <span class="brand-name">Lyft</span>
+      <span class="brand-name">Erewhon</span>
+      <span class="brand-name">Madhappy Foundation</span>
+      <span class="brand-name">Foundation for Women's Health</span>
+      <span class="brand-name">Apex for Youth</span>
+      <span class="brand-name">Ali Forney Center</span>
+      <span class="brand-name">Virgin Hotels</span>
+      <span class="brand-name">Yahoo Makers</span>
+      <span class="brand-name">IMG</span>
+      <span class="brand-name">Black Beauty Roster</span>
+      <span class="brand-name">Red Bull</span>
+      <span class="brand-name">Glossier</span>
+      <span class="brand-name">Rare Beauty</span>
+      <span class="brand-name">REFY</span>
+      <span class="brand-name">Charlotte Tilbury</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INDUSTRY EVENTS ─────────────────────────────────────────── -->
+<div class="geo-divider"></div>
+<section id="events" class="reveal">
+  <div class="events-head-wrap">
+    <div class="section-label">Events</div>
+    <div class="events-head-row">
+      <h2 class="section-headline">Events.</h2>
+      <a href="cases/events.html" class="events-view-all">View all →</a>
+    </div>
   </div>
   <div class="events-scroll-outer">
     <div class="events-scroll-inner">
@@ -710,19 +655,11 @@
   </div>
 </section>
 
-<!-- ─── TYPE COLLISION INTERSTITIAL ───────────────────────────── -->
-<div id="interstitial">
-  <div class="interstitial-bg-text" aria-hidden="true">Culture + Purpose</div>
-  <div class="interstitial-fg">
-    <div class="interstitial-text">= Unstoppable Impact</div>
-    <div class="interstitial-rule"></div>
-  </div>
-</div>
-
-<!-- ─── GEO DIVIDER ────────────────────────────────────────────── -->
-<div class="geo-divider"></div>
+<!-- ─── TAGLINE STRIP ───────────────────────────────────────────── -->
+<div class="tagline-strip">Culture + Purpose = Unstoppable Impact</div>
 
 <!-- ─── 360 STRATEGY SECTION ──────────────────────────────────── -->
+<div class="geo-divider"></div>
 <section id="strategy" class="reveal">
   <div class="strategy-section-inner">
 
@@ -802,6 +739,36 @@
   </div>
 </section>
 
+<!-- ─── ABOUT SECTION ─────────────────────────────────────────── -->
+<div class="geo-divider"></div>
+<section id="about">
+  <div class="about-section-inner">
+
+    <div class="about-left">
+      <div class="section-label">About</div>
+      <h2 class="about-name">Nicholas<br>Griggs-Drane</h2>
+      <div class="about-caps">
+        <span class="cap-tag cap-tag-dark">Talent Partnerships</span>
+        <span class="cap-tag cap-tag-dark">Brand Advisory</span>
+        <span class="cap-tag cap-tag-dark">Event Creative Production</span>
+        <span class="cap-tag cap-tag-dark">360 Strategy</span>
+        <span class="cap-tag cap-tag-dark">Campaign Development</span>
+      </div>
+    </div>
+
+    <div class="about-right">
+      <p class="about-bio-text">Nicholas Griggs-Drane is an impact strategist working at the intersection of culture, celebrity, and conscience. He builds campaigns and philanthropic frameworks that turn talent platforms into engines for lasting change.</p>
+      <p class="about-bio-text">With experience spanning Capitol Hill advocacy, foundation infrastructure, brand partnerships, and live activations, Nicholas has delivered work that generates hundreds of millions of media impressions while moving real money to real causes.</p>
+      <p class="about-bio-text">He operates across entertainment, sports, fashion, and media — helping talent, agencies, and brands translate influence into impact that matters.</p>
+      <div class="about-contact">
+        <a href="mailto:ngriggsdrane@gmail.com" class="about-email">ngriggsdrane@gmail.com</a>
+        <p class="about-location">NYC · LA · UK</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ─── CONTACT ────────────────────────────────────────────────── -->
 <section id="contact" class="reveal">
   <div class="contact-inner">
@@ -816,7 +783,7 @@
 
 <!-- ─── FOOTER BAR ─────────────────────────────────────────────── -->
 <footer id="footer-bar">
-  <span class="footer-name">Nicholas Griggs-Drane</span>
+  <span class="footer-name">NGD</span>
   <span class="footer-tagline">Culture + Purpose = Unstoppable Impact</span>
 </footer>
 
