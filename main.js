@@ -6,23 +6,6 @@
 
 'use strict';
 
-/* ─── NGD INTRO ANIMATION ────────────────────────────────────── */
-(function initNGDIntro() {
-  const intro = document.getElementById('ngd-intro');
-  if (!intro) return;
-
-  // Set exact strokeDasharray/strokeDashoffset for each stroke path via measured length.
-  // Must run before any CSS animation fires (all animations have ≥0.1s delay).
-  document.querySelectorAll('.ngd-path').forEach(path => {
-    const len = Math.ceil(path.getTotalLength());
-    path.style.strokeDasharray = len;
-    path.style.strokeDashoffset = len;
-  });
-
-  // Remove overlay after exit animations complete: bg-exit starts at 3.0s, lasts 0.5s
-  setTimeout(() => { intro.style.display = 'none'; }, 3600);
-})();
-
 /* ─── HAMBURGER / MOBILE NAV ─────────────────────────────────── */
 (function initMobileNav() {
   const hamburger = document.getElementById('hamburger');
@@ -54,18 +37,17 @@
   const nav = document.getElementById('top-nav');
   if (nav) requestAnimationFrame(() => nav.classList.add('loaded'));
 
-  // Bg-exit starts 3.0s, letters-exit starts 3.0s — hero fires as overlay fades
-  const BASE = 3100;
+  // Hero lines stagger in immediately on page load
   const delays = {
-    line1: BASE + 100,   // 3200ms
-    line2: BASE + 220,   // 3320ms
-    line3: BASE + 420,   // 3520ms
-    right: BASE + 50,    // 3150ms
+    line1: 100,
+    line2: 220,
+    line3: 420,
+    right: 50,
   };
 
   const lines = document.querySelectorAll('.hero-line-inner');
   lines.forEach((line, i) => {
-    const delay = [delays.line1, delays.line2, delays.line3][i] || (BASE + 100 + i * 150);
+    const delay = [delays.line1, delays.line2, delays.line3][i] || (100 + i * 150);
     setTimeout(() => line.classList.add('loaded'), delay);
   });
 

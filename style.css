@@ -87,14 +87,15 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 
 /* ══════════════════════════════════════════════════════════════
-   NAVIGATION — dark bar, anchor links
+   NAVIGATION — light editorial bar
    ══════════════════════════════════════════════════════════════ */
 #top-nav {
   position: sticky;
   top: 0;
   z-index: 900;
   height: var(--nav-h);
-  background: var(--ink-block);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   padding: 0 var(--pad-x);
@@ -109,7 +110,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.2em;
-  color: var(--white);
+  color: var(--ink);
   text-transform: uppercase;
   flex-shrink: 0;
   margin-right: auto;
@@ -126,7 +127,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  color: var(--warm-grey);
   transition: color 0.15s;
   white-space: nowrap;
 }
@@ -153,7 +154,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   padding: 4px;
   margin-left: auto;
 }
-.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--white); transition: all 0.3s; }
+.nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--ink); transition: all 0.3s; }
 
 /* Mobile nav */
 #mobile-nav {
@@ -187,7 +188,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
    ══════════════════════════════════════════════════════════════ */
 #hero {
   background: var(--ink-block);
-  min-height: 70vh;
+  min-height: 72vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto 1fr;
@@ -268,88 +269,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
-
-/* ══════════════════════════════════════════════════════════════
-   NGD INTRO ANIMATION
-   ══════════════════════════════════════════════════════════════ */
-#ngd-intro {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: var(--ink-block);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: ngd-bg-exit 0.5s ease 3.0s forwards;
-}
-#ngd-letters {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: ngd-letters-exit 0.4s cubic-bezier(0.4,0,1,1) 3.0s forwards;
-}
-#ngd-intro svg {
-  width: 85vw;
-  max-width: 1100px;
-  min-width: 240px;
-  height: 45vh;
-  max-height: 580px;
-  min-height: 120px;
-}
-.ngd-path {
-  fill: none;
-  stroke: var(--white);
-  stroke-width: 10;
-  stroke-linecap: square;
-  stroke-linejoin: miter;
-}
-.ngd-n-left {
-  animation:
-    ngd-draw 0.3s cubic-bezier(0.4,0,0.2,1) 0.1s forwards,
-    ngd-fill  0.25s ease 2.3s forwards,
-    ngd-orange 0.3s ease 2.6s forwards;
-}
-.ngd-n-diag {
-  animation:
-    ngd-draw 0.3s cubic-bezier(0.4,0,0.2,1) 0.3s forwards,
-    ngd-fill  0.25s ease 2.3s forwards,
-    ngd-orange 0.3s ease 2.6s forwards;
-}
-.ngd-n-right {
-  animation:
-    ngd-draw 0.3s cubic-bezier(0.4,0,0.2,1) 0.5s forwards,
-    ngd-fill  0.25s ease 2.3s forwards,
-    ngd-orange 0.3s ease 2.6s forwards;
-}
-.ngd-g-arc {
-  animation:
-    ngd-draw 0.5s cubic-bezier(0.4,0,0.2,1) 0.9s forwards,
-    ngd-fill  0.25s ease 2.3s forwards,
-    ngd-orange 0.3s ease 2.6s forwards;
-}
-.ngd-g-bar {
-  animation:
-    ngd-draw 0.2s cubic-bezier(0.4,0,0.2,1) 1.3s forwards,
-    ngd-fill  0.25s ease 2.3s forwards,
-    ngd-orange 0.3s ease 2.6s forwards;
-}
-.ngd-d-left {
-  animation:
-    ngd-draw 0.3s cubic-bezier(0.4,0,0.2,1) 1.6s forwards,
-    ngd-fill  0.25s ease 2.3s forwards,
-    ngd-orange 0.3s ease 2.6s forwards;
-}
-.ngd-d-curve {
-  animation:
-    ngd-draw 0.4s cubic-bezier(0.4,0,0.2,1) 1.8s forwards,
-    ngd-fill  0.25s ease 2.3s forwards,
-    ngd-orange 0.3s ease 2.6s forwards;
-}
-@keyframes ngd-draw   { to { stroke-dashoffset: 0; } }
-@keyframes ngd-fill   { to { fill: var(--white); stroke: var(--white); } }
-@keyframes ngd-orange { to { fill: var(--orange); stroke: var(--orange); } }
-@keyframes ngd-letters-exit { to { transform: scale(1.2); opacity: 0; } }
-@keyframes ngd-bg-exit      { to { opacity: 0; pointer-events: none; } }
 
 /* ══════════════════════════════════════════════════════════════
    ORANGE INTRO SECTION — name + capabilities
@@ -704,52 +623,51 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .talent-roster-name:hover { color: var(--orange); }
 
 /* ══════════════════════════════════════════════════════════════
-   BRANDS SECTION
+   BRANDS SECTION — logo grid
    ══════════════════════════════════════════════════════════════ */
-#brands { background: var(--paper); }
+#brands { background: var(--white); }
 .brands-section-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: var(--xl) var(--pad-x) var(--lg);
+  padding: var(--lg) var(--pad-x) var(--md);
 }
-.brands-section-inner .section-headline { margin-top: 10px; }
-.brands-scroll-outer {
-  position: relative;
-  overflow: hidden;
+.brand-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
 }
-.brands-scroll-outer::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 80px;
-  background: linear-gradient(to right, transparent, var(--paper));
-  pointer-events: none;
-  z-index: 2;
-}
-.brands-scroll {
+.brand-logo-cell {
+  background: var(--white);
+  padding: 32px 40px;
   display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
   align-items: center;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  justify-content: center;
+  min-height: 100px;
+  transition: background 0.2s;
 }
-.brands-scroll::-webkit-scrollbar { display: none; }
-.brand-name {
-  font-size: 32px;
-  font-weight: 300;
-  color: var(--warm-grey);
-  padding: 24px 48px;
-  border-right: 1px solid var(--border);
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: color 0.15s;
-  cursor: default;
+.brand-logo-cell:hover { background: var(--orange-pale); }
+.brand-logo-cell img {
+  max-width: 120px;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+  display: block;
 }
-.brand-name:hover { color: var(--ink); }
+.brand-logo-cell:hover img { filter: grayscale(0%); }
+.brand-logo-fallback {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  line-height: 1.2;
+}
 
 /* ══════════════════════════════════════════════════════════════
    INDUSTRY EVENTS
@@ -1024,8 +942,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .talent-section-inner { padding: var(--lg) var(--pad-x); }
   .talent-roster-grid { grid-template-columns: 1fr 1fr; gap: var(--lg) var(--sm); }
 
-  .brands-section-inner { padding: var(--lg) var(--pad-x) var(--md); }
-  .brand-name { font-size: 24px; padding: 20px 32px; }
+  .brands-section-inner { padding: var(--md) var(--pad-x) var(--sm); }
+  .brand-logo-grid { grid-template-columns: repeat(3, 1fr); }
+  .brand-logo-cell { padding: 24px 20px; min-height: 80px; }
+  .brand-logo-cell img { max-width: 90px; max-height: 36px; }
 
   .events-head-wrap { padding: var(--lg) var(--pad-x) var(--md); }
   .events-head-row { flex-direction: column; align-items: flex-start; gap: var(--sm); }
@@ -1054,4 +974,5 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 @media (max-width: 480px) {
   .talent-roster-grid { grid-template-columns: 1fr; }
   .case-card { width: calc(100% - 0px); }
+  .brand-logo-grid { grid-template-columns: repeat(2, 1fr); }
 }
