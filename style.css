@@ -717,8 +717,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   border-bottom: 1px solid var(--border);
 }
 .events-head-row .section-headline { line-height: 1; }
-.events-view-all { font-size: 13px; font-weight: 300; color: var(--orange); transition: opacity 0.15s; padding-bottom: 4px; }
-.events-view-all:hover { opacity: 0.7; }
 
 .events-scroll-outer { overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding-bottom: var(--xl); }
 .events-scroll-outer::-webkit-scrollbar { display: none; }
@@ -749,6 +747,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .event-card-partner { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border); min-height: 44px; }
 .event-card-partner-label { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm-grey); white-space: nowrap; flex-shrink: 0; }
 .event-card-partner-logo { max-height: 20px; max-width: 90px; width: auto; object-fit: contain; filter: grayscale(100%) opacity(0.55); transition: filter 0.2s ease; }
+.event-card-partner-logo.logo-large { max-height: 32px; max-width: 120px; }
 .event-card:hover .event-card-partner-logo { filter: grayscale(0%) opacity(1); }
 
 /* ══════════════════════════════════════════════════════════════
