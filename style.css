@@ -484,19 +484,25 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 .case-card:hover .card-img-overlay { background: rgba(232,80,10,0.82); }
 
-.card-img-label {
+.card-name-pill {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.2);
-  text-align: center;
-  padding: var(--md);
+  bottom: 48px;
+  left: 12px;
+  background: var(--orange);
+  color: #FAFAF8;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  z-index: 3;
+  max-width: calc(100% - 24px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   pointer-events: none;
-  line-height: 1.4;
 }
 
 .card-tags {
@@ -525,44 +531,15 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--lg);
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 3;
+  z-index: 4;
 }
 .case-card:hover .card-hover { opacity: 1; transform: none; }
-.card-hover-text { font-size: 15px; font-weight: 300; color: var(--white); text-align: center; line-height: 1.5; }
-
-
-.card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 48px;
-  padding: 0 var(--md);
-  background: var(--white);
-  border-top: 1px solid var(--border);
-  flex-shrink: 0;
-}
-.card-client {
-  font-size: 9px;
-  font-weight: 300;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: var(--xs);
-}
-.card-arrow {
-  color: var(--orange);
-  font-size: 16px;
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
-}
-.case-card:hover .card-arrow { transform: translateX(4px); }
+.reveal-inner { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; padding: 0 24px; }
+.reveal-title { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: #FAFAF8; line-height: 1.2; }
+.reveal-desc { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 13px; line-height: 1.6; color: rgba(250,250,248,0.8); max-width: 280px; }
 
 /* ══════════════════════════════════════════════════════════════
    TALENT SECTION
