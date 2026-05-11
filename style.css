@@ -31,6 +31,10 @@ ul, ol { list-style: none; }
   --orange-dark:   #C43D00;
   --orange-pale:   #FDF0E8;
 
+  --green:         #2D5016;
+  --green-pale:    rgba(45,80,22,0.07);
+  --green-on-dark: #A3D47A;
+
   --xs:  8px;
   --sm:  16px;
   --md:  24px;
@@ -65,7 +69,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   top: -1px;
   width: 48px;
   height: 3px;
-  background: var(--orange);
+  background: var(--green);
   display: block;
 }
 
@@ -131,7 +135,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: color 0.15s;
   white-space: nowrap;
 }
-.nav-link:hover,
+.nav-link:hover { color: var(--green); }
 .nav-link.active { color: var(--orange); }
 
 .nav-contact {
@@ -181,7 +185,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: color 0.15s;
   display: block;
 }
-.mobile-nav-item:hover { color: var(--orange); }
+.mobile-nav-item:hover { color: var(--green-on-dark); }
 
 /* ══════════════════════════════════════════════════════════════
    HERO — full dark typographic
@@ -447,7 +451,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: background 0.15s;
   flex-shrink: 0;
 }
-.work-arrow:hover { background: var(--orange); }
+.work-arrow:hover { background: var(--green); }
 .work-arrow.hidden { display: none; }
 .work-arrow-left  { left: var(--md); }
 .work-arrow-right { right: var(--md); }
@@ -521,7 +525,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: var(--orange);
+  background: var(--green);
   color: var(--white);
   padding: 4px 10px;
   border-radius: 999px;
@@ -595,7 +599,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--green);
   margin-bottom: 12px;
 }
 .talent-roster-name {
@@ -607,7 +611,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: color 0.15s;
   cursor: default;
 }
-.talent-roster-name:hover { color: var(--orange); }
+.talent-roster-name:hover { color: var(--green); }
 
 /* ══════════════════════════════════════════════════════════════
    BRANDS SECTION — logo grid
@@ -719,8 +723,8 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
    ══════════════════════════════════════════════════════════════ */
 #strategy {
   background: var(--ink-block);
-  border-top: 4px solid var(--orange);
-  border-bottom: 4px solid var(--orange);
+  border-top: 4px solid var(--green);
+  border-bottom: 4px solid var(--green);
 }
 .strategy-section-inner {
   display: grid;
@@ -732,7 +736,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   align-items: start;
 }
 .strategy-left { position: sticky; top: calc(var(--nav-h) + var(--lg)); }
-.strategy-label { font-size: 10px; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: var(--md); }
+.strategy-label { font-size: 10px; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-on-dark); margin-bottom: var(--md); }
 .strategy-headline { font-size: 52px; font-weight: 300; letter-spacing: -0.03em; line-height: 0.95; color: var(--white); margin-bottom: var(--md); }
 .strategy-body { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: var(--lg); }
 .strategy-view-all {
@@ -764,7 +768,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: border-color 0.15s;
   background: var(--ink-soft);
 }
-.strategy-client:hover { box-shadow: inset 3px 0 0 var(--orange); }
+.strategy-client:hover { box-shadow: inset 3px 0 0 var(--green-on-dark); }
 .sc-num { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.25); flex-shrink: 0; margin-top: 2px; }
 .sc-name { font-size: 16px; font-weight: 500; color: var(--white); margin-bottom: 6px; }
 .sc-tag {
@@ -773,8 +777,8 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--orange);
-  background: rgba(232,80,10,0.15);
+  color: var(--green-on-dark);
+  background: rgba(45,80,22,0.3);
   padding: 3px 8px;
   border-radius: 999px;
 }
@@ -863,26 +867,26 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .contact-btn:hover { background: var(--orange-dark); }
 
 #footer-bar {
-  background: var(--ink-block);
+  background: var(--green);
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--pad-x);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(0,0,0,0.2);
 }
 .footer-name {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--white);
 }
 .footer-tagline {
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.65);
 }
 
 /* ══════════════════════════════════════════════════════════════
