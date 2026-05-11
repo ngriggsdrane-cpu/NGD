@@ -103,14 +103,7 @@ const caseStudies = {
       { number: '$22.8M', label: 'Earned media value' },
       { number: '26M', label: 'Women affected by fibroids' }
     ],
-    gallery: [
-      { src: 'images/ABC-News-Linsey-Davis-Lupita-Nyongo-2-032326-7e78c931493e49aa98522a63659124e0.jpg', alt: 'ABC News Live Prime' },
-      { src: 'images/8-1024x683.jpg', alt: 'Capitol Hill roundtable' },
-      { src: 'images/5-scaled.jpg', alt: 'Capitol Hill advocacy day' },
-      { src: 'images/b68c9ce40e18d75e0699acb927ef6d8a.webp', alt: 'Press appearance' },
-      { src: 'images/aq9bFJ3m-1280.jpg', alt: 'ABC News interview' },
-      { src: 'images/lupita/Fruit1.png', alt: 'Campaign visual identity' }
-    ],
+    gallery: [],
     press: [
       { name: 'TODAY Show', url: 'https://www.today.com/health/womens-health/lupita-nyongo-fibroids-rcna260617' },
       { name: 'ABC News', url: 'https://abcnews.com/video/131335681/' },
@@ -150,7 +143,7 @@ const caseStudies = {
     eyebrow: 'Sam Smith',
     title: 'The Pink House Foundation',
     desc: 'Launched The Pink House Foundation to support and uplift LGBTQ+ communities, activating their platform to drive funding and visibility for grassroots organizations. Through a network of fundraisers and community partners, the foundation has leveraged residencies in New York and San Francisco to raise capital and amplify local LGBTQ+ organizations.',
-    hero: { type: 'image', src: 'images/p1-017.png', position: 'center top' },
+    hero: { type: 'image', src: 'images/sam-smith.jpg', position: 'center top' },
     stats: [],
     gallery: [],
     press: []
@@ -160,7 +153,7 @@ const caseStudies = {
     eyebrow: 'Venus Williams \xd7 Saving Mothers',
     title: 'Advancing Equity in Maternal Health',
     desc: "Teamed up with Saving Mothers and NYU Langone to advance the organization’s mission to reduce maternal mortality and improve health outcomes for underserved women. This partnership amplifies access to lifesaving care, education, and advocacy in fibroid diagnosis and treatment.",
-    hero: { type: 'image', src: 'images/p1-008.png', position: 'center top' },
+    hero: { type: 'image', src: 'images/venus-williams/Venus Headshot_Credit to Laura Metzler Photography.jpg', position: 'center top' },
     stats: [],
     gallery: [],
     press: []
@@ -185,9 +178,7 @@ const caseStudies = {
     desc: 'An annual three-month program designed to expand access across creative and executive fashion careers. Built at the intersection of talent, community, and industry, the mission connects emerging leaders with top creatives and executives shaping the global landscape.',
     hero: { type: 'video', videoId: 'spwdzlv88NM' },
     stats: [],
-    gallery: [
-      { src: 'images/p2-002.png', alt: 'WME Incubator editorial shoot' }
-    ],
+    gallery: [],
     press: [
       { name: 'Blanc Magazine', url: 'https://blancmagazine.com/the-veil-wme-incubator/' },
       { name: 'WME Fashion', url: 'https://wmefashion.com/incubator-2026/' }
@@ -200,10 +191,7 @@ const caseStudies = {
     desc: "Headlined Black Beauty Roster’s Creator Summit as keynote speaker, with her conversation filmed by Amazon for its docuseries The CEO Club. The appearance amplified diverse female leadership and entrepreneurship, reflecting her commitment to championing representation and empowering the next generation of founders.",
     hero: { type: 'image', src: 'images/winnie-harlow/Winnie Harlow BBR 2.jpeg copy.jpg', position: 'left 20% top 0%' },
     stats: [],
-    gallery: [
-      { src: 'images/p1-023.png', alt: 'BBR Creator Summit' },
-      { src: 'images/p2-017.png', alt: 'BBR Black Beauty celebration' }
-    ],
+    gallery: [],
     press: []
   },
 
@@ -225,7 +213,7 @@ const caseStudies = {
     eyebrow: 'Grace Bowers',
     title: 'We All Gotta Live Together',
     desc: 'Raised over $30,000 in support of Everytown for Gun Safety and MusiCares at her third annual benefit concert. The event featured performances by Flavorflav, Ingrid Andress, Brothers Osborne, Luke Spiller of The Struts, and donations from Sheryl Crow, Billy Strings, and a Gibson guitar signed by all performers.',
-    hero: { type: 'image', src: 'images/p1-014.png', position: 'center top' },
+    hero: { type: 'image', src: 'images/grace-bowers/GraceBowers-BrookylnBowl-101825-4.jpg.webp', position: 'center top' },
     stats: [
       { number: '$30K+', label: 'Raised for Everytown and MusiCares' }
     ],
@@ -247,7 +235,7 @@ const caseStudies = {
     eyebrow: 'Nara Smith \xd7 Save the Children',
     title: 'Erewhon Partnership',
     desc: "Raised over $30,000 to support Save the Children through her Erewhon smoothie partnership. She utilized the moment to spotlight the organization’s mission and is now building a deeper relationship with them.",
-    hero: { type: 'image', src: 'images/p1-003.png', position: 'center top' },
+    hero: { type: 'image', src: 'images/nara-smith/Nara Smith Erewhon.jpg.webp', position: 'center top' },
     stats: [
       { number: '$30K+', label: 'Raised for Save the Children' }
     ],
@@ -261,9 +249,7 @@ const caseStudies = {
     desc: 'Partnered with Girls Inc. to create memorable experiences for young girls in select cities by donating VIP tickets, private meet-and-greets and transportation. With support from Lyft, the partnership ensured safe transportation and reflected her commitment to uplifting the next generation of young women.',
     hero: { type: 'image', src: 'images/coco-jones/coco-jones-Header.png.webp', position: 'center top' },
     stats: [],
-    gallery: [
-      { src: 'images/p1-002.png', alt: 'Coco Jones with Girls Inc.' }
-    ],
+    gallery: [],
     press: []
   },
 
@@ -273,9 +259,7 @@ const caseStudies = {
     desc: 'Launched a partnership with Child Rescue Coalition to amplify their mission of protecting children from exploitation on the internet. Through dedicated SERIALously podcast episodes, CrimeCon appearances, custom merchandise and newsletter features, using her platform to raise funds and drive awareness.',
     hero: { type: 'image', src: 'images/annie-elise/Annie Elise.jpg.webp', position: 'center top' },
     stats: [],
-    gallery: [
-      { src: 'images/p1-001.png', alt: 'Annie Elise \xd7 Child Rescue Coalition' }
-    ],
+    gallery: [],
     press: []
   },
 
@@ -287,9 +271,7 @@ const caseStudies = {
     stats: [
       { number: '$300K+', label: 'Deployed annually for mental health' }
     ],
-    gallery: [
-      { src: 'images/p2-013.png', alt: 'Madhappy Foundation' }
-    ],
+    gallery: [],
     press: []
   },
 
@@ -299,15 +281,34 @@ const caseStudies = {
     desc: "Launched The Lemons Foundation to drive awareness and support around mental health, leveraging their platform, podcast, and live events to engage audiences and build community. Grounded in Tay’s experience as a former ICU nurse during COVID-19, the initiative reflects their commitment to supporting healthcare workers and expanding access to mental health resources.",
     hero: { type: 'image', src: 'images/Tay and Tay Lemons Foundation.webp', position: 'center top 8%' },
     stats: [],
-    gallery: [
-      { src: 'images/p2-010.png', alt: 'The Lemons Foundation launch' }
-    ],
+    gallery: [],
     press: []
   }
 
 };
 
 /* ─── MODAL OPEN / CLOSE ─────────────────────────────────────── */
+function closeModal() {
+  const overlay = document.getElementById('caseModalOverlay');
+  if (!overlay) return;
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  const hero = document.getElementById('caseModalHero');
+  if (hero) hero.innerHTML = '';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.getElementById('caseModalClose');
+  const overlay  = document.getElementById('caseModalOverlay');
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (overlay) overlay.addEventListener('click', function(e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+});
+
 function openModal(key) {
   const data = caseStudies[key];
   if (!data) return;
@@ -332,7 +333,8 @@ function openModal(key) {
     hero.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.hero.videoId}?autoplay=1&mute=1&loop=1&playlist=${data.hero.videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; muted" allowfullscreen title="${data.title}"></iframe>`;
   } else {
     hero.innerHTML = '';
-    hero.style.backgroundImage = `url('${data.hero.src}')`;
+    const encodedHeroSrc = data.hero.src.replace(/ /g, '%20');
+    hero.style.backgroundImage = `url('${encodedHeroSrc}')`;
     hero.style.backgroundPosition = data.hero.position || 'center top';
   }
 
@@ -350,7 +352,8 @@ function openModal(key) {
   if (data.gallery && data.gallery.length > 0) {
     galleryWrap.style.display = 'block';
     data.gallery.forEach(img => {
-      gallery.innerHTML += `<img src="${img.src}" alt="${img.alt}" class="case-modal-gallery-img" loading="lazy">`;
+      const encodedSrc = img.src.replace(/ /g, '%20');
+      gallery.innerHTML += `<img src="${encodedSrc}" alt="${img.alt}" class="case-modal-gallery-img" loading="lazy" onerror="this.style.display='none'">`;
     });
   } else {
     galleryWrap.style.display = 'none';
@@ -371,20 +374,6 @@ function openModal(key) {
   overlay.classList.add('open');
 }
 
-function closeModal() {
-  const overlay = document.getElementById('caseModalOverlay');
-  overlay.classList.remove('open');
-  document.body.style.overflow = '';
-  document.getElementById('caseModalHero').innerHTML = '';
-}
-
-document.getElementById('caseModalClose').addEventListener('click', closeModal);
-document.getElementById('caseModalOverlay').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeModal();
-});
 
 /* ─── WORK GRID EXPAND / COLLAPSE ───────────────────────────── */
 (function initWorkExpand() {
