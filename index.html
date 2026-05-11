@@ -12,6 +12,19 @@
 </head>
 <body>
 
+<!-- ─── INTRO OVERLAY ────────────────────────────────────────── -->
+<div class="ngd-intro" id="ngdIntro">
+  <div class="ngd-intro-inner">
+    <!-- LOGO NEEDED: commit images/ngd-mark.png to repo -->
+    <img src="images/ngd-mark.png" alt="NGD" class="ngd-intro-logo" id="ngdLogo">
+    <div class="ngd-intro-tagline" id="ngdTagline">
+      <span class="tl-line" id="tl1">Infusing purpose into culture.</span>
+      <span class="tl-line" id="tl2">Inspiring fans at scale.</span>
+    </div>
+    <div class="ngd-intro-sub" id="ngdSub">Culture + Purpose = Unstoppable Impact</div>
+  </div>
+</div>
+
 <!-- ─── NAV ──────────────────────────────────────────────────── -->
 <nav id="top-nav">
   <a href="index.html" class="nav-logo">NGD</a>
@@ -41,39 +54,24 @@
 </nav>
 
 <!-- ─── HERO ───────────────────────────────────────────────────── -->
-<section id="hero">
-
-  <div class="hero-dark">
-    <h1 class="hero-headline">
-      <span class="hero-line"><span class="hero-line-inner">Infusing purpose</span></span>
-      <span class="hero-line hero-line-orange"><span class="hero-line-inner">into culture.</span></span>
-      <span class="hero-line hero-line-highlight"><span class="hero-line-inner">Inspiring fans at scale.</span></span>
-    </h1>
-  </div>
-
-  <div class="hero-orange">
-    <div class="hero-orange-content">
-      <div class="intro-name">
-        <div>Nicholas</div>
-        <div>Griggs-Drane</div>
-        <div class="intro-name-rule"></div>
-      </div>
-      <p class="intro-desc">Utilizing talent, campaigns, and partnerships that accelerate philanthropic missions and brand recognition.</p>
-      <div class="intro-caps-rule"></div>
-      <div class="intro-caps">
-        <span class="cap-tag">Talent Partnerships</span>
-        <span class="cap-tag">Brand Advisory</span>
-        <span class="cap-tag">Event Creative Production</span>
-        <span class="cap-tag">360 Strategy</span>
-        <span class="cap-tag">Campaign Development</span>
-      </div>
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <span class="hero-eyebrow">Nicholas Griggs-Drane / Impact Strategist</span>
+      <div class="hero-locations">NYC · LA · UK</div>
     </div>
-    <div class="hero-meta">
-      <span class="hero-location">NYC · LA · UK</span>
-      <div class="hero-time" id="hero-time">—</div>
+    <div class="hero-headline">
+      <h1>
+        <span class="hl hl1">Infusing purpose</span>
+        <span class="hl hl2">into culture.</span>
+        <span class="hl-stamp">Inspiring fans at scale.</span>
+      </h1>
+    </div>
+    <div class="hero-bottom">
+      <p class="hero-desc">Utilizing talent, campaigns, and partnerships that accelerate philanthropic missions and brand recognition.</p>
+      <div class="hero-time" id="heroTime"></div>
     </div>
   </div>
-
 </section>
 
 <!-- ─── SELECTED WORK ──────────────────────────────────────────── -->
@@ -745,5 +743,88 @@
 </footer>
 
 <script src="main.js"></script>
+<script>
+/* ─── INTRO ANIMATION + HERO ENTRANCE ───────────────────────── */
+(function() {
+  var intro   = document.getElementById('ngdIntro');
+  var logo    = document.getElementById('ngdLogo');
+  var tl1     = document.getElementById('tl1');
+  var tl2     = document.getElementById('tl2');
+  var sub     = document.getElementById('ngdSub');
+  var seen    = sessionStorage.getItem('ngdIntroSeen');
+
+  if (seen) {
+    if (intro) intro.style.display = 'none';
+  } else {
+    function tw(el, props, delay, ms, ease) {
+      setTimeout(function() {
+        el.style.transition = 'all ' + ms + 'ms ' + (ease || 'cubic-bezier(0.16,1,0.3,1)');
+        Object.keys(props).forEach(function(k) { el.style[k] = props[k]; });
+      }, delay);
+    }
+
+    tw(logo, { opacity: '1', transform: 'scale(1)', filter: 'brightness(0)' }, 200, 700);
+
+    setTimeout(function() {
+      logo.style.transition = 'filter 0.4s ease';
+      logo.style.filter = 'brightness(0) sepia(1) saturate(5) hue-rotate(340deg)';
+    }, 1000);
+    setTimeout(function() {
+      logo.style.transition = 'filter 0.5s ease';
+      logo.style.filter = 'brightness(0)';
+    }, 1500);
+
+    tw(tl1, { opacity: '1', transform: 'translateY(0)' }, 1200, 600);
+    tw(tl2, { opacity: '1', transform: 'translateY(0)' }, 1500, 600);
+    tw(sub, { opacity: '1' }, 1900, 500, 'ease');
+
+    setTimeout(function() {
+      intro.style.transition = 'transform 0.7s cubic-bezier(0.76,0,0.24,1), opacity 0.5s ease';
+      intro.style.transform  = 'translateY(-100%)';
+      intro.style.opacity    = '0';
+    }, 3000);
+
+    setTimeout(function() {
+      intro.style.display = 'none';
+      sessionStorage.setItem('ngdIntroSeen', '1');
+    }, 3700);
+  }
+
+  /* ─── HERO ENTRANCE ──────────────────────────────────────── */
+  function animateHero() {
+    var delay = sessionStorage.getItem('ngdIntroSeen') ? 0 : 3700;
+    setTimeout(function() {
+      var hl1   = document.querySelector('.hl1');
+      var hl2   = document.querySelector('.hl2');
+      var stamp = document.querySelector('.hl-stamp');
+      var desc  = document.querySelector('.hero-desc');
+
+      function tw2(el, props, ms) {
+        if (!el) return;
+        el.style.transition = 'all ' + ms + 'ms cubic-bezier(0.16,1,0.3,1)';
+        Object.keys(props).forEach(function(k) { el.style[k] = props[k]; });
+      }
+
+      setTimeout(function() { tw2(hl1,   { opacity: '1', transform: 'translateY(0)' }, 800); }, 100);
+      setTimeout(function() { tw2(hl2,   { opacity: '1', transform: 'translateY(0)' }, 800); }, 250);
+      setTimeout(function() { tw2(stamp, { opacity: '1', transform: 'scale(1)'      }, 600); }, 450);
+      setTimeout(function() { tw2(desc,  { opacity: '1'                              }, 600); }, 650);
+    }, delay);
+  }
+  animateHero();
+
+  /* ─── LIVE TIME ──────────────────────────────────────────── */
+  function updateTime() {
+    var el = document.getElementById('heroTime');
+    if (!el) return;
+    var t = new Date().toLocaleTimeString('en-US', {
+      timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit'
+    });
+    el.textContent = 'New York — ' + t;
+  }
+  updateTime();
+  setInterval(updateTime, 30000);
+})();
+</script>
 </body>
 </html>

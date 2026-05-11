@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    NGD — main.js
-   Hero animations · Live time · Scroll reveals · Scroll nav
-   Filter pills · Work scroll arrows · Card navigation
+   Scroll reveals · Scroll nav · Card navigation · Work expand
+   Talent expand · Mobile nav
    ═══════════════════════════════════════════════════════════════ */
 
 'use strict';
@@ -32,46 +32,10 @@
   });
 })();
 
-/* ─── PAGE LOAD ANIMATIONS ───────────────────────────────────── */
-(function initLoadAnimations() {
+/* ─── NAV LOADED STATE ───────────────────────────────────────── */
+(function initNav() {
   const nav = document.getElementById('top-nav');
   if (nav) requestAnimationFrame(() => nav.classList.add('loaded'));
-
-  // Hero lines stagger in immediately on page load
-  const delays = {
-    line1: 100,
-    line2: 220,
-    line3: 420,
-    right: 50,
-  };
-
-  const lines = document.querySelectorAll('.hero-line-inner');
-  lines.forEach((line, i) => {
-    const delay = [delays.line1, delays.line2, delays.line3][i] || (100 + i * 150);
-    setTimeout(() => line.classList.add('loaded'), delay);
-  });
-
-  const heroOrange = document.querySelector('.hero-orange');
-  if (heroOrange) setTimeout(() => heroOrange.classList.add('loaded'), delays.right);
-})();
-
-/* ─── LIVE TIME ──────────────────────────────────────────────── */
-(function initLiveTime() {
-  const el = document.getElementById('hero-time');
-  if (!el) return;
-
-  function update() {
-    const now = new Date();
-    const ny  = now.toLocaleTimeString('en-US', {
-      timeZone: 'America/New_York',
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true,
-    });
-    el.textContent = 'New York — ' + ny;
-  }
-  update();
-  setInterval(update, 1000);
 })();
 
 /* ─── SCROLL REVEALS (IntersectionObserver) ──────────────────── */
