@@ -158,33 +158,48 @@ function setFilter(value) {
   });
 })();
 
-/* ─── WORK SECTION SCROLL ARROWS ────────────────────────────── */
-(function initWorkScroll() {
-  const track      = document.getElementById('cards-scroll-track');
-  const leftArrow  = document.getElementById('work-arrow-left');
-  const rightArrow = document.getElementById('work-arrow-right');
-  if (!track || !leftArrow || !rightArrow) return;
+/* ─── WORK GRID EXPAND / COLLAPSE ───────────────────────────── */
+(function initWorkExpand() {
+  const btn      = document.querySelector('.work-expand-btn');
+  const expanded = document.querySelector('.work-grid-expanded');
+  if (!btn || !expanded) return;
 
-  function getStepWidth() {
-    const card = track.querySelector('.case-card');
-    return card ? card.offsetWidth + 1 : Math.round(track.clientWidth / 4);
-  }
+  let open = false;
 
-  function updateArrows() {
-    const atStart = track.scrollLeft <= 0;
-    const atEnd   = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
-    leftArrow.classList.toggle('hidden', atStart);
-    rightArrow.classList.toggle('hidden', atEnd);
-  }
-
-  leftArrow.addEventListener('click', () => {
-    track.scrollBy({ left: -getStepWidth(), behavior: 'smooth' });
+  btn.addEventListener('click', () => {
+    open = !open;
+    if (open) {
+      expanded.style.maxHeight = expanded.scrollHeight + 'px';
+      expanded.style.opacity   = '1';
+      btn.textContent = 'See fewer examples';
+    } else {
+      expanded.style.maxHeight = '0';
+      expanded.style.opacity   = '0';
+      btn.textContent = 'See all work examples';
+    }
   });
-  rightArrow.addEventListener('click', () => {
-    track.scrollBy({ left: getStepWidth(), behavior: 'smooth' });
-  });
+})();
 
-  track.addEventListener('scroll', updateArrows, { passive: true });
-  window.addEventListener('resize', updateArrows);
-  updateArrows();
+/* ─── TALENT ROSTER EXPAND / COLLAPSE ───────────────────────── */
+(function initTalentExpand() {
+  const btn  = document.querySelector('.talent-expand-btn');
+  const grid = document.querySelector('.talent-grid-expanded');
+  if (!btn || !grid) return;
+
+  let open = false;
+
+  btn.addEventListener('click', () => {
+    open = !open;
+    if (open) {
+      grid.style.maxHeight  = grid.scrollHeight + 'px';
+      grid.style.opacity    = '1';
+      grid.style.marginTop  = '40px';
+      btn.textContent = 'Collapse roster';
+    } else {
+      grid.style.maxHeight  = '0';
+      grid.style.opacity    = '0';
+      grid.style.marginTop  = '0';
+      btn.textContent = 'See full talent roster';
+    }
+  });
 })();
