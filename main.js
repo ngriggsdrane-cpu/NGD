@@ -325,6 +325,8 @@ function openModal(key) {
   const pressWrap  = document.getElementById('caseModalPressWrap');
 
   eyebrow.textContent = data.eyebrow;
+  const wmeTag = document.getElementById('caseModalWme');
+  if (wmeTag) wmeTag.textContent = 'Developed at WME';
   title.textContent   = data.title;
   desc.textContent    = data.desc;
 
