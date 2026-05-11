@@ -211,13 +211,18 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   align-items: center;
   gap: 0;
 }
-.ngd-intro-logo {
-  width: 380px;
-  max-width: 70vw;
+.ngd-intro-wordmark {
+  font-family: 'Arial Black', 'Franklin Gothic Heavy', 'Helvetica Neue', Impact, sans-serif;
+  font-weight: 900;
+  font-size: clamp(80px, 20vw, 220px);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #1A1414;
   opacity: 0;
-  filter: brightness(0);
-  transform: scale(0.92);
+  transform: scale(0.94);
   transition: none;
+  text-align: center;
+  user-select: none;
 }
 .ngd-intro-tagline {
   display: flex;

@@ -15,8 +15,7 @@
 <!-- ─── INTRO OVERLAY ────────────────────────────────────────── -->
 <div class="ngd-intro" id="ngdIntro">
   <div class="ngd-intro-inner">
-    <!-- LOGO NEEDED: commit images/ngd-mark.png to repo -->
-    <img src="images/ngd-mark.png" alt="NGD" class="ngd-intro-logo" id="ngdLogo">
+    <div class="ngd-intro-wordmark" id="ngdWordmark">NGD</div>
     <div class="ngd-intro-tagline" id="ngdTagline">
       <span class="tl-line" id="tl1">Infusing purpose into culture.</span>
       <span class="tl-line" id="tl2">Inspiring fans at scale.</span>
@@ -746,48 +745,48 @@
 <script>
 /* ─── INTRO ANIMATION + HERO ENTRANCE ───────────────────────── */
 (function() {
-  var intro   = document.getElementById('ngdIntro');
-  var logo    = document.getElementById('ngdLogo');
-  var tl1     = document.getElementById('tl1');
-  var tl2     = document.getElementById('tl2');
-  var sub     = document.getElementById('ngdSub');
-  var seen    = sessionStorage.getItem('ngdIntroSeen');
+  const intro     = document.getElementById('ngdIntro');
+  const wordmark  = document.getElementById('ngdWordmark');
+  const tl1       = document.getElementById('tl1');
+  const tl2       = document.getElementById('tl2');
+  const sub       = document.getElementById('ngdSub');
 
-  if (seen) {
-    if (intro) intro.style.display = 'none';
+  if (sessionStorage.getItem('ngdIntroSeen')) {
+    intro.style.display = 'none';
   } else {
-    function tw(el, props, delay, ms, ease) {
-      setTimeout(function() {
-        el.style.transition = 'all ' + ms + 'ms ' + (ease || 'cubic-bezier(0.16,1,0.3,1)');
-        Object.keys(props).forEach(function(k) { el.style[k] = props[k]; });
+    function animate(el, props, delay, duration, easing) {
+      setTimeout(() => {
+        el.style.transition = `all ${duration}ms ${easing || 'cubic-bezier(0.16,1,0.3,1)'}`;
+        Object.assign(el.style, props);
       }, delay);
     }
 
-    tw(logo, { opacity: '1', transform: 'scale(1)', filter: 'brightness(0)' }, 200, 700);
+    animate(wordmark, { opacity: '1', transform: 'scale(1)' }, 150, 700);
 
-    setTimeout(function() {
-      logo.style.transition = 'filter 0.4s ease';
-      logo.style.filter = 'brightness(0) sepia(1) saturate(5) hue-rotate(340deg)';
-    }, 1000);
-    setTimeout(function() {
-      logo.style.transition = 'filter 0.5s ease';
-      logo.style.filter = 'brightness(0)';
-    }, 1500);
+    setTimeout(() => {
+      wordmark.style.transition = 'color 0.4s ease';
+      wordmark.style.color = '#E8500A';
+    }, 900);
 
-    tw(tl1, { opacity: '1', transform: 'translateY(0)' }, 1200, 600);
-    tw(tl2, { opacity: '1', transform: 'translateY(0)' }, 1500, 600);
-    tw(sub, { opacity: '1' }, 1900, 500, 'ease');
+    setTimeout(() => {
+      wordmark.style.transition = 'color 0.5s ease';
+      wordmark.style.color = '#1A1414';
+    }, 1400);
 
-    setTimeout(function() {
+    animate(tl1, { opacity: '1', transform: 'translateY(0)' }, 1100, 600);
+    animate(tl2, { opacity: '1', transform: 'translateY(0)' }, 1400, 600);
+    animate(sub, { opacity: '1' }, 1800, 500, 'ease');
+
+    setTimeout(() => {
       intro.style.transition = 'transform 0.7s cubic-bezier(0.76,0,0.24,1), opacity 0.5s ease';
       intro.style.transform  = 'translateY(-100%)';
       intro.style.opacity    = '0';
-    }, 3000);
+    }, 2900);
 
-    setTimeout(function() {
+    setTimeout(() => {
       intro.style.display = 'none';
       sessionStorage.setItem('ngdIntroSeen', '1');
-    }, 3700);
+    }, 3600);
   }
 
   /* ─── HERO ENTRANCE ──────────────────────────────────────── */
