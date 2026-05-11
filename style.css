@@ -737,16 +737,18 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   overflow: hidden;
   background: var(--cream);
   transition: background 0.15s;
+  display: flex;
+  flex-direction: column;
 }
 .event-card:hover { background: var(--orange-pale); }
 .event-card-img { height: 180px; background-size: cover; background-position: center; background-repeat: no-repeat; background-color: var(--paper-warm); position: relative; flex-shrink: 0; }
 .event-card-img.has-photo::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(to bottom, transparent, rgba(240,235,225,0.4)); pointer-events: none; }
-.event-card-body { padding: var(--sm); }
+.event-card-body { padding: var(--sm); flex: 1; display: flex; flex-direction: column; }
 .event-card-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 6px; line-height: 1.4; border-top: 1px solid var(--border); padding-top: 12px; }
-.event-card-desc { font-size: 12px; font-weight: 300; color: var(--warm-grey); line-height: 1.5; }
-.event-card-partner { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--border); }
+.event-card-desc { font-size: 12px; font-weight: 300; color: var(--warm-grey); line-height: 1.5; flex: 1; }
+.event-card-partner { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--border); min-height: 44px; }
 .event-card-partner-label { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--warm-grey); white-space: nowrap; flex-shrink: 0; }
-.event-card-partner-logo { max-height: 22px; max-width: 80px; width: auto; object-fit: contain; filter: grayscale(100%) opacity(0.6); transition: filter 0.2s ease; }
+.event-card-partner-logo { max-height: 20px; max-width: 90px; width: auto; object-fit: contain; filter: grayscale(100%) opacity(0.55); transition: filter 0.2s ease; }
 .event-card:hover .event-card-partner-logo { filter: grayscale(0%) opacity(1); }
 
 /* ══════════════════════════════════════════════════════════════
