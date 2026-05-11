@@ -261,17 +261,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   text-align: center;
 }
 .tl-line:first-child { font-weight: 500; color: #E8500A; }
-.ngd-intro-sub {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: clamp(10px, 1.5vw, 13px);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(26,20,20,0.35);
-  margin-top: 20px;
-  opacity: 0;
-  text-align: center;
-}
 
 /* ══════════════════════════════════════════════════════════════
    HERO — single dark band
@@ -788,20 +777,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .event-card:hover .event-card-partner-logo { filter: grayscale(0%) opacity(1); }
 
 /* ══════════════════════════════════════════════════════════════
-   TAGLINE STRIP
-   ══════════════════════════════════════════════════════════════ */
-.tagline-strip {
-  background: var(--orange-light);
-  padding: 24px 48px;
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  text-align: center;
-  line-height: 1.2;
-}
-
-/* ══════════════════════════════════════════════════════════════
    360 STRATEGY SECTION — warm light island
    ══════════════════════════════════════════════════════════════ */
 #strategy {
@@ -1030,12 +1005,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   color: rgba(255,255,255,0.35);
   text-transform: uppercase;
 }
-.footer-tagline {
-  font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  color: var(--warm-grey);
-}
 
 /* ══════════════════════════════════════════════════════════════
    SCROLL REVEAL
@@ -1071,7 +1040,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .events-head-wrap { padding: 0 var(--pad-x) var(--md); }
   .events-head-row { flex-direction: column; align-items: flex-start; gap: var(--sm); }
 
-  .tagline-strip { font-size: 22px; padding: 20px 20px; }
 
   .strategy-section-inner { grid-template-columns: 1fr; }
   .strategy-left { position: static; }
