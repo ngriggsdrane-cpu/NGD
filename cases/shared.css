@@ -69,18 +69,18 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 48px;
-  border-bottom: 1px solid rgba(15,15,15,0.1);
-  background: #FAFAF8;
+  border-bottom: 1px solid rgba(26,20,20,0.08);
+  background: #FAF7F2;
   z-index: 1000;
 }
 
 .cs-nav-logo {
   font-family: 'DM Sans', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #0F0F0F;
+  color: #E8500A;
   text-decoration: none;
 }
 
@@ -90,7 +90,7 @@ body {
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #8C8880;
+  color: #9A8E85;
   text-align: center;
   flex: 1;
   padding: 0 24px;
@@ -105,7 +105,7 @@ body {
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #C4341A;
+  color: #E8500A;
   text-decoration: none;
   transition: opacity 0.15s;
   white-space: nowrap;
@@ -215,7 +215,7 @@ body {
 .cs-impact-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background: #000;
+  background: #EDE6D8;
   border-bottom: 1px solid var(--cs-border);
 }
 
@@ -346,7 +346,7 @@ body {
 /* ─── PULL QUOTE ─────────────────────────────────────────── */
 .cs-pullquote {
   padding: 100px 40px;
-  background: #000;
+  background: #EDE6D8;
   text-align: center;
   border-bottom: 1px solid var(--cs-border);
 }
@@ -626,8 +626,8 @@ body {
   justify-content: space-between;
   padding: 0 48px;
   height: 44px;
-  background: #0F0F0F;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  background: #EDE6D8;
+  border-top: 1px solid rgba(26,20,20,0.08);
 }
 
 .cs-footer-back {
@@ -636,17 +636,17 @@ body {
   font-weight: 300;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
+  color: rgba(26,20,20,0.45);
   text-decoration: none;
   transition: color 0.15s;
 }
-.cs-footer-back:hover { color: rgba(255,255,255,0.8); }
+.cs-footer-back:hover { color: rgba(26,20,20,0.75); }
 
 .cs-footer-copy {
   font-family: 'DM Sans', sans-serif;
   font-size: 10px;
   font-weight: 300;
-  color: rgba(255,255,255,0.3);
+  color: rgba(26,20,20,0.35);
 }
 
 /* ─── RESPONSIVE ──────────────────────────────────────────── */
@@ -803,11 +803,11 @@ body {
   justify-content: space-between;
   padding: 20px;
   text-decoration: none;
-  background: #0e0e0e;
+  background: #FAF7F2;
   border-left: 2px solid var(--cs-accent);
   transition: background 0.2s;
 }
-.cs-press-img-card:hover { background: #141414; }
+.cs-press-img-card:hover { background: #FBE9DC; }
 
 .pi-outlet {
   font-size: 10px;

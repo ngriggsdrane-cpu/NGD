@@ -91,6 +91,19 @@
   items.forEach(el => observer.observe(el));
 })();
 
+/* ─── NAV SCROLL SHADOW ──────────────────────────────────────── */
+(function initNavScroll() {
+  const nav = document.getElementById('top-nav');
+  const hero = document.getElementById('hero');
+  if (!nav || !hero) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => nav.classList.toggle('scrolled', !entry.isIntersecting),
+    { threshold: 0 }
+  );
+  observer.observe(hero);
+})();
+
 /* ─── SCROLL-BASED NAV ACTIVE STATE ──────────────────────────── */
 (function initScrollNav() {
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
