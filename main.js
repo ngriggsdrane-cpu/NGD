@@ -125,29 +125,6 @@
   sections.forEach(s => observer.observe(s));
 })();
 
-/* ─── FILTER PILLS ───────────────────────────────────────────── */
-function setFilter(value) {
-  const pills = document.querySelectorAll('.filter-pill');
-  pills.forEach(p => {
-    p.classList.toggle('active', p.dataset.filter === value);
-  });
-
-  document.querySelectorAll('.case-card').forEach(card => {
-    if (value === 'all') {
-      card.classList.remove('filtered-out');
-    } else {
-      const types = (card.dataset.type || '').split(' ');
-      card.classList.toggle('filtered-out', !types.includes(value));
-    }
-  });
-}
-
-(function initFilter() {
-  document.querySelectorAll('.filter-pill').forEach(pill => {
-    pill.addEventListener('click', () => setFilter(pill.dataset.filter));
-  });
-})();
-
 /* ─── CARD CLICK NAVIGATION ──────────────────────────────────── */
 (function initCardNav() {
   document.querySelectorAll('.case-card[data-href]').forEach(card => {
@@ -171,11 +148,15 @@ function setFilter(value) {
     if (open) {
       expanded.style.maxHeight = expanded.scrollHeight + 'px';
       expanded.style.opacity   = '1';
-      btn.textContent = 'See fewer examples';
+      btn.querySelector('.btn-text').textContent = 'Show fewer examples';
+      btn.querySelector('.btn-arrow').textContent = '↑';
+      btn.style.animation = 'none';
     } else {
       expanded.style.maxHeight = '0';
       expanded.style.opacity   = '0';
-      btn.textContent = 'See all work examples';
+      btn.querySelector('.btn-text').textContent = 'See all work examples';
+      btn.querySelector('.btn-arrow').textContent = '↓';
+      btn.style.animation = 'btnBounce 2s ease-in-out infinite';
     }
   });
 })();
