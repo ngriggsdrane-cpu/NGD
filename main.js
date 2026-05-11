@@ -101,8 +101,9 @@
 
 /* ─── WORK GRID EXPAND / COLLAPSE ───────────────────────────── */
 (function initWorkExpand() {
-  const btn      = document.querySelector('.work-expand-btn');
-  const expanded = document.querySelector('.work-grid-expanded');
+  const btn       = document.querySelector('.work-expand-btn');
+  const expanded  = document.querySelector('.work-grid-expanded');
+  const teaserRow = document.getElementById('workTeaserRow');
   if (!btn || !expanded) return;
 
   let open = false;
@@ -112,12 +113,22 @@
     if (open) {
       expanded.style.maxHeight = expanded.scrollHeight + 'px';
       expanded.style.opacity   = '1';
+      if (teaserRow) {
+        teaserRow.style.transition  = 'opacity 0.3s ease, max-height 0.4s ease';
+        teaserRow.style.opacity     = '0';
+        teaserRow.style.maxHeight   = '0';
+        teaserRow.style.overflow    = 'hidden';
+      }
       btn.querySelector('.btn-text').textContent = 'Show fewer examples';
       btn.querySelector('.btn-arrow').textContent = '↑';
       btn.style.animation = 'none';
     } else {
       expanded.style.maxHeight = '0';
       expanded.style.opacity   = '0';
+      if (teaserRow) {
+        teaserRow.style.opacity   = '1';
+        teaserRow.style.maxHeight = '400px';
+      }
       btn.querySelector('.btn-text').textContent = 'See all work examples';
       btn.querySelector('.btn-arrow').textContent = '↓';
       btn.style.animation = 'btnBounce 2s ease-in-out infinite';

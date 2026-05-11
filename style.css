@@ -419,11 +419,66 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   justify-content: center;
   padding: var(--lg) var(--pad-x);
 }
+.work-teaser-row {
+  position: relative;
+  overflow: hidden;
+  margin-top: 1px;
+}
+.work-teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+@media (max-width: 768px) {
+  .work-teaser-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-teaser-grid .work-teaser-card:last-child { display: none; }
+}
+.work-teaser-card {
+  position: relative;
+  overflow: hidden;
+}
+.work-teaser-img {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: grayscale(100%) brightness(0.85) contrast(1.05);
+  transition: filter 0.4s ease;
+}
+.work-teaser-card:hover .work-teaser-img {
+  filter: grayscale(80%) brightness(0.9);
+}
+.work-teaser-name {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  pointer-events: none;
+  z-index: 2;
+}
+.work-teaser-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent 0%, var(--paper) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
 .work-expand-btn {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 40px auto 0;
+  margin: 24px auto 0;
   background: var(--orange);
   color: #FAFAF8;
   font-family: 'DM Sans', sans-serif;
@@ -433,9 +488,12 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   text-transform: uppercase;
   padding: 16px 40px;
   border: none;
+  border-radius: 999px;
   cursor: pointer;
   animation: btnBounce 2s ease-in-out infinite;
   transition: background 0.2s ease, transform 0.2s ease;
+  position: relative;
+  z-index: 10;
 }
 .work-expand-btn:hover { background: var(--orange-dark); animation: none; transform: scale(1.03); }
 .btn-arrow { font-size: 16px; display: inline-block; animation: arrowBounce 2s ease-in-out infinite; }
