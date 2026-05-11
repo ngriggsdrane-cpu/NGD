@@ -283,6 +283,18 @@ const caseStudies = {
     stats: [],
     gallery: [],
     press: []
+  },
+
+  honeyland: {
+    eyebrow: 'Honeyland Festival',
+    title: 'Honeyland Impact Strategy',
+    desc: 'Music and culinary festival impact strategy and creation of the Honeyfund, investing in Black excellence and equity in culture. Honeyland celebrates Black expression and takes active steps towards fostering equity and Black excellence.',
+    hero: { type: 'image', src: 'images/Honeyland.jpg', position: 'center top' },
+    stats: [],
+    gallery: [],
+    press: [
+      { name: 'Honeyland Festival', url: 'https://www.honeylandfestival.com/impact/' }
+    ]
   }
 
 };
