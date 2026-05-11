@@ -344,9 +344,15 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   color: rgba(255,255,255,0.2);
 }
 @media (max-width: 768px) {
-  .hero { padding: 28px 24px 36px; }
+  .hero { padding: 28px 24px 36px; min-height: auto; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
   .hero-time { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hl1, .hl2, .hl-stamp, .hero-desc {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* Capability tags — about section variant */
@@ -854,6 +860,23 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   align-items: start;
 }
 .about-left { position: sticky; top: calc(var(--nav-h) + var(--lg)); }
+.about-photo {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+@media (max-width: 768px) {
+  .about-photo { max-width: 100%; aspect-ratio: 4/3; }
+}
 .about-name {
   font-size: 48px;
   font-weight: 300;

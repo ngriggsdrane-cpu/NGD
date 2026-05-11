@@ -757,6 +757,9 @@
   <div class="about-section-inner">
 
     <div class="about-left">
+      <div class="about-photo">
+        <img src="images/nicholas-griggs-drane.png" alt="Nicholas Griggs-Drane" loading="lazy">
+      </div>
       <div class="section-label">About</div>
       <h2 class="about-name">Nicholas<br>Griggs-Drane</h2>
       <div class="about-caps">
@@ -811,58 +814,68 @@
 
   if (sessionStorage.getItem('ngdIntroSeen')) {
     intro.style.display = 'none';
-    return;
-  }
+  } else {
+    function animate(el, props, delay, duration, easing) {
+      setTimeout(() => {
+        el.style.transition = `all ${duration}ms ${easing || 'cubic-bezier(0.16,1,0.3,1)'}`;
+        Object.assign(el.style, props);
+      }, delay);
+    }
 
-  function animate(el, props, delay, duration, easing) {
+    animate(wordmark, { opacity: '1', transform: 'scale(1)' }, 200, 1000);
+
     setTimeout(() => {
-      el.style.transition = `all ${duration}ms ${easing || 'cubic-bezier(0.16,1,0.3,1)'}`;
-      Object.assign(el.style, props);
-    }, delay);
+      wordmark.style.transition = 'color 1.2s cubic-bezier(0.4,0,0.2,1)';
+      wordmark.style.color = '#E8500A';
+    }, 1300);
+
+    animate(tl1, { opacity: '1', transform: 'translateY(0)' }, 1600, 800);
+    animate(tl2, { opacity: '1', transform: 'translateY(0)' }, 2000, 800);
+    animate(sub, { opacity: '1' }, 2500, 700, 'ease');
+
+    setTimeout(() => {
+      intro.style.transition = 'transform 0.9s cubic-bezier(0.76,0,0.24,1), opacity 0.6s ease';
+      intro.style.transform  = 'translateY(-100%)';
+      intro.style.opacity    = '0';
+    }, 4800);
+
+    setTimeout(() => {
+      intro.style.display = 'none';
+      sessionStorage.setItem('ngdIntroSeen', '1');
+    }, 5700);
   }
-
-  animate(wordmark, { opacity: '1', transform: 'scale(1)' }, 200, 1000);
-
-  setTimeout(() => {
-    wordmark.style.transition = 'color 1.2s cubic-bezier(0.4,0,0.2,1)';
-    wordmark.style.color = '#E8500A';
-  }, 1300);
-
-  animate(tl1, { opacity: '1', transform: 'translateY(0)' }, 1600, 800);
-  animate(tl2, { opacity: '1', transform: 'translateY(0)' }, 2000, 800);
-  animate(sub, { opacity: '1' }, 2500, 700, 'ease');
-
-  setTimeout(() => {
-    intro.style.transition = 'transform 0.9s cubic-bezier(0.76,0,0.24,1), opacity 0.6s ease';
-    intro.style.transform  = 'translateY(-100%)';
-    intro.style.opacity    = '0';
-  }, 4800);
-
-  setTimeout(() => {
-    intro.style.display = 'none';
-    sessionStorage.setItem('ngdIntroSeen', '1');
-  }, 5700);
 
   /* ─── HERO ENTRANCE ──────────────────────────────────────── */
   function animateHero() {
-    var delay = sessionStorage.getItem('ngdIntroSeen') ? 0 : 5700;
-    setTimeout(function() {
-      var hl1   = document.querySelector('.hl1');
-      var hl2   = document.querySelector('.hl2');
-      var stamp = document.querySelector('.hl-stamp');
-      var desc  = document.querySelector('.hero-desc');
+    const introSeen = sessionStorage.getItem('ngdIntroSeen');
+    const delay = introSeen ? 0 : 5700;
 
-      function tw2(el, props, ms) {
+    setTimeout(() => {
+      const hl1   = document.querySelector('.hl1');
+      const hl2   = document.querySelector('.hl2');
+      const stamp = document.querySelector('.hl-stamp');
+      const desc  = document.querySelector('.hero-desc');
+
+      if (!hl1) return;
+
+      function tw(el, props, ms) {
         if (!el) return;
-        el.style.transition = 'all ' + ms + 'ms cubic-bezier(0.16,1,0.3,1)';
-        Object.keys(props).forEach(function(k) { el.style[k] = props[k]; });
+        el.style.transition = `all ${ms}ms cubic-bezier(0.16,1,0.3,1)`;
+        Object.assign(el.style, props);
       }
 
-      setTimeout(function() { tw2(hl1,   { opacity: '1', transform: 'translateY(0)' }, 800); }, 100);
-      setTimeout(function() { tw2(hl2,   { opacity: '1', transform: 'translateY(0)' }, 800); }, 250);
-      setTimeout(function() { tw2(stamp, { opacity: '1', transform: 'scale(1)'      }, 600); }, 450);
-      setTimeout(function() { tw2(desc,  { opacity: '1'                              }, 600); }, 650);
+      setTimeout(() => tw(hl1,   { opacity: '1', transform: 'translateY(0)' }, 800), 100);
+      setTimeout(() => tw(hl2,   { opacity: '1', transform: 'translateY(0)' }, 800), 250);
+      setTimeout(() => tw(stamp, { opacity: '1', transform: 'scale(1)'      }, 600), 450);
+      setTimeout(() => tw(desc,  { opacity: '1'                              }, 600), 650);
     }, delay);
+
+    setTimeout(() => {
+      ['.hl1', '.hl2', '.hl-stamp', '.hero-desc'].forEach(sel => {
+        const el = document.querySelector(sel);
+        if (el) { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; }
+      });
+    }, 7000);
   }
   animateHero();
 
