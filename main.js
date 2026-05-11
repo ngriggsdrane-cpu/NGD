@@ -378,46 +378,52 @@ function openModal(key) {
 
 
 /* ─── WORK GRID EXPAND / COLLAPSE ───────────────────────────── */
-(function initWorkExpand() {
-  const btn       = document.querySelector('.work-expand-btn');
-  const expanded  = document.querySelector('.work-grid-expanded');
-  const teaserRow = document.getElementById('workTeaserRow');
-  if (!btn || !expanded) return;
+const workBtn      = document.querySelector('.work-expand-btn');
+const workExpanded = document.querySelector('.work-grid-expanded');
+const teaserRow    = document.getElementById('workTeaserRow');
+let workOpen = false;
 
-  let open = false;
+if (workBtn && workExpanded) {
+  workBtn.addEventListener('click', function() {
+    workOpen = !workOpen;
 
-  btn.addEventListener('click', () => {
-    open = !open;
-    if (open) {
-      expanded.style.maxHeight = expanded.scrollHeight + 'px';
-      expanded.style.opacity   = '1';
+    if (workOpen) {
+      workExpanded.style.maxHeight = workExpanded.scrollHeight + 'px';
+      workExpanded.style.opacity   = '1';
+      workExpanded.style.overflow  = 'visible';
       if (teaserRow) {
-        teaserRow.style.transition  = 'opacity 0.3s ease, max-height 0.4s ease';
         teaserRow.style.opacity     = '0';
         teaserRow.style.maxHeight   = '0';
         teaserRow.style.overflow    = 'hidden';
+        teaserRow.style.pointerEvents = 'none';
       }
-      btn.querySelector('.btn-text').textContent = 'Show fewer examples';
-      btn.querySelector('.btn-arrow').textContent = '↑';
-      btn.style.animation = 'none';
+      const btnText  = workBtn.querySelector('.btn-text');
+      const btnArrow = workBtn.querySelector('.btn-arrow');
+      if (btnText)  btnText.textContent  = 'Show fewer examples';
+      if (btnArrow) btnArrow.textContent = '↑';
+      workBtn.style.animation = 'none';
     } else {
-      expanded.style.maxHeight = '0';
-      expanded.style.opacity   = '0';
+      workExpanded.style.maxHeight = '0';
+      workExpanded.style.opacity   = '0';
+      workExpanded.style.overflow  = 'hidden';
       if (teaserRow) {
-        teaserRow.style.opacity   = '1';
-        teaserRow.style.maxHeight = '400px';
+        teaserRow.style.opacity     = '1';
+        teaserRow.style.maxHeight   = '400px';
+        teaserRow.style.pointerEvents = 'all';
       }
-      btn.querySelector('.btn-text').textContent = 'See all work examples';
-      btn.querySelector('.btn-arrow').textContent = '↓';
-      btn.style.animation = 'btnBounce 2s ease-in-out infinite';
+      const btnText  = workBtn.querySelector('.btn-text');
+      const btnArrow = workBtn.querySelector('.btn-arrow');
+      if (btnText)  btnText.textContent  = 'See all work examples';
+      if (btnArrow) btnArrow.textContent = '↓';
+      workBtn.style.animation = 'btnBounce 2s ease-in-out infinite';
     }
   });
-})();
+}
 
 /* ─── TALENT ROSTER EXPAND / COLLAPSE ───────────────────────── */
 (function initTalentExpand() {
   const btn  = document.querySelector('.talent-expand-btn');
-  const grid = document.querySelector('.talent-grid-expanded');
+  const grid = document.getElementById('talentGridExpanded');
   if (!btn || !grid) return;
 
   let open = false;
@@ -425,15 +431,19 @@ function openModal(key) {
   btn.addEventListener('click', () => {
     open = !open;
     if (open) {
-      grid.style.maxHeight  = grid.scrollHeight + 'px';
-      grid.style.opacity    = '1';
-      grid.style.marginTop  = '40px';
-      btn.textContent = 'Collapse roster';
+      grid.style.maxHeight = grid.scrollHeight + 'px';
+      grid.style.opacity   = '1';
+      const txt = btn.querySelector('.talent-btn-text');
+      const arr = btn.querySelector('.talent-btn-arrow');
+      if (txt) txt.textContent = 'Collapse roster';
+      if (arr) arr.textContent = '↑';
     } else {
-      grid.style.maxHeight  = '0';
-      grid.style.opacity    = '0';
-      grid.style.marginTop  = '0';
-      btn.textContent = 'See full talent roster';
+      grid.style.maxHeight = '0';
+      grid.style.opacity   = '0';
+      const txt = btn.querySelector('.talent-btn-text');
+      const arr = btn.querySelector('.talent-btn-arrow');
+      if (txt) txt.textContent = 'See full talent roster';
+      if (arr) arr.textContent = '↓';
     }
   });
 })();

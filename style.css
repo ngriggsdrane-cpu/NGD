@@ -363,15 +363,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
    ══════════════════════════════════════════════════════════════ */
 #clients { background: var(--cream); }
 
-.section-header-row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 16px var(--pad-x);
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-
 .work-header-wrap { background: var(--cream); }
 .work-header {
   display: flex;
@@ -399,7 +390,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   background: var(--border);
 }
 .work-grid-expanded {
-  transition: max-height 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.4s ease 0.1s;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.4s ease;
 }
 
 .work-expand-wrap {
@@ -593,28 +587,34 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 .talent-header { margin-bottom: 0; }
 
-.clients-talent-divider {
+.clients-header-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 36px 48px 0;
-  margin-top: 40px;
-  border-top: 1px solid var(--border);
+  padding: 36px 48px 24px;
+  border-bottom: 1px solid var(--border);
 }
-.clients-talent-heading {
+.clients-header-right {
+  display: flex;
+  align-items: center;
+}
+.clients-disclaimer {
   font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  letter-spacing: -0.02em;
-  color: var(--ink);
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--warm-grey);
+  padding: 14px 48px;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
 }
 @media (max-width: 768px) {
-  .clients-talent-divider {
-    padding: 28px 24px 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  .clients-header-bar {
+    padding: 24px 24px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
   }
+  .clients-disclaimer { padding: 12px 24px; }
 }
 
 .talent-expand-btn {
