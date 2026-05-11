@@ -187,28 +187,45 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
    HERO — full dark typographic
    ══════════════════════════════════════════════════════════════ */
 #hero {
+  display: flex;
+  min-height: 80vh;
+}
+
+.hero-dark {
+  flex: 3;
   background: var(--ink-block);
-  min-height: 72vh;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto 1fr;
+  display: flex;
+  align-items: flex-end;
   padding: 56px var(--pad-x) var(--pad-x);
-  column-gap: 24px;
-  position: relative;
-  overflow: hidden;
+}
+
+.hero-orange {
+  flex: 2;
+  background: var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 52px 48px;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.3s;
+}
+.hero-orange.loaded { opacity: 1; }
+
+.hero-orange-content { display: flex; flex-direction: column; }
+
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 32px;
 }
 
 .hero-headline {
-  grid-column: 1 / 10;
-  grid-row: 2;
-  align-self: center;
-  font-size: clamp(72px, 8.4375vw, 108px);
+  font-size: clamp(52px, 6.25vw, 96px);
   font-weight: 300;
   letter-spacing: -0.04em;
   line-height: 0.88;
   padding-bottom: 8px;
-  z-index: 1;
-  position: relative;
 }
 .hero-line { display: block; overflow: hidden; }
 .hero-line-inner {
@@ -237,54 +254,24 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 .hero-line-highlight .hero-line-inner.loaded { opacity: 1; transform: scale(1); }
 
-.hero-right {
-  grid-column: 12 / 13;
-  grid-row: 1 / 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-bottom: 4px;
-  opacity: 0;
-  transition: opacity 0.5s ease 0.7s;
-  z-index: 1;
-}
-.hero-right.loaded { opacity: 1; }
-.hero-location-wrap { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
 .hero-location {
   font-size: 10px;
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--orange);
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  color: rgba(255,255,255,0.7);
   white-space: nowrap;
 }
 .hero-time {
   font-size: 11px;
   font-weight: 300;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.55);
   white-space: nowrap;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
 }
 
 /* ══════════════════════════════════════════════════════════════
-   ORANGE INTRO SECTION — name + capabilities
+   HERO ORANGE PANEL — name + capabilities (merged into hero)
    ══════════════════════════════════════════════════════════════ */
-#ngd-intro-section {
-  background: var(--orange);
-  padding: 48px var(--pad-x);
-}
-.intro-section-inner {
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  align-items: start;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  gap: var(--xl);
-}
 .intro-name {
   font-size: 52px;
   font-weight: 600;
@@ -298,7 +285,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   background: rgba(255,255,255,0.3);
   margin-top: 16px;
 }
-.intro-right { display: flex; flex-direction: column; }
+.hero-orange-content > * + * { margin-top: 20px; }
 .intro-desc {
   font-size: 22px;
   font-weight: 300;
@@ -908,7 +895,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
    RESPONSIVE
    ══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .hero-headline { grid-column: 1 / 11; }
+  .hero-orange { padding: 40px 36px; }
   .strategy-headline { font-size: 40px; }
 }
 
@@ -919,17 +906,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .nav-contact { display: none; }
   .nav-hamburger { display: flex; }
 
-  #hero {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 40px 20px 32px;
-    column-gap: 0;
-  }
-  .hero-headline { grid-column: 1; grid-row: 1; font-size: clamp(52px, 12vw, 80px); margin-top: 32px; }
-  .hero-right { display: none; }
-
-  #ngd-intro-section { padding: 32px 20px; }
-  .intro-section-inner { grid-template-columns: 1fr; gap: var(--lg); }
+  #hero { flex-direction: column; min-height: auto; }
+  .hero-dark { padding: 40px 20px 32px; }
+  .hero-headline { font-size: clamp(52px, 12vw, 80px); margin-top: 32px; }
+  .hero-orange { padding: 32px 20px; }
   .intro-name { font-size: 36px; }
   .intro-desc { font-size: 18px; }
 

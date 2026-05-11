@@ -51,8 +51,8 @@
     setTimeout(() => line.classList.add('loaded'), delay);
   });
 
-  const heroRight = document.querySelector('.hero-right');
-  if (heroRight) setTimeout(() => heroRight.classList.add('loaded'), delays.right);
+  const heroOrange = document.querySelector('.hero-orange');
+  if (heroOrange) setTimeout(() => heroOrange.classList.add('loaded'), delays.right);
 })();
 
 /* ─── LIVE TIME ──────────────────────────────────────────────── */
