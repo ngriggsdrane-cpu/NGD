@@ -863,7 +863,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .about-left { position: sticky; top: calc(var(--nav-h) + var(--lg)); }
 .about-photo {
   width: 100%;
-  max-width: 320px;
+  max-width: 360px;
   aspect-ratio: 3/4;
   overflow: hidden;
   margin-bottom: 24px;
@@ -876,7 +876,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   display: block;
 }
 @media (max-width: 768px) {
-  .about-photo { max-width: 100%; aspect-ratio: 4/3; }
+  .about-photo { max-width: 100%; aspect-ratio: 4/5; }
 }
 .about-name {
   font-size: 48px;
