@@ -71,7 +71,7 @@
 /* ─── SCROLL-BASED NAV ACTIVE STATE ──────────────────────────── */
 (function initScrollNav() {
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-  const sectionIds = ['work', 'talent', 'brands', 'events', 'about'];
+  const sectionIds = ['clients', 'brands', 'events', 'strategy', 'about'];
   const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
   if (!sections.length || !navLinks.length) return;

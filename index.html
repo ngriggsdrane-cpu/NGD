@@ -18,7 +18,6 @@
     <div class="ngd-intro-wordmark" id="ngdWordmark">NGD</div>
     <div class="ngd-intro-tagline" id="ngdTagline">
       <span class="tl-line" id="tl1">Infusing purpose into culture.</span>
-      <span class="tl-line" id="tl2">Inspiring fans at scale.</span>
     </div>
     <div class="ngd-intro-sub" id="ngdSub">Culture + Purpose = Unstoppable Impact</div>
   </div>
@@ -29,11 +28,11 @@
   <a href="index.html" class="nav-logo">NGD</a>
 
   <div class="nav-links">
-    <a href="#work"   class="nav-link">Work</a>
-    <a href="#talent" class="nav-link">Talent</a>
-    <a href="#brands" class="nav-link">Brands</a>
-    <a href="#events" class="nav-link">Events</a>
-    <a href="#about"  class="nav-link">About</a>
+    <a href="#clients"  class="nav-link">Clients</a>
+    <a href="#brands"   class="nav-link">Brands</a>
+    <a href="#events"   class="nav-link">Events</a>
+    <a href="#strategy" class="nav-link">Strategy</a>
+    <a href="#about"    class="nav-link">About</a>
   </div>
 
   <a href="mailto:ngriggsdrane@gmail.com" class="nav-contact">Contact</a>
@@ -44,8 +43,7 @@
 
 <!-- Mobile nav -->
 <nav id="mobile-nav">
-  <a href="#work"   class="mobile-nav-item">Work</a>
-  <a href="#talent" class="mobile-nav-item">Talent</a>
+  <a href="#clients"  class="mobile-nav-item">Clients</a>
   <a href="#brands" class="mobile-nav-item">Brands</a>
   <a href="#events" class="mobile-nav-item">Events</a>
   <a href="#about"  class="mobile-nav-item">About</a>
@@ -63,7 +61,6 @@
       <h1>
         <span class="hl hl1">Infusing purpose</span>
         <span class="hl hl2">into culture.</span>
-        <span class="hl-stamp">Inspiring fans at scale.</span>
       </h1>
     </div>
     <div class="hero-bottom">
@@ -73,15 +70,13 @@
   </div>
 </section>
 
-<!-- ─── SELECTED WORK ──────────────────────────────────────────── -->
+<!-- ─── CLIENTS ─────────────────────────────────────────────────── -->
 <div class="geo-divider"></div>
-<section id="work">
-  <div class="work-header-wrap">
-    <div class="work-header">
-      <span class="work-title">Work.</span>
-    </div>
-    <div class="work-orange-bar"></div>
+<section id="clients">
+  <div class="section-header-row">
+    <h2 class="section-title">Clients</h2>
   </div>
+  <div class="work-orange-bar"></div>
 
   <div class="work-grid-featured">
 
@@ -345,18 +340,11 @@
     </button>
   </div>
 
-</section>
-
-<!-- ─── TALENT SECTION ─────────────────────────────────────────── -->
-<div class="geo-divider"></div>
-<section id="talent">
-  <div class="talent-section-inner">
-
-    <div class="talent-header">
-      <div class="section-label">Talent</div>
-      <h2 class="section-headline">Celebrity talent supported across every vertical.</h2>
-      <button class="talent-expand-btn">See full talent roster</button>
-    </div>
+  <!-- TALENT ROSTER -->
+  <div class="clients-talent-divider">
+    <h3 class="clients-talent-heading">Full Talent Roster</h3>
+    <button class="talent-expand-btn">See full talent roster</button>
+  </div>
 
     <div class="talent-grid-expanded" style="max-height:0; overflow:hidden; opacity:0; margin-top:0; transition: max-height 0.6s cubic-bezier(0.16,1,0.3,1), opacity 0.4s ease, margin-top 0.4s ease;">
 
@@ -444,14 +432,13 @@
       </div>
     </div><!-- /talent-grid-expanded -->
 
-  </div>
 </section>
 
 <!-- ─── BRANDS SECTION ─────────────────────────────────────────── -->
 <div class="geo-divider"></div>
 <section id="brands">
   <div class="brands-section-inner">
-    <div class="section-label">Brand Partners</div>
+    <h2 class="section-title">Brand Partners</h2>
   </div>
   <div class="brand-logo-grid">
 
@@ -512,9 +499,8 @@
 <div class="geo-divider"></div>
 <section id="events" class="reveal">
   <div class="events-head-wrap">
-    <div class="section-label">Events</div>
     <div class="events-head-row">
-      <h2 class="section-headline">Events.</h2>
+      <h2 class="section-title">Events</h2>
     </div>
   </div>
   <div class="events-scroll-outer">
@@ -627,8 +613,8 @@
   <div class="strategy-section-inner">
 
     <div class="strategy-left">
-      <div class="strategy-label">360 Strategy</div>
-      <h2 class="strategy-headline">End-to-end strategic frameworks developed in partnership with talent to define, activate, and scale their legacy driven impact.</h2>
+      <h2 class="section-title">360 Strategy</h2>
+      <p class="strategy-headline">End-to-end strategic frameworks developed in partnership with talent to define, activate, and scale their legacy driven impact.</p>
       <p class="strategy-body">Each strategy integrates deep research, tailored recommendations, fundraising architecture, communications and rollout planning, content integration, strategic partnerships, and foundation buildouts.</p>
     </div>
 
@@ -747,8 +733,7 @@
       <div class="about-photo">
         <img src="images/NGD.jpg" alt="Nicholas Griggs-Drane" loading="lazy">
       </div>
-      <div class="section-label">About</div>
-      <h2 class="about-name">Nicholas<br>Griggs-Drane</h2>
+      <h2 class="section-title about-name">Nicholas<br>Griggs-Drane</h2>
       <div class="about-caps">
         <span class="cap-tag cap-tag-dark">Talent Partnerships</span>
         <span class="cap-tag cap-tag-dark">Brand Advisory</span>
@@ -796,7 +781,6 @@
   const intro     = document.getElementById('ngdIntro');
   const wordmark  = document.getElementById('ngdWordmark');
   const tl1       = document.getElementById('tl1');
-  const tl2       = document.getElementById('tl2');
   const sub       = document.getElementById('ngdSub');
 
   if (sessionStorage.getItem('ngdIntroSeen')) {
@@ -817,7 +801,6 @@
     }, 1300);
 
     animate(tl1, { opacity: '1', transform: 'translateY(0)' }, 1600, 800);
-    animate(tl2, { opacity: '1', transform: 'translateY(0)' }, 2000, 800);
     animate(sub, { opacity: '1' }, 2500, 700, 'ease');
 
     setTimeout(() => {
@@ -840,7 +823,6 @@
     setTimeout(() => {
       const hl1   = document.querySelector('.hl1');
       const hl2   = document.querySelector('.hl2');
-      const stamp = document.querySelector('.hl-stamp');
       const desc  = document.querySelector('.hero-desc');
 
       if (!hl1) return;
@@ -851,14 +833,13 @@
         Object.assign(el.style, props);
       }
 
-      setTimeout(() => tw(hl1,   { opacity: '1', transform: 'translateY(0)' }, 800), 100);
-      setTimeout(() => tw(hl2,   { opacity: '1', transform: 'translateY(0)' }, 800), 250);
-      setTimeout(() => tw(stamp, { opacity: '1', transform: 'scale(1)'      }, 600), 450);
-      setTimeout(() => tw(desc,  { opacity: '1'                              }, 600), 650);
+      setTimeout(() => tw(hl1,  { opacity: '1', transform: 'translateY(0)' }, 800), 100);
+      setTimeout(() => tw(hl2,  { opacity: '1', transform: 'translateY(0)' }, 800), 250);
+      setTimeout(() => tw(desc, { opacity: '1'                              }, 600), 650);
     }, delay);
 
     setTimeout(() => {
-      ['.hl1', '.hl2', '.hl-stamp', '.hero-desc'].forEach(sel => {
+      ['.hl1', '.hl2', '.hero-desc'].forEach(sel => {
         const el = document.querySelector(sel);
         if (el) { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; }
       });
