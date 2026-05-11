@@ -534,12 +534,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .case-card:hover .card-hover { opacity: 1; transform: none; }
 .card-hover-text { font-size: 15px; font-weight: 300; color: var(--white); text-align: center; line-height: 1.5; }
 
-/* ─── LUPITA VIDEO CARD ──────────────────────────────────────── */
-.lupita-video-card { background-image: url('images/p1-020.png'); background-size: cover; background-position: center top; }
-.lupita-iframe { position: absolute; top: 20%; left: 50%; width: 177.78%; height: 100%; min-width: 100%; min-height: 56.25vw; transform: translate(-50%, -20%); border: none; pointer-events: none; }
-.lupita-video-overlay { position: absolute; inset: 0; background: rgba(15,15,15,0.25); z-index: 1; pointer-events: none; }
-.lupita-video-card .card-tags { z-index: 2; }
-.lupita-video-card .card-hover { z-index: 2; }
 
 .card-footer {
   display: flex;
