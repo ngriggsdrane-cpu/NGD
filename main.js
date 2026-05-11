@@ -295,6 +295,18 @@ const caseStudies = {
     press: [
       { name: 'Honeyland Festival', url: 'https://www.honeylandfestival.com/impact/' }
     ]
+  },
+
+  ilana: {
+    eyebrow: 'Ilana Glazer \xd7 Yahoo Makers',
+    title: "Yahoo Makers Women's Conference 2026",
+    desc: "Booked Ilana Glazer to speak at the 2026 Yahoo Makers women's conference in Santa Barbara, bringing together women leaders from around the world. With a 2026 tour, a new podcast, and a movement for safer, more inclusive civic engagement.",
+    hero: { type: 'video', videoId: 'x94iRCpy1Pw' },
+    stats: [],
+    gallery: [],
+    press: [
+      { name: 'Yahoo Makers', url: 'https://www.youtube.com/watch?v=x94iRCpy1Pw' }
+    ]
   }
 
 };
@@ -458,4 +470,108 @@ if (workBtn && workExpanded) {
       if (arr) arr.textContent = '↓';
     }
   });
+})();
+
+/* ─── BRAND PARTNER DETAIL PANELS ───────────────────────────── */
+const brandDetails = {
+  skyy: {
+    name: 'SKYY Vodka',
+    campaign: 'Born to Be Original — Pride 2022',
+    desc: "SKYY Vodka's involvement for Pride 2022 included a 9 week organic social campaign titled Born to be Original. This educational campaign showcased real people from the LGBTQ+ community that represented each color of the flag and the meaning behind it.",
+    image: 'images/SKYY.png',
+    link: null
+  },
+  audi: {
+    name: 'Audi Gay Ski Week',
+    campaign: 'Aspen Gay Ski Week Activation',
+    desc: "2025 marks Audi's 4th consecutive year at Aspen Gay Ski Week. Branded touchpoints across Gondola Plaza and Snowmass including vehicle displays, the Audi Ring Swing, branded cocoa carts, and the Audi Skiii-Lift bench with inclusive messaging — all designed to encourage community and user-generated content.",
+    image: 'images/audi-gsk.png',
+    link: null
+  },
+  lyft: {
+    name: 'Lyft',
+    campaign: 'Girls Inc. \xd7 Coco Jones Partnership',
+    desc: 'Provided Lyft codes in partnership with Girls Inc. to ensure that their mentees could attend the Coco Jones concert without spending a dime. Lyft generously provided transportation codes to ensure safe and accessible travel for all Girls Inc. attendees.',
+    image: null,
+    link: null
+  },
+  redbull: {
+    name: 'Red Bull',
+    campaign: 'WME Fashion Incubator',
+    desc: 'Red Bull is the premier sponsor of the WME Fashion Incubator, supporting young creatives in the fashion industry to propel them to the next level.',
+    image: null,
+    link: null
+  },
+  yahoo: {
+    name: 'Yahoo Makers',
+    campaign: "Women's Conference 2026",
+    desc: "Booked Ilana Glazer to speak at the 2026 Yahoo Makers women's conference in Santa Barbara, bringing together women leaders from around the world.",
+    image: null,
+    link: 'https://www.youtube.com/watch?v=x94iRCpy1Pw'
+  },
+  ufc: {
+    name: 'UFC',
+    campaign: 'We Are All Fighters \xd7 GLAAD',
+    desc: 'Supported UFC on the We Are All Fighters campaign in partnership with GLAAD, raising over $15,000 in support of LGBTQ+ advocacy.',
+    image: null,
+    link: 'https://www.ufc.com/news/ufc-raises-more-than-15k-for-GLAAD-we-are-all-fighters'
+  }
+};
+
+(function initBrandPanels() {
+  const brandCells = document.querySelectorAll('.brand-cell');
+  const brandPanel = document.getElementById('brandDetailPanel');
+  const brandInner = document.getElementById('brandDetailInner');
+  const brandClose = document.getElementById('brandDetailClose');
+  if (!brandPanel || !brandInner) return;
+
+  let activeBrand = null;
+
+  brandCells.forEach(cell => {
+    cell.addEventListener('click', function() {
+      const key  = this.dataset.brand;
+      const data = brandDetails[key];
+      if (!data) return;
+
+      if (activeBrand === key) {
+        closeBrandPanel();
+        return;
+      }
+
+      activeBrand = key;
+      document.querySelectorAll('.brand-cell').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+
+      const imgHtml = data.image
+        ? `<img src="${data.image}" alt="${data.name}" class="brand-detail-img" onerror="this.parentElement.innerHTML=''">`
+        : `<div style="background:var(--paper);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--warm-grey);">${data.name}</span></div>`;
+
+      const linkHtml = data.link
+        ? `<a href="${data.link}" target="_blank" rel="noopener" class="brand-detail-link">View more →</a>`
+        : '';
+
+      brandInner.innerHTML = `
+        <div>
+          <div class="brand-detail-campaign">${data.campaign}</div>
+          <div class="brand-detail-name">${data.name}</div>
+          <div class="brand-detail-desc">${data.desc}</div>
+          ${linkHtml}
+        </div>
+        <div>${imgHtml}</div>
+      `;
+
+      brandPanel.classList.add('open');
+      setTimeout(() => {
+        brandPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    });
+  });
+
+  function closeBrandPanel() {
+    brandPanel.classList.remove('open');
+    document.querySelectorAll('.brand-cell').forEach(c => c.classList.remove('active'));
+    activeBrand = null;
+  }
+
+  if (brandClose) brandClose.addEventListener('click', closeBrandPanel);
 })();

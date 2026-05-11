@@ -697,7 +697,8 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   background: var(--border);
   border: 1px solid var(--border);
 }
-.brand-logo-cell {
+.brand-logo-cell,
+.brand-cell {
   background: var(--white);
   padding: 32px 40px;
   display: flex;
@@ -707,7 +708,8 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: background 0.2s;
 }
 .brand-logo-cell:hover { background: var(--orange-wash); }
-.brand-logo-cell img {
+.brand-logo-cell img,
+.brand-cell img {
   max-width: 120px;
   max-height: 48px;
   width: auto;
@@ -726,6 +728,94 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   border: 1px solid var(--border);
   padding: 8px 16px;
   line-height: 1.2;
+}
+
+/* clickable brand cells */
+.brand-cell { cursor: pointer; }
+.brand-cell:hover { background: var(--orange-wash); }
+.brand-cell:hover img { filter: grayscale(0%) opacity(1); }
+.brand-cell.active {
+  background: var(--orange-pale);
+  outline: 2px solid var(--orange);
+  outline-offset: -2px;
+}
+.brand-cell.active img { filter: grayscale(0%) opacity(1); }
+
+/* brand detail panel */
+.brand-detail-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease;
+  opacity: 0;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+.brand-detail-panel.open { max-height: 600px; opacity: 1; }
+.brand-detail-inner {
+  padding: 32px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .brand-detail-inner { grid-template-columns: 1fr; padding: 24px; }
+}
+.brand-detail-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--warm-grey);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+.brand-detail-close:hover { color: var(--ink); }
+.brand-detail-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.brand-detail-campaign {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+.brand-detail-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--warm-grey);
+}
+.brand-detail-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+.brand-detail-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px solid var(--orange);
+  padding-bottom: 2px;
 }
 
 /* ══════════════════════════════════════════════════════════════

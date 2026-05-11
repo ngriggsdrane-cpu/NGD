@@ -426,7 +426,22 @@
         </div>
       </article>
 
-      <!-- 16 — Honeyland Festival -->
+      <!-- 16 — Ilana Glazer -->
+      <article class="case-card" data-type="campaigns" onclick="openModal('ilana')">
+        <div class="card-img">
+          <div class="card-img-bg" style="background-color:var(--ink-soft);background-size:cover;background-position:center top;"></div>
+          <div class="card-img-overlay"></div>
+          <div class="card-name-pill">Ilana Glazer × Yahoo Makers</div>
+          <div class="card-hover">
+            <div class="reveal-inner">
+              <div class="reveal-title">Yahoo Makers Women's Conference</div>
+              <div class="reveal-desc">Booked Ilana Glazer to speak at the 2026 Yahoo Makers women's conference in Santa Barbara, bringing together women leaders from around the world.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 17 — Honeyland Festival -->
       <article class="case-card" data-type="campaigns" onclick="openModal('honeyland')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/Honeyland.jpg');background-size:cover;background-position:center top;"></div>
@@ -460,58 +475,63 @@
     <h2 class="section-title">Brand Partners</h2>
     <div class="brand-logo-grid" style="margin-top: 32px;">
 
-    <!-- Audi Gay Ski Week — using Audi sponsoring brand logo -->
-    <div class="brand-logo-cell">
+    <!-- Audi Gay Ski Week -->
+    <div class="brand-cell" data-brand="audi">
       <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/audi.svg" alt="Audi Gay Ski Week">
     </div>
 
     <!-- Lyft -->
-    <div class="brand-logo-cell">
+    <div class="brand-cell" data-brand="lyft">
       <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/lyft.svg" alt="Lyft">
     </div>
 
-    <!-- Erewhon -->
+    <!-- Erewhon — no detail data -->
     <div class="brand-logo-cell">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Erewhon.svg" alt="Erewhon">
     </div>
 
     <!-- Skyy Vodka -->
-    <div class="brand-logo-cell">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Skyy_Vodka_-_logo_%28United_States%2C_2021%29.svg" alt="Skyy Vodka">
+    <div class="brand-cell" data-brand="skyy">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Skyy_Vodka_-_logo_%28United_States%2C_2021%29.svg" alt="SKYY Vodka">
     </div>
 
-    <!-- Adidas -->
+    <!-- Adidas — no detail data -->
     <div class="brand-logo-cell">
       <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/adidas.svg" alt="Adidas">
     </div>
 
-    <!-- Madhappy -->
+    <!-- Madhappy — no detail data -->
     <div class="brand-logo-cell">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Madhappy_Logo_2023.webp" alt="Madhappy">
     </div>
 
     <!-- Yahoo -->
-    <div class="brand-logo-cell">
+    <div class="brand-cell" data-brand="yahoo">
       <img src="https://raw.githubusercontent.com/gilbarbara/logos/main/logos/yahoo.svg" alt="Yahoo">
     </div>
 
     <!-- Red Bull -->
-    <div class="brand-logo-cell">
+    <div class="brand-cell" data-brand="redbull">
       <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/redbull.svg" alt="Red Bull">
     </div>
 
-    <!-- Diageo -->
+    <!-- Diageo — no detail data -->
     <div class="brand-logo-cell">
       <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Diageo_Plc_Logo.svg" alt="Diageo">
     </div>
 
     <!-- UFC -->
-    <div class="brand-logo-cell">
+    <div class="brand-cell" data-brand="ufc">
       <img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/ufc.svg" alt="UFC">
     </div>
 
     </div><!-- /brand-logo-grid -->
-  </div><!-- /brands-section-inner -->
+
+    <!-- BRAND DETAIL PANEL -->
+    <div class="brand-detail-panel" id="brandDetailPanel">
+      <div class="brand-detail-inner" id="brandDetailInner"></div>
+      <button class="brand-detail-close" id="brandDetailClose">✕</button>
+    </div>
 </section>
 
 <!-- ─── INDUSTRY EVENTS ─────────────────────────────────────────── -->
