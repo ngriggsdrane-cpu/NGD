@@ -494,14 +494,14 @@ const brandDetails = {
     name: 'Audi Gay Ski Week',
     campaign: 'Aspen Gay Ski Week Activation',
     desc: "2025 marks Audi's 4th consecutive year at Aspen Gay Ski Week. Branded touchpoints across Gondola Plaza and Snowmass including vehicle displays, the Audi Ring Swing, branded cocoa carts, and the Audi Skiii-Lift bench with inclusive messaging — all designed to encourage community and user-generated content.",
-    image: 'images/audi-gsk.png',
+    image: 'images/Audi Gay Skii Week.png',
     link: null
   },
   lyft: {
     name: 'Lyft',
     campaign: 'Girls Inc. \xd7 Coco Jones Partnership',
     desc: 'Provided Lyft codes in partnership with Girls Inc. to ensure that their mentees could attend the Coco Jones concert without spending a dime. Lyft generously provided transportation codes to ensure safe and accessible travel for all Girls Inc. attendees.',
-    image: null,
+    image: 'images/Lyft.png',
     link: null
   },
   redbull: {
@@ -511,18 +511,11 @@ const brandDetails = {
     image: null,
     link: null
   },
-  yahoo: {
-    name: 'Yahoo Makers',
-    campaign: "Women's Conference 2026",
-    desc: "Booked Ilana Glazer to speak at the 2026 Yahoo Makers women's conference in Santa Barbara, bringing together women leaders from around the world.",
-    image: null,
-    link: 'https://www.youtube.com/watch?v=x94iRCpy1Pw'
-  },
   ufc: {
     name: 'UFC',
     campaign: 'We Are All Fighters \xd7 GLAAD',
     desc: 'Supported UFC on the We Are All Fighters campaign in partnership with GLAAD, raising over $15,000 in support of LGBTQ+ advocacy.',
-    image: null,
+    image: 'images/UFC We are all fighters.jpg',
     link: 'https://www.ufc.com/news/ufc-raises-more-than-15k-for-GLAAD-we-are-all-fighters'
   }
 };
@@ -584,4 +577,12 @@ const brandDetails = {
 
   if (brandClose) brandClose.addEventListener('click', closeBrandPanel);
 })();
+
+// Auto-open Audi panel on load to signal interactivity
+document.addEventListener('DOMContentLoaded', function() {
+  const audiCell = document.querySelector('.brand-cell[data-brand="audi"]');
+  if (audiCell) {
+    setTimeout(() => { audiCell.click(); }, 800);
+  }
+});
 

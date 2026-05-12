@@ -734,6 +734,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   justify-content: center;
   min-height: 100px;
   transition: background 0.2s;
+  position: relative;
 }
 .brand-logo-cell:hover { background: var(--orange-wash); }
 .brand-logo-cell img,
@@ -768,6 +769,24 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   outline-offset: -2px;
 }
 .brand-cell.active img { filter: grayscale(0%) opacity(1); }
+.brand-cell::after {
+  content: 'Click to learn more';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.brand-cell:hover::after { opacity: 1; }
+.brand-cell.active::after { opacity: 0; }
 
 /* brand detail panel */
 .brand-detail-panel {
