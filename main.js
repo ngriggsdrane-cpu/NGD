@@ -510,7 +510,10 @@ const brandDetails = {
     name: 'Red Bull',
     campaign: 'WME Fashion Incubator',
     desc: 'Red Bull is the premier sponsor of the WME Fashion Incubator, supporting young creatives in the fashion industry to propel them to the next level.',
-    image: null,
+    image: 'images/RedBull.png',
+    imageStyle: 'contain',
+    imageBg: '#ffffff',
+    imageHeight: '320px',
     link: null
   },
   ufc: {
@@ -549,7 +552,7 @@ const brandDetails = {
       this.classList.add('active');
 
       const imgHtml = data.image
-        ? `<div style="width:100%; height:280px; overflow:hidden; background:${data.imageBg || 'var(--paper-warm)'};">
+        ? `<div style="width:100%; height:${data.imageHeight || '280px'}; overflow:hidden; background:${data.imageBg || 'var(--paper-warm)'};">
              <img src="${data.image}" alt="${data.name}" style="width:100%; height:100%; object-fit:${data.imageStyle || 'cover'}; object-position:center; display:block;" onerror="this.parentElement.style.background='var(--paper)'">
            </div>`
         : `<div style="width:100%; height:280px; background:var(--paper); display:flex; align-items:center; justify-content:center;">
