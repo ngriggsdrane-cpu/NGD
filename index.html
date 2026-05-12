@@ -53,7 +53,13 @@
 <section class="hero" id="hero">
   <div class="hero-inner">
     <div class="hero-top">
-      <div class="hero-eyebrow">Nicholas Griggs-Drane &nbsp;/&nbsp; Director of Client Impact &nbsp;/&nbsp; WME</div>
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-name">Nicholas Griggs-Drane</span>
+        <span class="hero-eyebrow-sep">/</span>
+        <span class="hero-eyebrow-role">Director of Client Impact</span>
+        <span class="hero-eyebrow-sep">/</span>
+        <span class="hero-eyebrow-role">WME</span>
+      </div>
       <div class="hero-locations">NYC · LA · UK</div>
     </div>
     <div class="hero-headline">
@@ -64,7 +70,6 @@
     </div>
     <div class="hero-bottom">
       <p class="hero-desc">Utilizing talent, campaigns, and partnerships that accelerate philanthropic missions and brand recognition.</p>
-      <div class="hero-time" id="heroTime"></div>
     </div>
   </div>
 </section>
@@ -825,17 +830,6 @@
   }
   animateHero();
 
-  /* ─── LIVE TIME ──────────────────────────────────────────── */
-  function updateTime() {
-    var el = document.getElementById('heroTime');
-    if (!el) return;
-    var t = new Date().toLocaleTimeString('en-US', {
-      timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit'
-    });
-    el.textContent = 'New York — ' + t;
-  }
-  updateTime();
-  setInterval(updateTime, 30000);
 })();
 </script>
 

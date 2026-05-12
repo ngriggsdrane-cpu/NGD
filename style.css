@@ -281,10 +281,28 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   margin-bottom: 32px;
 }
 .hero-eyebrow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.hero-eyebrow-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  color: var(--white);
+}
+.hero-eyebrow-sep {
+  color: var(--orange);
+  font-size: 14px;
+}
+.hero-eyebrow-role {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: 11px;
-  letter-spacing: 0.16em;
+  font-size: 13px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.35);
 }
@@ -329,17 +347,9 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   max-width: 420px;
   opacity: 0;
 }
-.hero-time {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.2);
-}
 @media (max-width: 768px) {
   .hero { padding: 28px 24px 36px; min-height: auto; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .hero-time { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hl1, .hl2, .hero-desc {
