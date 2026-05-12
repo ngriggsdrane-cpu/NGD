@@ -312,102 +312,103 @@ const caseStudies = {
 };
 
 /* ─── MODAL OPEN / CLOSE ─────────────────────────────────────── */
-function closeModal() {
-  document.getElementById('caseModalOverlay').classList.remove('open');
-  document.getElementById('caseModal').classList.remove('open');
-  const savedY = parseInt(document.body.dataset.scrollY || '0', 10);
-  document.body.style.position = '';
-  document.body.style.top      = '';
-  document.body.style.width    = '';
-  document.body.style.overflow = '';
-  window.scrollTo(0, savedY);
-  const hero = document.getElementById('caseModalHero');
-  if (hero) hero.innerHTML = '';
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  const closeBtn = document.getElementById('caseModalClose');
-  const overlay  = document.getElementById('caseModalOverlay');
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (overlay)  overlay.addEventListener('click', closeModal);
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-  });
-});
-
 function openModal(key) {
   const data = caseStudies[key];
   if (!data) return;
 
-  const overlay    = document.getElementById('caseModalOverlay');
-  const hero       = document.getElementById('caseModalHero');
-  const eyebrow    = document.getElementById('caseModalEyebrow');
-  const title      = document.getElementById('caseModalTitle');
-  const desc       = document.getElementById('caseModalDesc');
-  const stats      = document.getElementById('caseModalStats');
-  const gallery    = document.getElementById('caseModalGallery');
-  const galleryWrap= document.getElementById('caseModalGalleryWrap');
-  const press      = document.getElementById('caseModalPress');
-  const pressWrap  = document.getElementById('caseModalPressWrap');
+  const backdrop = document.getElementById('modalBackdrop');
+  const modal    = document.getElementById('caseModal');
+  const hero     = document.getElementById('modalHero');
+  const scroll   = document.getElementById('modalScroll');
 
-  eyebrow.textContent = data.eyebrow;
-  const wmeTag = document.getElementById('caseModalWme');
-  if (wmeTag) wmeTag.textContent = 'Developed at WME';
-  title.textContent   = data.title;
-  desc.textContent    = data.desc;
+  scroll.scrollTop = 0;
 
+  document.getElementById('modalEyebrow').textContent = data.eyebrow || '';
+  document.getElementById('modalTitle').textContent   = data.title   || '';
+  document.getElementById('modalDesc').textContent    = data.desc    || '';
+
+  hero.innerHTML = '';
   if (data.hero.type === 'video') {
     hero.style.backgroundImage = '';
-    hero.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.hero.videoId}?autoplay=1&mute=1&loop=1&playlist=${data.hero.videoId}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; muted" allowfullscreen title="${data.title}"></iframe>`;
+    hero.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.hero.videoId}?autoplay=1&mute=1&loop=1&playlist=${data.hero.videoId}&controls=0&rel=0&playsinline=1" style="position:absolute;top:50%;left:50%;width:177.78%;height:100%;min-width:100%;transform:translate(-50%,-50%);border:none;pointer-events:none;" allow="autoplay;muted" allowfullscreen></iframe>`;
   } else {
-    hero.innerHTML = '';
-    const encodedHeroSrc = data.hero.src.replace(/ /g, '%20');
-    hero.style.backgroundImage = `url('${encodedHeroSrc}')`;
+    const src = data.hero.src ? data.hero.src.replace(/ /g, '%20') : '';
+    hero.style.backgroundImage  = src ? `url('${src}')` : '';
     hero.style.backgroundPosition = data.hero.position || 'center top';
+    hero.style.backgroundSize   = 'cover';
   }
 
-  stats.innerHTML = '';
+  const statsEl = document.getElementById('modalStats');
+  statsEl.innerHTML = '';
   if (data.stats && data.stats.length > 0) {
-    stats.style.display = 'grid';
+    statsEl.style.display = 'grid';
+    statsEl.style.gridTemplateColumns = `repeat(${Math.min(data.stats.length, 2)}, 1fr)`;
     data.stats.forEach(s => {
-      stats.innerHTML += `<div class="case-modal-stat"><div class="case-modal-stat-number">${s.number}</div><div class="case-modal-stat-label">${s.label}</div></div>`;
+      statsEl.innerHTML += `<div class="modal-stat-cell"><div class="modal-stat-number">${s.number}</div><div class="modal-stat-label">${s.label}</div></div>`;
     });
   } else {
-    stats.style.display = 'none';
+    statsEl.style.display = 'none';
   }
 
+  const galleryWrap = document.getElementById('modalGalleryWrap');
+  const gallery     = document.getElementById('modalGallery');
   gallery.innerHTML = '';
   if (data.gallery && data.gallery.length > 0) {
     galleryWrap.style.display = 'block';
     data.gallery.forEach(img => {
-      const encodedSrc = img.src.replace(/ /g, '%20');
-      gallery.innerHTML += `<img src="${encodedSrc}" alt="${img.alt}" class="case-modal-gallery-img" loading="lazy" onerror="this.style.display='none'">`;
+      const src = img.src.replace(/ /g, '%20');
+      gallery.innerHTML += `<img src="${src}" alt="${img.alt}" class="modal-gallery-img" loading="lazy" onerror="this.style.display='none'">`;
     });
   } else {
     galleryWrap.style.display = 'none';
   }
 
+  const pressWrap = document.getElementById('modalPressWrap');
+  const press     = document.getElementById('modalPress');
   press.innerHTML = '';
   if (data.press && data.press.length > 0) {
     pressWrap.style.display = 'block';
     data.press.forEach(p => {
-      press.innerHTML += `<span class="case-modal-press-item" onclick="openLinkViewer('${p.url}', '${p.name}')" style="cursor:pointer;">${p.name}</span>`;
+      press.innerHTML += `<button class="modal-press-btn" onclick="openLinkViewer('${p.url}','${p.name}')">${p.name}</button>`;
     });
   } else {
     pressWrap.style.display = 'none';
   }
 
-  document.getElementById('caseModalInner').scrollTop = 0;
-  const scrollY = window.scrollY;
-  document.body.dataset.scrollY = scrollY;
-  document.body.style.overflow  = 'hidden';
-  document.body.style.position  = 'fixed';
-  document.body.style.top       = `-${scrollY}px`;
-  document.body.style.width     = '100%';
-  document.getElementById('caseModalOverlay').classList.add('open');
-  document.getElementById('caseModal').classList.add('open');
+  backdrop.style.display = 'block';
+  modal.style.display    = 'flex';
+  document.body.style.overflow = 'hidden';
+
+  requestAnimationFrame(() => {
+    backdrop.classList.add('modal-open');
+    modal.classList.add('modal-open');
+  });
 }
 
+function closeModal() {
+  const backdrop = document.getElementById('modalBackdrop');
+  const modal    = document.getElementById('caseModal');
+  const hero     = document.getElementById('modalHero');
+
+  backdrop.classList.remove('modal-open');
+  modal.classList.remove('modal-open');
+  document.body.style.overflow = '';
+
+  setTimeout(() => {
+    backdrop.style.display = 'none';
+    modal.style.display    = 'none';
+    hero.innerHTML = '';
+    hero.style.backgroundImage = '';
+  }, 400);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalBackdrop').addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+});
 
 /* ─── WORK GRID EXPAND / COLLAPSE ───────────────────────────── */
 const workBtn      = document.querySelector('.work-expand-btn');

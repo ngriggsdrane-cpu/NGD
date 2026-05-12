@@ -865,29 +865,40 @@
 </script>
 
 <!-- ─── CASE STUDY MODAL ─────────────────────────────────────────── -->
-<div class="case-modal-overlay" id="caseModalOverlay"></div>
-<div class="case-modal" id="caseModal">
-  <button class="case-modal-close" id="caseModalClose" aria-label="Close">
-    <span>✕</span>
-  </button>
-  <div class="case-modal-hero" id="caseModalHero"></div>
-  <div class="case-modal-inner" id="caseModalInner">
-    <div class="case-modal-content">
-      <div class="case-modal-header">
-        <div class="case-modal-eyebrow" id="caseModalEyebrow"></div>
-        <div class="case-modal-wme" id="caseModalWme">Developed at WME</div>
-        <h2 class="case-modal-title" id="caseModalTitle"></h2>
-        <p class="case-modal-desc" id="caseModalDesc"></p>
+<div id="modalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,15,15,0.82); z-index:500;"></div>
+
+<div id="caseModal" style="display:none; position:fixed; z-index:501; background:#F5F0E8; overflow:hidden; flex-direction:column;">
+
+  <button id="modalClose" style="position:absolute; top:14px; right:14px; z-index:10; width:34px; height:34px; border-radius:50%; background:#1A1414; color:#fff; border:none; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+
+  <div id="modalHero" style="flex-shrink:0; background:#2C2420; background-size:cover; background-position:center top; position:relative; overflow:hidden;"></div>
+
+  <div id="modalScroll" style="overflow-y:scroll; -webkit-overflow-scrolling:touch; flex:1; min-height:0;">
+    <div style="padding:28px 24px 80px;">
+
+      <div id="modalEyebrow" style="font-family:'DM Sans',sans-serif; font-weight:300; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#E8500A; margin-bottom:6px;"></div>
+
+      <div style="font-family:'DM Sans',sans-serif; font-weight:300; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#9A948C; margin-bottom:10px; display:flex; align-items:center; gap:8px;">
+        <span style="display:inline-block; width:20px; height:1px; background:#E8500A;"></span>
+        DEVELOPED AT WME
       </div>
-      <div class="case-modal-stats" id="caseModalStats"></div>
-      <div class="case-modal-gallery-wrap" id="caseModalGalleryWrap">
-        <div class="case-modal-section-label">Photos</div>
-        <div class="case-modal-gallery" id="caseModalGallery"></div>
+
+      <h2 id="modalTitle" style="font-family:'DM Sans',sans-serif; font-weight:600; font-size:24px; letter-spacing:-0.02em; color:#1A1414; margin-bottom:14px; line-height:1.2;"></h2>
+
+      <p id="modalDesc" style="font-family:'DM Sans',sans-serif; font-weight:300; font-size:15px; line-height:1.75; color:#9A948C; margin-bottom:24px;"></p>
+
+      <div id="modalStats" style="display:none; margin-bottom:28px; border:1px solid rgba(15,15,15,0.1);"></div>
+
+      <div id="modalGalleryWrap" style="display:none; margin-bottom:28px;">
+        <div style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#9A948C; margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid rgba(15,15,15,0.1);">Photos</div>
+        <div id="modalGallery" style="display:grid; grid-template-columns:1fr 1fr; gap:4px;"></div>
       </div>
-      <div class="case-modal-press-wrap" id="caseModalPressWrap">
-        <div class="case-modal-section-label">Press</div>
-        <div class="case-modal-press" id="caseModalPress"></div>
+
+      <div id="modalPressWrap" style="display:none;">
+        <div style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#9A948C; margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid rgba(15,15,15,0.1);">Press</div>
+        <div id="modalPress" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
       </div>
+
     </div>
   </div>
 </div>
