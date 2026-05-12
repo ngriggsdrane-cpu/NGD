@@ -64,8 +64,8 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 @media (max-width: 768px) {
   #events, #strategy, #about {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 }
 
@@ -631,14 +631,21 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 @media (max-width: 768px) {
   #clients { padding-top: 0; padding-bottom: 32px; }
   .clients-header-bar { padding: 20px 24px 16px; margin-bottom: 0; gap: 12px; }
-  .clients-header-bar-inner { flex-wrap: wrap; gap: 12px; }
+  .clients-header-bar-inner { flex-wrap: nowrap; align-items: center; gap: 12px; }
+  .clients-header-bar .section-title { font-size: 28px; flex-shrink: 0; }
   .clients-disclaimer { padding: 8px 24px; margin: 0; font-size: 11px; }
   .talent-expand-btn {
-    font-size: 10px;
-    padding: 10px 20px;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    padding: 7px 14px;
+    border-radius: 999px;
     white-space: nowrap;
+    flex-shrink: 0;
+    border-width: 1px;
     margin-top: 0;
   }
+  .talent-expand-btn .talent-btn-text { font-size: 9px; letter-spacing: 0.1em; }
+  .talent-expand-btn .talent-btn-arrow { font-size: 10px; }
   .work-grid-featured { margin-top: 0; padding-top: 0; }
 }
 
@@ -1159,6 +1166,38 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .contact-right { align-items: flex-start; }
 
   .geo-divider::after { left: 24px; }
+
+  /* Universal section title sizing */
+  .section-title {
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Section inner padding */
+  .section-inner { padding-left: 24px; padding-right: 24px; }
+
+  /* Strategy — long tagline headline reduced */
+  .strategy-tagline {
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .strategy-left { padding: 0 0 24px 0; }
+
+  /* Events / About section title bottom margin */
+  #events .section-title,
+  #about .section-title { margin-bottom: 16px; }
+
+  /* About bio */
+  .about-bio {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 16px;
+  }
 }
 
 @media (max-width: 480px) {
