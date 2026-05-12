@@ -807,7 +807,9 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   align-items: start;
 }
 @media (max-width: 768px) {
-  .brand-detail-inner { grid-template-columns: 1fr; padding: 24px; }
+  .brand-detail-inner { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+  .brand-detail-img,
+  .brand-detail-inner > div:last-child > div { height: 220px; }
 }
 .brand-detail-close {
   position: absolute;
@@ -847,9 +849,15 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 .brand-detail-img {
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 280px;
   object-fit: cover;
+  object-position: center;
   display: block;
+}
+.brand-detail-img.logo-img {
+  object-fit: contain;
+  background: var(--paper);
+  padding: 20px;
 }
 .brand-detail-link {
   display: inline-block;

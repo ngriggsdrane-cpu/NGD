@@ -545,8 +545,12 @@ const brandDetails = {
       this.classList.add('active');
 
       const imgHtml = data.image
-        ? `<img src="${data.image}" alt="${data.name}" class="brand-detail-img" onerror="this.parentElement.innerHTML=''">`
-        : `<div style="background:var(--paper);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--warm-grey);">${data.name}</span></div>`;
+        ? `<div style="width:100%; height:280px; overflow:hidden; background:var(--paper-warm);">
+             <img src="${data.image}" alt="${data.name}" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;" onerror="this.parentElement.style.background='var(--paper)'">
+           </div>`
+        : `<div style="width:100%; height:280px; background:var(--paper); display:flex; align-items:center; justify-content:center;">
+             <span style="font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--warm-grey);">${data.name}</span>
+           </div>`;
 
       const linkHtml = data.link
         ? `<a href="${data.link}" target="_blank" rel="noopener noreferrer" class="brand-detail-link">View more →</a>`
