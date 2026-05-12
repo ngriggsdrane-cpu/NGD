@@ -349,12 +349,25 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 
 /* Capability tags — about section variant */
+.cap-tag {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
 .cap-tag-dark {
   border-color: var(--border-strong);
   color: var(--warm-grey);
   background: transparent;
 }
-.cap-tag-dark:hover { background: var(--orange-pale); color: var(--orange); }
+.cap-tag-dark:hover { background: var(--orange-pale); color: var(--orange); border-color: var(--orange); }
 
 /* Scroll reveal */
 .reveal-from-left {
