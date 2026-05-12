@@ -313,9 +313,8 @@ const caseStudies = {
 
 /* ─── MODAL OPEN / CLOSE ─────────────────────────────────────── */
 function closeModal() {
-  const overlay = document.getElementById('caseModalOverlay');
-  if (!overlay) return;
-  overlay.classList.remove('open');
+  document.getElementById('caseModalOverlay').classList.remove('open');
+  document.getElementById('caseModal').classList.remove('open');
   const savedY = parseInt(document.body.dataset.scrollY || '0', 10);
   document.body.style.position = '';
   document.body.style.top      = '';
@@ -330,9 +329,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeBtn = document.getElementById('caseModalClose');
   const overlay  = document.getElementById('caseModalOverlay');
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (overlay) overlay.addEventListener('click', function(e) {
-    if (e.target === overlay) closeModal();
-  });
+  if (overlay)  overlay.addEventListener('click', closeModal);
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeModal();
   });
@@ -407,7 +404,8 @@ function openModal(key) {
   document.body.style.position  = 'fixed';
   document.body.style.top       = `-${scrollY}px`;
   document.body.style.width     = '100%';
-  overlay.classList.add('open');
+  document.getElementById('caseModalOverlay').classList.add('open');
+  document.getElementById('caseModal').classList.add('open');
 }
 
 
