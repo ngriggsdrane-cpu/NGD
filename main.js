@@ -517,6 +517,7 @@ const brandDetails = {
     desc: 'Supported UFC on the We Are All Fighters campaign in partnership with GLAAD, raising over $15,000 in support of LGBTQ+ advocacy.',
     image: 'images/UFC We are all fighters.jpg',
     imageStyle: 'contain',
+    imageBg: '#0a0a0a',
     link: 'https://www.ufc.com/news/ufc-raises-more-than-15k-for-GLAAD-we-are-all-fighters'
   }
 };
@@ -546,7 +547,7 @@ const brandDetails = {
       this.classList.add('active');
 
       const imgHtml = data.image
-        ? `<div style="width:100%; height:280px; overflow:hidden; background:var(--paper-warm);">
+        ? `<div style="width:100%; height:280px; overflow:hidden; background:${data.imageBg || 'var(--paper-warm)'};">
              <img src="${data.image}" alt="${data.name}" style="width:100%; height:100%; object-fit:${data.imageStyle || 'cover'}; object-position:center; display:block;" onerror="this.parentElement.style.background='var(--paper)'">
            </div>`
         : `<div style="width:100%; height:280px; background:var(--paper); display:flex; align-items:center; justify-content:center;">
