@@ -4,6 +4,12 @@
    Talent expand · Mobile nav
    ═══════════════════════════════════════════════════════════════ */
 
+window.addEventListener('load', function() {
+  window.scrollTo(0, 0);
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+});
+
 'use strict';
 
 /* ─── HAMBURGER / MOBILE NAV ─────────────────────────────────── */
@@ -574,9 +580,11 @@ const brandDetails = {
       `;
 
       brandPanel.classList.add('open');
-      setTimeout(() => {
-        brandPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 100);
+      if (!suppressScroll) {
+        setTimeout(() => {
+          brandPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
     });
   });
 
@@ -590,10 +598,15 @@ const brandDetails = {
 })();
 
 // Auto-open Audi panel on load to signal interactivity
+let suppressScroll = true;
+
 document.addEventListener('DOMContentLoaded', function() {
   const audiCell = document.querySelector('.brand-cell[data-brand="audi"]');
   if (audiCell) {
-    setTimeout(() => { audiCell.click(); }, 800);
+    setTimeout(() => {
+      audiCell.click();
+      setTimeout(() => { suppressScroll = false; }, 100);
+    }, 800);
   }
 });
 
