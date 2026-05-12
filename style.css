@@ -1279,7 +1279,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: background 0.2s;
 }
 .case-modal-close:hover { background: var(--orange); }
-.case-modal-inner { overflow-y: auto; height: 100%; -webkit-overflow-scrolling: touch; }
+.case-modal-inner { overflow-y: auto; overflow-x: hidden; flex: 1; min-height: 0; -webkit-overflow-scrolling: touch; }
 .case-modal-hero {
   width: 100%;
   height: 400px;
@@ -1406,9 +1406,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 .case-modal-press-item:hover { background: var(--orange); border-color: var(--orange); color: var(--white); }
 @media (max-width: 768px) {
-  .case-modal { width: 100%; max-height: 95vh; }
-  .case-modal-overlay { padding: 0; align-items: flex-end; }
-  .case-modal-hero { height: 240px; }
+  .case-modal { width: 100%; max-height: 92vh; height: 92vh; }
+  .case-modal-overlay { padding: 0; align-items: flex-end; overflow: hidden; }
+  .case-modal-inner { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
+  .case-modal-hero { height: 240px; flex-shrink: 0; }
   .case-modal-content { padding: 24px 20px 40px; }
   .case-modal-stats { grid-template-columns: repeat(2, 1fr); }
   .case-modal-gallery { grid-template-columns: repeat(2, 1fr); }
