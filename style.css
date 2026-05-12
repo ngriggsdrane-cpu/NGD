@@ -1012,7 +1012,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   margin-top: 8px;
   margin-bottom: var(--md);
 }
-.about-caps { display: flex; flex-wrap: wrap; gap: 0; margin-top: 4px; }
+.about-caps { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; margin-bottom: 20px; }
 .about-right { display: flex; flex-direction: column; gap: var(--md); padding-top: 28px; }
 .about-bio-text {
   font-size: 16px;
@@ -1054,7 +1054,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   gap: var(--xl);
   align-items: center;
 }
-.contact-headline { font-size: 72px; font-weight: 300; letter-spacing: -0.04em; line-height: 0.92; color: var(--ink); }
+.contact-hed { font-size: 72px; font-weight: 300; letter-spacing: -0.04em; line-height: 0.92; color: var(--ink); }
 .contact-right { display: flex; flex-direction: column; align-items: flex-end; gap: var(--md); }
 .contact-email { font-size: 16px; font-weight: 300; color: var(--orange); transition: color 0.15s; }
 .contact-email:hover { color: var(--orange-dark); }
@@ -1162,7 +1162,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .about-right { padding-top: 0; }
 
   .contact-inner { grid-template-columns: 1fr; gap: var(--lg); }
-  .contact-headline { font-size: 48px; }
+  .contact-hed { font-size: 48px; }
   .contact-right { align-items: flex-start; }
 
   .geo-divider::after { left: 24px; }
@@ -1199,6 +1199,13 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
     font-size: 14px;
     line-height: 1.7;
     margin-top: 16px;
+  }
+
+  /* Contact headline */
+  .contact-hed {
+    font-size: 36px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 }
 
