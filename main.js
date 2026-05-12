@@ -301,7 +301,7 @@ const caseStudies = {
     eyebrow: 'Ilana Glazer \xd7 Yahoo Makers',
     title: "Yahoo Makers Women's Conference 2026",
     desc: "Booked Ilana Glazer to speak at the 2026 Yahoo Makers women's conference in Santa Barbara, bringing together women leaders from around the world. With a 2026 tour, a new podcast, and a movement for safer, more inclusive civic engagement.",
-    hero: { type: 'video', videoId: 'x94iRCpy1Pw' },
+    hero: { type: 'image', src: 'images/IMG_7127.jpeg', position: 'center top' },
     stats: [],
     gallery: [],
     press: [
