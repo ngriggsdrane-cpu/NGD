@@ -389,7 +389,7 @@ function openModal(key) {
   if (data.press && data.press.length > 0) {
     pressWrap.style.display = 'block';
     data.press.forEach(p => {
-      press.innerHTML += `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="case-modal-press-item">${p.name}</a>`;
+      press.innerHTML += `<span class="case-modal-press-item" onclick="openLinkViewer('${p.url}', '${p.name}')" style="cursor:pointer;">${p.name}</span>`;
     });
   } else {
     pressWrap.style.display = 'none';
@@ -547,7 +547,7 @@ const brandDetails = {
         : `<div style="background:var(--paper);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;"><span style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--warm-grey);">${data.name}</span></div>`;
 
       const linkHtml = data.link
-        ? `<a href="${data.link}" target="_blank" rel="noopener" class="brand-detail-link">View more →</a>`
+        ? `<span class="brand-detail-link" onclick="openLinkViewer('${data.link}', '${data.name}')" style="cursor:pointer;">View more →</span>`
         : '';
 
       brandInner.innerHTML = `
@@ -575,3 +575,123 @@ const brandDetails = {
 
   if (brandClose) brandClose.addEventListener('click', closeBrandPanel);
 })();
+
+/* ──────────────────────────────────────────────────────────────
+   IN-APP LINK VIEWER
+   ────────────────────────────────────────────────────────────── */
+const iframeBlockedDomains = [
+  'people.com', 'dailymail.co.uk', 'abcnews.go.com', 'abcnews.com',
+  'nbcnews.com', 'today.com', 'eonline.com', 'usatoday.com',
+  'hollywoodreporter.com', 'variety.com', 'billboard.com',
+  'parade.com', 'theroot.com', 'thegrio.com', 'msn.com',
+  'primetimer.com', 'blackenterprise.com', 'revolt.tv',
+  'rollingout.com', 'fadeawayworld.net', 'sports.yahoo.com',
+  'yahoo.com', 'instagram.com', 'twitter.com', 'x.com',
+  'facebook.com', 'tiktok.com'
+];
+
+function isDomainBlocked(url) {
+  try {
+    const hostname = new URL(url).hostname.replace('www.', '');
+    return iframeBlockedDomains.some(d => hostname.includes(d));
+  } catch(e) { return false; }
+}
+
+function getSourceName(url) {
+  try {
+    const hostname = new URL(url).hostname.replace('www.', '');
+    const parts = hostname.split('.');
+    const name = parts[parts.length - 2];
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  } catch(e) { return 'External Link'; }
+}
+
+function openLinkViewer(url, title) {
+  const overlay  = document.getElementById('linkViewerOverlay');
+  const iframe   = document.getElementById('linkViewerIframe');
+  const fallback = document.getElementById('linkViewerFallback');
+  const fallbackSource = document.getElementById('linkViewerFallbackSource');
+  const fallbackBtn    = document.getElementById('linkViewerFallbackBtn');
+  const externalBtn    = document.getElementById('linkViewerExternal');
+  const sourceLabel    = document.getElementById('linkViewerSource');
+  const titleLabel     = document.getElementById('linkViewerTitle');
+  const body           = iframe.parentElement;
+
+  const sourceName = getSourceName(url);
+  sourceLabel.textContent  = sourceName;
+  titleLabel.textContent   = title || sourceName;
+  externalBtn.href         = url;
+  fallbackBtn.href         = url;
+  fallbackSource.textContent = sourceName;
+
+  fallback.classList.remove('visible');
+  iframe.src = '';
+  body.classList.add('loading');
+
+  document.body.style.overflow = 'hidden';
+  overlay.classList.add('open');
+
+  if (isDomainBlocked(url)) {
+    setTimeout(() => {
+      body.classList.remove('loading');
+      fallback.classList.add('visible');
+    }, 600);
+    return;
+  }
+
+  iframe.src = url;
+
+  const failTimer = setTimeout(() => {
+    body.classList.remove('loading');
+    fallback.classList.add('visible');
+  }, 5000);
+
+  iframe.onload = function() {
+    clearTimeout(failTimer);
+    body.classList.remove('loading');
+    try {
+      const doc = iframe.contentDocument || iframe.contentWindow.document;
+      if (!doc || doc.body.innerHTML === '') {
+        fallback.classList.add('visible');
+      }
+    } catch(e) {
+      fallback.classList.add('visible');
+    }
+  };
+}
+
+function closeLinkViewer() {
+  const overlay = document.getElementById('linkViewerOverlay');
+  const iframe  = document.getElementById('linkViewerIframe');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(() => { iframe.src = ''; }, 400);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.getElementById('linkViewerClose');
+  const overlay  = document.getElementById('linkViewerOverlay');
+
+  if (closeBtn) closeBtn.addEventListener('click', closeLinkViewer);
+  if (overlay) {
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeLinkViewer();
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLinkViewer();
+  });
+
+  // Intercept external links in event cards
+  document.querySelectorAll('.event-card-partner a, .event-card a[href^="http"]').forEach(link => {
+    const url   = link.href;
+    const title = link.textContent.trim() || link.getAttribute('alt') || '';
+    link.removeAttribute('href');
+    link.style.cursor = 'pointer';
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      openLinkViewer(url, title);
+    });
+  });
+});

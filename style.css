@@ -1414,3 +1414,159 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .case-modal-gallery { grid-template-columns: repeat(2, 1fr); }
   .case-modal-title { font-size: 24px; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   IN-APP LINK VIEWER
+   ══════════════════════════════════════════════════════════════ */
+.link-viewer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,15,15,0.75);
+  z-index: 600;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+@media (min-width: 769px) {
+  .link-viewer-overlay { align-items: center; }
+}
+.link-viewer-overlay.open { opacity: 1; pointer-events: all; }
+
+.link-viewer {
+  background: var(--white);
+  width: 100%;
+  max-width: 860px;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.45s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .link-viewer { height: 92vh; border-radius: 0; }
+}
+.link-viewer-overlay.open .link-viewer { transform: translateY(0); opacity: 1; }
+
+.link-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+  flex-shrink: 0;
+  gap: 16px;
+}
+.link-viewer-meta { display: flex; flex-direction: column; gap: 2px; overflow: hidden; flex: 1; }
+.link-viewer-source {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+.link-viewer-title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.link-viewer-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.link-viewer-external {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-strong);
+  padding-bottom: 1px;
+  white-space: nowrap;
+}
+.link-viewer-external:hover { color: var(--orange); border-color: var(--orange); }
+.link-viewer-close {
+  background: var(--ink);
+  color: var(--white);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.link-viewer-close:hover { background: var(--orange); }
+
+.link-viewer-body { flex: 1; position: relative; overflow: hidden; }
+.link-viewer-iframe { width: 100%; height: 100%; border: none; display: block; }
+
+.link-viewer-fallback {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+}
+.link-viewer-fallback.visible { display: flex; }
+.link-viewer-fallback-inner { text-align: center; padding: 40px; max-width: 360px; }
+.link-viewer-fallback-source {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.link-viewer-fallback-msg {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--warm-grey);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+.link-viewer-fallback-btn {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.link-viewer-fallback-btn:hover { background: var(--orange-dark, #c43d00); }
+
+.link-viewer-body.loading::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--orange) 0%, var(--orange-light, #ff8c52) 50%, var(--orange) 100%);
+  background-size: 200% 100%;
+  animation: loadBar 1.2s ease infinite;
+  z-index: 2;
+}
+@keyframes loadBar {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
