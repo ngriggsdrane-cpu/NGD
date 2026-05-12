@@ -488,6 +488,8 @@ const brandDetails = {
     campaign: 'Born to Be Original — Pride 2022',
     desc: "SKYY Vodka's involvement for Pride 2022 included a 9 week organic social campaign titled Born to be Original. This educational campaign showcased real people from the LGBTQ+ community that represented each color of the flag and the meaning behind it.",
     image: 'images/SKYY.png',
+    imageStyle: 'contain',
+    imageBg: '#ffffff',
     link: null
   },
   audi: {
