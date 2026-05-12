@@ -630,8 +630,8 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 @media (max-width: 768px) {
   #clients { padding-top: 0; padding-bottom: 32px; }
-  .clients-header-bar { padding: 20px 24px 16px; margin-bottom: 0; gap: 12px; }
-  .clients-header-bar-inner { flex-wrap: nowrap; align-items: center; gap: 12px; }
+  .clients-header-bar { padding: 20px var(--pad-x) 16px; margin-bottom: 0; gap: 12px; }
+  .clients-header-bar-inner { flex-wrap: nowrap; align-items: center; gap: 12px; padding: 0; }
   .clients-header-bar .section-title { font-size: 28px; flex-shrink: 0; }
   .clients-disclaimer { padding: 8px 24px; margin: 0; font-size: 11px; }
   .talent-expand-btn {
