@@ -629,9 +629,16 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   border-bottom: 1px solid var(--border);
 }
 @media (max-width: 768px) {
-  .clients-header-bar { padding: 24px 0 20px; }
+  .clients-header-bar { padding: 20px 24px; gap: 12px; }
   .clients-header-bar-inner { flex-wrap: wrap; gap: 12px; }
   .clients-disclaimer { padding: 12px var(--pad-x); }
+  .talent-expand-btn {
+    font-size: 10px;
+    padding: 8px 16px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    margin-top: 0;
+  }
 }
 
 .talent-expand-btn {
@@ -1123,7 +1130,12 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .work-grid-expanded { grid-template-columns: repeat(2, 1fr); }
   .card-img { height: 200px; }
 
-  .talent-roster-grid { grid-template-columns: 1fr 1fr; gap: var(--lg) var(--sm); }
+  .talent-grid-expanded { padding: 24px 24px 32px; }
+  .talent-roster-grid { grid-template-columns: 1fr; gap: 0; }
+  .talent-roster-col { margin-bottom: 32px; }
+  .talent-names-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .talent-roster-name { font-size: 14px; padding: 5px 0; line-height: 1.5; }
+  .talent-roster-head { grid-column: 1 / -1; margin-bottom: 12px; }
 
   .brand-logo-grid { grid-template-columns: repeat(3, 1fr); }
   .brand-logo-cell { padding: 24px 20px; min-height: 80px; }
@@ -1149,7 +1161,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 
 @media (max-width: 480px) {
-  .talent-roster-grid { grid-template-columns: 1fr; }
   .case-card { width: calc(100% - 0px); }
   .brand-logo-grid { grid-template-columns: repeat(2, 1fr); }
 }
