@@ -102,7 +102,7 @@ const caseStudies = {
     eyebrow: "Lupita Nyong’o \xd7 Foundation for Women’s Health",
     title: 'Make Fibroids Count',
     desc: 'Mobilizing $400,000 via fan fundraising, brand partnerships and foundation funding to drive awareness for uterine fibroid research. The campaign funded research grants focused on accelerating less and non-invasive treatments for an underfunded condition affecting 26M women.',
-    hero: { type: 'image', src: 'images/lupita/p1-020.png', position: 'center top' },
+    hero: { type: 'image', src: 'https://images.gofundme.com/6PSxB1IQBLrK0pyRzNuhwcTM9ek=/1200x900/https://d2g8igdw686xgo.cloudfront.net/100419681_1771970330591462_r.png', position: 'center top' },
     stats: [
       { number: '$400K', label: 'Mobilized' },
       { number: '694M', label: 'Media & social impressions' },
