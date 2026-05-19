@@ -133,7 +133,8 @@ const caseStudies = {
     hero: { type: 'image', src: 'images/taylor-rooks/Taylor Rooks.jpg', position: 'center top' },
     stats: [
       { number: '$2.1M', label: 'Medical debt relieved' },
-      { number: '1,805', label: 'Georgia residents helped' }
+      { number: '1,805', label: 'Georgia residents helped' },
+      { number: '$22.4M', label: 'Earned media value' }
     ],
     gallery: [],
     press: [
