@@ -134,7 +134,7 @@ const caseStudies = {
     stats: [
       { number: '$2.1M', label: 'Medical debt relieved' },
       { number: '1,805', label: 'Georgia residents helped' },
-      { number: '$22.4M', label: 'Earned media value' }
+      { number: '22.5M', label: 'Total estimated impressions' }
     ],
     gallery: [],
     press: [
