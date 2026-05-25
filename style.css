@@ -263,13 +263,15 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .tl-line:first-child { font-weight: 500; color: #E8500A; }
 .intro-pills {
   margin-top: 28px;
-  height: 40px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   width: 100%;
   padding: 0 24px;
   box-sizing: border-box;
+  min-height: 40px;
 }
 .intro-pill {
   background: transparent;
@@ -280,23 +282,17 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 8px 24px;
+  padding: 7px 16px;
   border-radius: 999px;
   white-space: nowrap;
   display: inline-block;
-  max-width: 90vw;
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  transform: translateX(24px);
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 .intro-pill.visible {
   opacity: 1;
-  transform: translateY(0);
-}
-.intro-pill.exit {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(0);
 }
 
 /* ══════════════════════════════════════════════════════════════

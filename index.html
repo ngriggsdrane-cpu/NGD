@@ -40,9 +40,7 @@
     <div class="ngd-intro-tagline" id="ngdTagline">
       <span class="tl-line" id="tl1">Infusing purpose into culture.</span>
     </div>
-    <div class="intro-pills" id="introPills">
-      <div class="intro-pill" id="introPill"></div>
-    </div>
+    <div class="intro-pills" id="introPills"></div>
   </div>
 </div>
 
@@ -823,51 +821,42 @@
       'Philanthropic Strategy'
     ];
 
-    const pillEl = document.getElementById('introPill');
-    let pillIndex = 0;
+    const pillsContainer = document.getElementById('introPills');
 
-    function showPill() {
-      if (!pillEl || pillIndex >= pills.length) return;
+    function buildPills() {
+      if (!pillsContainer) return;
 
-      pillEl.textContent = pills[pillIndex];
-      pillEl.classList.remove('exit', 'visible');
-
-      void pillEl.offsetWidth;
-
-      pillEl.classList.add('visible');
-
-      setTimeout(() => {
-        pillEl.classList.remove('visible');
-        pillEl.classList.add('exit');
+      pills.forEach((text, i) => {
+        const pill = document.createElement('span');
+        pill.className = 'intro-pill';
+        pill.textContent = text;
+        pillsContainer.appendChild(pill);
 
         setTimeout(() => {
-          pillEl.classList.remove('exit');
-          pillIndex++;
-          if (pillIndex < pills.length) {
-            setTimeout(showPill, 80);
-          }
-        }, 320);
-      }, 700);
+          void pill.offsetWidth;
+          pill.classList.add('visible');
+        }, i * 180);
+      });
     }
 
-    setTimeout(showPill, 1800);
+    setTimeout(buildPills, 1800);
 
     setTimeout(() => {
       intro.style.transition = 'transform 0.9s cubic-bezier(0.76,0,0.24,1), opacity 0.6s ease';
       intro.style.transform  = 'translateY(-100%)';
       intro.style.opacity    = '0';
-    }, 8100);
+    }, 5500);
 
     setTimeout(() => {
       intro.style.display = 'none';
       sessionStorage.setItem('ngdIntroSeen', '1');
-    }, 9000);
+    }, 6400);
   }
 
   /* ─── HERO ENTRANCE ──────────────────────────────────────── */
   function animateHero() {
     const introSeen = sessionStorage.getItem('ngdIntroSeen');
-    const delay = introSeen ? 0 : 9000;
+    const delay = introSeen ? 0 : 6400;
 
     setTimeout(() => {
       const hl1   = document.querySelector('.hl1');
