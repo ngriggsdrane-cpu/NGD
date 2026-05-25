@@ -216,7 +216,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .ngd-intro {
   position: fixed;
   inset: 0;
-  background: #F0EBE1;
+  background: #2C2420 !important;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -253,37 +253,42 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   display: block;
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  font-size: clamp(14px, 2.5vw, 22px);
+  font-size: clamp(14px, 2.5vw, 20px);
   letter-spacing: 0.04em;
-  color: #1A1414;
+  color: var(--orange);
   opacity: 0;
   transform: translateY(12px);
   text-align: center;
 }
 .tl-line:first-child { font-weight: 500; color: #E8500A; }
 .intro-pills {
-  margin-top: 24px;
-  height: 32px;
+  margin-top: 28px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   perspective: 600px;
+  width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 .intro-pill {
   background: transparent;
-  border: 1px solid rgba(232,80,10,0.5);
-  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(232,80,10,0.6);
+  color: rgba(242,240,236,0.85);
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 6px 20px;
+  padding: 8px 24px;
   border-radius: 999px;
   opacity: 0;
   transform: rotateX(90deg);
-  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.25s ease;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease;
   white-space: nowrap;
+  display: inline-block;
+  max-width: 90vw;
 }
 .intro-pill.visible {
   opacity: 1;
