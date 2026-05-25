@@ -830,13 +830,11 @@
       if (!pillEl || pillIndex >= pills.length) return;
 
       pillEl.textContent = pills[pillIndex];
-      pillEl.classList.remove('exit');
+      pillEl.classList.remove('exit', 'visible');
 
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          pillEl.classList.add('visible');
-        });
-      });
+      void pillEl.offsetWidth;
+
+      pillEl.classList.add('visible');
 
       setTimeout(() => {
         pillEl.classList.remove('visible');
@@ -846,10 +844,10 @@
           pillEl.classList.remove('exit');
           pillIndex++;
           if (pillIndex < pills.length) {
-            setTimeout(showPill, 120);
+            setTimeout(showPill, 80);
           }
-        }, 300);
-      }, 600);
+        }, 320);
+      }, 700);
     }
 
     setTimeout(showPill, 1800);
