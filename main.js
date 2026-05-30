@@ -138,11 +138,14 @@ const caseStudies = {
     ],
     gallery: [],
     press: [
-      { name: 'Fadeaway World', url: 'https://fadeawayworld.net/nba-media/taylor-rooks-erases-2-1m-in-medical-debt-for-1805-residents-in-her-hometown' },
-      { name: 'Revolt', url: 'https://www.revolt.tv/article/taylor-rooks-georgia-medical-debt-relief' },
-      { name: 'Black Enterprise', url: 'https://www.blackenterprise.com/taylor-rooks-foundations-helps-erase-medical-debt/' },
       { name: 'Rolling Out', url: 'https://rollingout.com/2026/04/23/taylor-rooks-stuns-hometown-with/' },
-      { name: 'Yahoo Sports', url: 'https://sports.yahoo.com/articles/taylor-rooks-announces-initiative-erased-120000029.html' }
+      { name: 'The Grio', url: 'https://thegrio.com/2026/04/22/taylor-rooks-foundation-medical-debt-gwinnett-county/' },
+      { name: 'Afro Tech', url: 'https://afrotech.com/taylor-rooks-foundation-and-undue-medical-debt-erase-2-1m-in-medical-debt-for-gwinnett-county-ga-residents' },
+      { name: 'Black Enterprise', url: 'https://www.blackenterprise.com/taylor-rooks-foundations-helps-erase-medical-debt/' },
+      { name: 'Athlon Sports', url: 'https://athlonsports.com/other-sports/nba-reporter-taylor-rooks-announces-2-1-million-news' },
+      { name: 'Fadeaway World', url: 'https://fadeawayworld.net/nba-media/taylor-rooks-erases-2-1m-in-medical-debt-for-1805-residents-in-her-hometown' },
+      { name: 'Essentially Sports', url: 'https://www.essentiallysports.com/nfl-active-news-charissa-thompson-joy-taylor-react-as-taylor-rooks-helps-clear-two-point-one-m-in-medical-debt/' },
+      { name: 'Undue Medical Debt', url: 'https://unduemedicaldebt.org/press-release/2-million-of-crushing-medical-debt-erased-for-atlanta-families-by-taylor-rooks-foundation/' }
     ]
   },
 
