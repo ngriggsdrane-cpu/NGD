@@ -183,7 +183,7 @@ const caseStudies = {
     eyebrow: 'WME Fashion Incubator',
     title: 'Expanding Access to Fashion Careers',
     desc: 'An annual three-month program designed to expand access across creative and executive fashion careers. Built at the intersection of talent, community, and industry, the mission connects emerging leaders with top creatives and executives shaping the global landscape.',
-    hero: { type: 'video', videoId: 'spwdzlv88NM' },
+    hero: { type: 'localvideo', src: 'images/Incubator-Sizzle-Website-23.mov' },
     stats: [],
     gallery: [],
     press: [
@@ -335,7 +335,10 @@ function openModal(key) {
   document.getElementById('modalDesc').textContent    = data.desc    || '';
 
   hero.innerHTML = '';
-  if (data.hero.type === 'video') {
+  if (data.hero.type === 'localvideo') {
+    hero.style.backgroundImage = '';
+    hero.innerHTML = `<video autoplay muted loop playsinline style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center;" src="${data.hero.src}"></video>`;
+  } else if (data.hero.type === 'video') {
     hero.style.backgroundImage = '';
     hero.innerHTML = `<iframe src="https://www.youtube.com/embed/${data.hero.videoId}?autoplay=1&mute=1&loop=1&playlist=${data.hero.videoId}&controls=0&rel=0&playsinline=1" style="position:absolute;top:50%;left:50%;width:177.78%;height:100%;min-width:100%;transform:translate(-50%,-50%);border:none;pointer-events:none;" allow="autoplay;muted" allowfullscreen></iframe>`;
   } else {
