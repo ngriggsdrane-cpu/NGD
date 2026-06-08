@@ -295,6 +295,21 @@ const caseStudies = {
     press: []
   },
 
+  joe: {
+    eyebrow: 'Joe Santagato',
+    title: 'The Happy Cry Fund',
+    desc: 'Helped Joe Santagato launch The Happy Cry Fund, a new charitable arm of his business supporting hunger relief, mental health, and youth development. Joe is personally donating $100,000 to launch the fund and committing $1 from every ticket sold on his upcoming tour through a partnership with PLUS1. The fund builds on the community Joe has created through The Basement Yard and reflects his commitment to using his platform for social good.',
+    hero: { type: 'image', src: 'images/joe-santagato.jpg', position: 'center top' },
+    stats: [
+      { number: '$100K', label: 'Personal launch donation' },
+      { number: '$1', label: 'Per ticket sold on tour via PLUS1' }
+    ],
+    gallery: [],
+    press: [
+      { name: 'People', url: 'https://people.com' } /* UPDATE: add exact People exclusive URL when live */
+    ]
+  },
+
   honeyland: {
     eyebrow: 'Honeyland Festival',
     title: 'Honeyland Impact Strategy',
