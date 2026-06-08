@@ -295,6 +295,18 @@ const caseStudies = {
     press: []
   },
 
+  gracenader: {
+    eyebrow: 'Grace Ann Nader \xd7 Safar Global Foundation',
+    title: 'Powering Girls Education in Africa',
+    desc: "Grace Ann Nader, star of Hulu's Love Thy Nader, hosted an event supporting Safar Global Foundation, focused on powering girls education in Africa. The event raised $15,000 in one evening at the Museum of Ice Cream, with funds directed toward building a study lab at a school. Brand partners included QUAI sunglasses and Tarte Makeup.",
+    hero: { type: 'image', src: 'images/Grace Ann Nader_Safar.JPG', position: 'center top' },
+    stats: [
+      { number: '$15K', label: 'Raised in one evening' }
+    ],
+    gallery: [],
+    press: []
+  },
+
   joe: {
     eyebrow: 'Joe Santagato',
     title: 'The Happy Cry Fund',
