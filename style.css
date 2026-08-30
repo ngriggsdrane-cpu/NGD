@@ -241,58 +241,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   text-align: center;
   user-select: none;
 }
-.ngd-intro-tagline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  margin-top: 28px;
-  overflow: hidden;
-}
-.tl-line {
-  display: block;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: clamp(14px, 2.5vw, 20px);
-  letter-spacing: 0.04em;
-  color: var(--orange);
-  opacity: 0;
-  transform: translateY(12px);
-  text-align: center;
-}
-.tl-line:first-child { font-weight: 500; color: #E8500A; }
-.intro-pills {
-  margin-top: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  padding: 0 48px;
-  box-sizing: border-box;
-}
-.intro-pill {
-  background: transparent;
-  border: 1px solid rgba(232,80,10,0.35);
-  color: rgba(242,240,236,0.55);
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 7px 20px;
-  border-radius: 999px;
-  white-space: nowrap;
-  display: inline-block;
-  opacity: 0;
-  transform: translateX(20px);
-  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
-}
-.intro-pill.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 /* ══════════════════════════════════════════════════════════════
    HERO — single dark band
    ══════════════════════════════════════════════════════════════ */
