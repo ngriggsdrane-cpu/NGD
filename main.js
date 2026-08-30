@@ -114,6 +114,15 @@ window.addEventListener('load', function() {
 */
 const recentUpdates = [
   {
+    date: '2026-07-01',
+    client: 'WME Fashion Incubator',
+    cardKey: 'incubator',
+    headline: 'WME Fashion partners with Milk Makeup for third cycle',
+    desc: 'Mentees will participate in a photoshoot for Milk Makeup at their SoHo headquarters, executing hair, makeup, wardrobe styling, photography, and management. 40 mentees have come through the program across two cycles, selected from nearly 1,000 applicants.',
+    tag: 'Partnership',
+    link: 'https://wwd.com/fashion-news/fashion-scoops/wme-fashion-partners-milk-makeup-incubator-program-foster-next-gen-creative-talent-1239048569/'
+  },
+  {
     date: '2026-08-26',
     client: 'Joe Santagato',
     cardKey: 'joe',
@@ -271,13 +280,23 @@ const caseStudies = {
   incubator: {
     eyebrow: 'WME Fashion Incubator',
     title: 'Expanding Access to Fashion Careers',
-    desc: 'An annual three-month program designed to expand access across creative and executive fashion careers. Built at the intersection of talent, community, and industry, the mission connects emerging leaders with top creatives and executives shaping the global landscape.',
+    desc: 'An annual three-month program designed to expand access across creative and executive fashion careers. Built at the intersection of talent, community, and industry, the mission connects emerging leaders with top creatives and executives shaping the global landscape. 40 mentees have come through the program during its first two cycles, selected out of nearly 1,000 applicants. For its third cycle, WME Fashion has partnered with Milk Makeup — mentees will participate in a photoshoot at Milk headquarters in SoHo, executing hair, makeup, wardrobe styling, photography, and management around the shoot.',
     hero: { type: 'localvideo', src: 'images/Incubator-Sizzle-Website-23.mov' },
-    stats: [],
-    gallery: [],
+    stats: [
+      { number: '40', label: 'Mentees across two cycles' },
+      { number: '1,000+', label: 'Applications received' }
+    ],
+    gallery: [
+      { src: 'images/incubator-milk-makeup.png', alt: 'WME Fashion Incubator x Milk Makeup partnership' },
+      { src: 'images/p2-002.png', alt: 'WME Incubator editorial shoot' }
+    ],
     press: [
+      { name: 'WWD — Milk Makeup Partnership', url: 'https://wwd.com/fashion-news/fashion-scoops/wme-fashion-partners-milk-makeup-incubator-program-foster-next-gen-creative-talent-1239048569/' },
       { name: 'Blanc Magazine', url: 'https://blancmagazine.com/the-veil-wme-incubator/' },
-      { name: 'WME Fashion', url: 'https://wmefashion.com/incubator-2026/' }
+      { name: 'WME Fashion', url: 'https://wmefashion.com/incubator-2026/' },
+      { name: 'WWD', url: 'https://wwd.com/fashion-news/fashion-scoops/wme-fashion-incubator-program-how-to-apply-1236511627/' },
+      { name: 'WWD', url: 'https://wwd.com/fashion-news/fashion-scoops/wme-fashion-application-second-cycle-incubator-program-creative-executive-careers-fashion-1237310925/' },
+      { name: 'Dazed Digital', url: 'https://www.dazeddigital.com/fashion/article/60686/1/underrepresented-talent-shines-the-wall-group-fashion-incubator-2023' }
     ]
   },
 
