@@ -491,27 +491,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .update-banner-text { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; max-width: 100%; }
   .update-banner-arrow { font-size: 13px; flex-shrink: 0; }
 }
-/* NEW badge on work cards */
-.case-new-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: var(--orange);
-  color: #fff;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 999px;
-  z-index: 5;
-  animation: badgePulse 2.5s ease-in-out infinite;
-}
-@keyframes badgePulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.6; }
-}
 /* Modal recent activity */
 .modal-recent-item {
   padding: 12px 0;

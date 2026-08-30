@@ -873,35 +873,7 @@ function initUpdateBanner() {
   banner.addEventListener('mouseleave', startRotation);
 }
 
-/* ─── NEW BADGES ─────────────────────────────────────────────── */
-function applyNewBadges() {
-  const now = new Date();
-  const ninetyDays = 90 * 24 * 60 * 60 * 1000;
-  const recentKeys = new Set(
-    recentUpdates
-      .filter(u => (now - new Date(u.date)) < ninetyDays)
-      .map(u => u.cardKey)
-  );
-  document.querySelectorAll('[onclick]').forEach(card => {
-    const onclickVal = card.getAttribute('onclick') || '';
-    const match = onclickVal.match(/openModal\(['"](\w+)['"]\)/);
-    if (match && recentKeys.has(match[1])) {
-      if (!card.querySelector('.case-new-badge')) {
-        const badge = document.createElement('div');
-        badge.className = 'case-new-badge';
-        badge.textContent = 'Updated';
-        const imgDiv = card.querySelector('.card-img');
-        if (imgDiv) {
-          imgDiv.style.position = 'relative';
-          imgDiv.appendChild(badge);
-        }
-      }
-    }
-  });
-}
-
 document.addEventListener('DOMContentLoaded', initUpdateBanner);
-document.addEventListener('DOMContentLoaded', applyNewBadges);
 
 // Auto-open Audi panel on load to signal interactivity
 let suppressScroll = true;
