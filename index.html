@@ -64,6 +64,7 @@
   </script>
 </head>
 <body>
+<a href="#clients" class="skip-link">Skip to main content</a>
 
 <!-- ─── INTRO OVERLAY ────────────────────────────────────────── -->
 <div class="ngd-intro" id="ngdIntro">
@@ -73,7 +74,7 @@
 </div>
 
 <!-- ─── NAV ──────────────────────────────────────────────────── -->
-<nav id="top-nav">
+<nav id="top-nav" role="navigation" aria-label="Main navigation">
   <a href="index.html" class="nav-logo">NGD</a>
 
   <div class="nav-links">
@@ -91,7 +92,7 @@
 </nav>
 
 <!-- Mobile nav -->
-<nav id="mobile-nav">
+<nav id="mobile-nav" role="navigation" aria-label="Mobile navigation">
   <a href="#clients"  class="mobile-nav-item">Clients</a>
   <a href="#brands" class="mobile-nav-item">Brands</a>
   <a href="#events" class="mobile-nav-item">Events</a>
@@ -151,7 +152,7 @@
   <div class="work-grid-featured">
 
       <!-- 1 — FEATURED — Lupita Nyong'o -->
-      <article class="case-card card-featured" data-type="campaigns" onclick="openModal('lupita')">
+      <article class="case-card card-featured" tabindex="0" data-type="campaigns" onclick="openModal('lupita')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('https://images.gofundme.com/6PSxB1IQBLrK0pyRzNuhwcTM9ek=/1200x900/https://d2g8igdw686xgo.cloudfront.net/100419681_1771970330591462_r.png');background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -166,7 +167,7 @@
       </article>
 
       <!-- 2 — Sam Smith -->
-      <article class="case-card" data-type="foundations" onclick="openModal('sam')">
+      <article class="case-card" tabindex="0" data-type="foundations" onclick="openModal('sam')">
         <div class="card-img" style="position:relative;">
           <div class="card-img-bg" style="background-image:url('images/sam-smith.jpg');background-size:cover;background-position:center top;"></div>
           <div style="position:absolute;inset:0;background:rgba(210,80,120,0.25);z-index:1;pointer-events:none;"></div>
@@ -183,7 +184,7 @@
       </article>
 
       <!-- 3 — Joe Santagato -->
-      <article class="case-card" data-type="foundations" onclick="openModal('joe')">
+      <article class="case-card" tabindex="0" data-type="foundations" onclick="openModal('joe')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/joe-santagato.png');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -198,7 +199,7 @@
       </article>
 
       <!-- 4 — Taylor Rooks -->
-      <article class="case-card" data-type="foundations" onclick="openModal('taylor')">
+      <article class="case-card" tabindex="0" data-type="foundations" onclick="openModal('taylor')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/taylor-rooks/Taylor Rooks.jpg');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -213,7 +214,7 @@
       </article>
 
       <!-- 5 — Venus Williams -->
-      <article class="case-card" data-type="campaigns" onclick="openModal('venus')">
+      <article class="case-card" tabindex="0" data-type="campaigns" onclick="openModal('venus')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/venus-williams/Venus Headshot_Credit to Laura Metzler Photography.jpg');background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -228,7 +229,7 @@
       </article>
 
       <!-- 6 — WME Fashion Incubator -->
-      <article class="case-card" data-type="events" onclick="openModal('incubator')">
+      <article class="case-card" tabindex="0" data-type="events" onclick="openModal('incubator')">
         <div class="card-img" style="position:relative; overflow:hidden;">
           <video
             autoplay
@@ -270,10 +271,10 @@
     <div class="work-teaser-fade"></div>
   </div>
 
-  <div class="work-grid-expanded">
+  <div class="work-grid-expanded" id="workGridExpanded">
 
       <!-- 1 — Candace Parker -->
-      <article class="case-card" data-type="foundations" onclick="openModal('candace')">
+      <article class="case-card" tabindex="0" data-type="foundations" onclick="openModal('candace')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/candace-parker/Candace Parker.jpg');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -288,7 +289,7 @@
       </article>
 
       <!-- 2 — Winnie Harlow -->
-      <article class="case-card" data-type="events" onclick="openModal('winnie')">
+      <article class="case-card" tabindex="0" data-type="events" onclick="openModal('winnie')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/winnie-harlow/Winnie Harlow BBR 2.jpeg copy.jpg');background-size:180%;background-position:left 20% top 0%;"></div>
           <div class="card-img-overlay"></div>
@@ -303,7 +304,7 @@
       </article>
 
       <!-- 3 — Paige Lorenze and Tommy Paul -->
-      <article class="case-card" data-type="foundations" onclick="openModal('kids')">
+      <article class="case-card" tabindex="0" data-type="foundations" onclick="openModal('kids')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/kids-outdoors/KidsOutdoors Announcement.jpg.avif');background-position:center top 5%;"></div>
           <div class="card-img-overlay"></div>
@@ -318,7 +319,7 @@
       </article>
 
       <!-- 4 — Grace Bowers -->
-      <article class="case-card" data-type="foundations" onclick="openModal('grace')">
+      <article class="case-card" tabindex="0" data-type="foundations" onclick="openModal('grace')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/grace-bowers/GraceBowers-BrookylnBowl-101825-4.jpg.webp');background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -333,7 +334,7 @@
       </article>
 
       <!-- 5 — Pokimane -->
-      <article class="case-card" data-type="campaigns" onclick="openModal('pokimane')">
+      <article class="case-card" tabindex="0" data-type="campaigns" onclick="openModal('pokimane')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/pokimane/pokimane.avif');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -348,7 +349,7 @@
       </article>
 
       <!-- 6 — Nara Smith -->
-      <article class="case-card" data-type="campaigns" onclick="openModal('nara')">
+      <article class="case-card" tabindex="0" data-type="campaigns" onclick="openModal('nara')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/nara-smith/Nara Smith Erewhon.jpg.webp');background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -363,7 +364,7 @@
       </article>
 
       <!-- 7 — Coco Jones -->
-      <article class="case-card" data-type="events" onclick="openModal('coco')">
+      <article class="case-card" tabindex="0" data-type="events" onclick="openModal('coco')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/coco-jones/coco-jones-Header.png.webp');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -378,7 +379,7 @@
       </article>
 
       <!-- 8 — Annie Elise -->
-      <article class="case-card" data-type="campaigns" onclick="openModal('annie')">
+      <article class="case-card" tabindex="0" data-type="campaigns" onclick="openModal('annie')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/annie-elise/Annie Elise.jpg.webp');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -393,7 +394,7 @@
       </article>
 
       <!-- 9 — Madhappy -->
-      <article class="case-card" data-type="mental-health" onclick="openModal('madhappy')">
+      <article class="case-card" tabindex="0" data-type="mental-health" onclick="openModal('madhappy')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/Madhappy-Foundation.jpg.webp');background-size:cover;background-position:center center;"></div>
           <div class="card-img-overlay"></div>
@@ -408,7 +409,7 @@
       </article>
 
       <!-- 10 — Tay and Taylor Lautner -->
-      <article class="case-card" data-type="mental-health" onclick="openModal('lemons')">
+      <article class="case-card" tabindex="0" data-type="mental-health" onclick="openModal('lemons')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/Tay and Tay Lemons Foundation.webp');background-size:cover;background-position:center top 8%;"></div>
           <div class="card-img-overlay"></div>
@@ -423,7 +424,7 @@
       </article>
 
       <!-- 11 — Honeyland Festival -->
-      <article class="case-card" data-type="campaigns" onclick="openModal('honeyland')">
+      <article class="case-card" tabindex="0" data-type="campaigns" onclick="openModal('honeyland')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/Honeyland.jpg');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -438,7 +439,7 @@
       </article>
 
       <!-- 12 — Ilana Glazer -->
-      <article class="case-card" data-type="campaigns" onclick="openModal('ilana')">
+      <article class="case-card" tabindex="0" data-type="campaigns" onclick="openModal('ilana')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/IMG_7127.jpeg');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -453,7 +454,7 @@
       </article>
 
       <!-- 13 — Grace Ann Nader -->
-      <article class="case-card" data-type="foundations" onclick="openModal('gracenader')">
+      <article class="case-card" tabindex="0" data-type="foundations" onclick="openModal('gracenader')">
         <div class="card-img">
           <div class="card-img-bg" style="background-image:url('images/Grace Ann Nader_Safar.JPG');background-size:cover;background-position:center top;"></div>
           <div class="card-img-overlay"></div>
@@ -471,7 +472,7 @@
 
   <!-- BUTTON — always last, after all cards -->
   <div class="work-btn-wrap">
-    <button class="work-expand-btn">
+    <button class="work-expand-btn" aria-expanded="false" aria-controls="workGridExpanded">
       <span class="btn-text">See all work examples</span>
       <span class="btn-arrow">↓</span>
     </button>
@@ -832,9 +833,9 @@
 <!-- ─── CASE STUDY MODAL ─────────────────────────────────────────── -->
 <div id="modalBackdrop" style="display:none; position:fixed; inset:0; background:rgba(15,15,15,0.82); z-index:500;"></div>
 
-<div id="caseModal" style="display:none; position:fixed; z-index:501; background:#F5F0E8; overflow:hidden; flex-direction:column;">
+<div id="caseModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none; position:fixed; z-index:501; background:#F5F0E8; overflow:hidden; flex-direction:column;">
 
-  <button id="modalClose" style="position:absolute; top:14px; right:14px; z-index:10; width:34px; height:34px; border-radius:50%; background:#1A1414; color:#fff; border:none; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+  <button id="modalClose" aria-label="Close case study" style="position:absolute; top:14px; right:14px; z-index:10; width:44px; height:44px; border-radius:50%; background:#1A1414; color:#fff; border:none; font-size:14px; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
 
   <div id="modalHero" style="flex-shrink:0; background:#2C2420; background-size:cover; background-position:center top; position:relative; overflow:hidden;"></div>
 

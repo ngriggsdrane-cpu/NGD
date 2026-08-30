@@ -642,6 +642,7 @@ let workOpen = false;
 if (workBtn && workExpanded) {
   workBtn.addEventListener('click', function() {
     workOpen = !workOpen;
+    workBtn.setAttribute('aria-expanded', workOpen ? 'true' : 'false');
 
     if (workOpen) {
       workExpanded.style.maxHeight = workExpanded.scrollHeight + 'px';
@@ -913,5 +914,15 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => { suppressScroll = false; }, 100);
     }, 800);
   }
+});
+
+/* ─── KEYBOARD ACCESSIBILITY — case cards ─────────────────────── */
+document.querySelectorAll('.case-card[onclick]').forEach(card => {
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      this.click();
+    }
+  });
 });
 
