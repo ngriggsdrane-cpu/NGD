@@ -132,7 +132,7 @@ const recentUpdates = [
     link: 'https://www.instagram.com/joesantagato/reel/DbEEa_fxMPU/'
   },
   {
-    date: '2026-08-29',
+    date: '2026-07-29',
     client: "Lupita Nyong'o",
     cardKey: 'lupita',
     headline: 'Honored by The White Dress Project in Atlanta',
@@ -141,7 +141,7 @@ const recentUpdates = [
     link: null
   },
   {
-    date: '2026-08-28',
+    date: '2026-07-28',
     client: "Lupita Nyong'o",
     cardKey: 'lupita',
     headline: 'Fibroid advocacy woven into The Odyssey press tour',
@@ -174,7 +174,8 @@ const recentUpdates = [
     headline: 'The Happy Cry Fund Launches',
     desc: '$100,000 personal commitment plus $1 from every tour ticket sold via PLUS1 partnership.',
     tag: 'Foundation Launch',
-    link: null
+    link: null,
+    showInBanner: false
   },
   {
     date: '2026-08-30',
@@ -183,7 +184,8 @@ const recentUpdates = [
     headline: 'Kids Outdoors Foundation Reel Hits 866K Views',
     desc: 'Foundation content goes viral with 866,000 views on Instagram.',
     tag: 'Social',
-    link: 'https://www.instagram.com/reel/Dcee363B0U0/'
+    link: 'https://www.instagram.com/reel/Dcee363B0U0/',
+    showInBanner: false
   }
 ];
 
@@ -778,7 +780,9 @@ function initUpdateBanner() {
   const textEl = document.getElementById('updateBannerText');
   if (!banner || !textEl || !recentUpdates.length) return;
 
-  const sorted = [...recentUpdates].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const sorted = [...recentUpdates]
+    .filter(u => u.showInBanner !== false)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
   let currentIndex = 0;
   let rotationInterval;
 
