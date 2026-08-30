@@ -535,7 +535,12 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 .update-banner:hover .update-banner-arrow { transform: translateX(4px); }
 @media (max-width: 768px) {
-  .update-banner-inner { padding: 0 24px; gap: 10px; }
+  .update-banner { height: 40px; }
+  .update-banner-inner { padding: 0 20px; gap: 10px; }
+  .update-banner-label { font-size: 8px; letter-spacing: 0.14em; padding-right: 10px; flex-shrink: 0; }
+  .update-banner-track { flex: 1; min-width: 0; overflow: hidden; }
+  .update-banner-text { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; max-width: 100%; }
+  .update-banner-arrow { font-size: 13px; flex-shrink: 0; }
 }
 /* NEW badge on work cards */
 .case-new-badge {
@@ -833,19 +838,9 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 
 .clients-header-bar {
   border-bottom: 1px solid var(--border);
-  padding: 36px 0 24px;
-}
-.clients-header-bar-inner {
+  padding: 36px var(--pad-x) 24px;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 var(--pad-x);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.clients-header-right {
-  display: flex;
-  align-items: center;
 }
 .clients-disclaimer {
   font-family: 'DM Sans', sans-serif;
@@ -860,42 +855,12 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 }
 @media (max-width: 768px) {
   #clients { padding-top: 0; padding-bottom: 32px; }
-  .clients-header-bar { padding: 20px var(--pad-x) 16px; margin-bottom: 0; gap: 12px; }
-  .clients-header-bar-inner { flex-wrap: nowrap; align-items: center; gap: 12px; padding: 0; }
-  .clients-header-bar .section-title { font-size: 28px; flex-shrink: 0; }
+  .clients-header-bar { padding: 20px var(--pad-x) 16px; margin-bottom: 0; }
+  .clients-header-bar .section-title { font-size: 28px; }
   .clients-disclaimer { padding: 8px 24px; margin: 0; font-size: 11px; }
-  .talent-expand-btn {
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    padding: 7px 14px;
-    border-radius: 999px;
-    white-space: nowrap;
-    flex-shrink: 0;
-    border-width: 1px;
-    margin-top: 0;
-  }
-  .talent-expand-btn .talent-btn-text { font-size: 9px; letter-spacing: 0.1em; }
-  .talent-expand-btn .talent-btn-arrow { font-size: 10px; }
   .work-grid-featured { margin-top: 0; padding-top: 0; }
 }
 
-.talent-expand-btn {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--orange);
-  border: 1px solid var(--orange);
-  background: transparent;
-  padding: 12px 32px;
-  border-radius: 0;
-  cursor: pointer;
-  margin-top: 24px;
-  transition: background 0.2s, color 0.2s;
-  display: inline-block;
-}
-.talent-expand-btn:hover { background: var(--orange); color: var(--white); }
 .talent-roster-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -911,17 +876,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   color: var(--orange);
   margin-bottom: 12px;
 }
-.talent-roster-name {
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--ink-soft);
-  line-height: 1.9;
-  display: block;
-  transition: color 0.15s;
-  cursor: default;
-}
-.talent-roster-name:hover { color: var(--orange); }
-
 /* ══════════════════════════════════════════════════════════════
    BRANDS SECTION — logo grid
    ══════════════════════════════════════════════════════════════ */
@@ -1394,13 +1348,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   .work-grid-featured,
   .work-grid-expanded { grid-template-columns: repeat(2, 1fr); }
   .card-img { height: 200px; }
-
-  .talent-grid-expanded { padding: 0; }
-  .talent-roster-grid { grid-template-columns: 1fr; gap: 0; padding: 24px 24px 32px; }
-  .talent-roster-col { margin-bottom: 32px; }
-  .talent-names-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-  .talent-roster-name { font-size: 14px; padding: 5px 0; line-height: 1.5; }
-  .talent-roster-head { grid-column: 1 / -1; margin-bottom: 12px; }
 
   .brand-logo-grid { grid-template-columns: repeat(3, 1fr); }
   .brand-logo-cell { padding: 24px 20px; min-height: 80px; }
