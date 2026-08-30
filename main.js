@@ -259,7 +259,7 @@ const caseStudies = {
     eyebrow: 'Sam Smith',
     title: 'The Pink House Foundation',
     desc: "Launched The Pink House Foundation to support LGBTQIA+ organisations and spaces that allow Queer youth to find their sanctuary, discover community and let the walls they've built crumble until only their truest selves remain. For founder Sam Smith, the Pink House was their real home in the English countryside — a space of total warmth and love, and somewhere they felt safe enough to find their voice and discover who they were. The foundation supports and partners with organisations changing Queer lives every day across the UK and US, with grants supporting housing, mental health, and community building for LGBTQIA+ youth.",
-    hero: { type: 'image', src: 'images/sam-smith.jpg', position: 'center top', overlay: 'rgba(210,80,120,0.25)', logoOverlay: 'https://thepinkhousefoundation.com/__l5e/assets-v1/72f8fd30-e3ba-4a0b-9711-12ab1c026859/pink-house-hd.png' },
+    hero: { type: 'image', src: 'images/sam-smith.jpg', position: 'center top', overlay: 'rgba(210,80,120,0.25)', logoOverlay: 'https://thepinkhousefoundation.com/__l5e/assets-v1/4d693064-957b-4329-819b-0c73252ce376/ph-logo.png' },
     stats: [
       { number: '5', label: 'Partner charities supported' },
       { number: '2', label: 'Countries — UK and US' }
@@ -525,7 +525,7 @@ function openModal(key) {
       const logoImg = document.createElement('img');
       logoImg.src = data.hero.logoOverlay;
       logoImg.alt = 'Foundation logo';
-      logoImg.style.cssText = 'position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200px;z-index:2;opacity:0.9;pointer-events:none;';
+      logoImg.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;z-index:2;opacity:0.9;filter:brightness(0) invert(1);pointer-events:none;';
       hero.appendChild(logoImg);
     }
   }
