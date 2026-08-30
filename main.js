@@ -114,6 +114,15 @@ window.addEventListener('load', function() {
 */
 const recentUpdates = [
   {
+    date: '2026-08-29',
+    client: "Lupita Nyong'o",
+    cardKey: 'lupita',
+    headline: 'Vogue feature alongside Senator Angela Alsobrooks',
+    desc: "Vogue explores Lupita's personal fibroid journey and the systemic inequities surrounding women's pain, spotlighting the bipartisan U-FIGHT Act. Lupita has also woven fibroid advocacy into major coverage with Elle and Who What Wear, and was honored by The White Dress Project in Atlanta for her Make Fibroids Count campaign.",
+    tag: 'Press',
+    link: 'https://www.vogue.com'
+  },
+  {
     date: '2025-08-24',
     client: 'Paige Lorenze and Tommy Paul',
     cardKey: 'kids',
@@ -178,7 +187,10 @@ const caseStudies = {
       { name: 'Parade', url: 'https://parade.com/news/lupita-nyongo-shares-health-update-after-2014-uterine-fibroid-removal-says-she-now-has-over-50' },
       { name: 'Daily Mail', url: 'https://www.dailymail.co.uk/tvshowbiz/article-15594271/I-felt-shame-scared-reproductive-health-Lupita-Nyongo-details-decade-long-battle-agonising-chronic-uterine-fibroids-reveals-currently-50.html' },
       { name: 'Black Health Matters', url: 'https://blackhealthmatters.com/lupito-nyongos-fibroids-have-returned-she-now-has-50/' },
-      { name: 'The Root', url: 'https://theroot.com' }
+      { name: 'The Root', url: 'https://theroot.com' },
+      { name: 'Vogue', url: 'https://www.vogue.com' },
+      { name: 'Elle', url: 'https://www.elle.com' },
+      { name: 'Who What Wear', url: 'https://www.whowhatwear.com' }
     ]
   },
 
