@@ -77,7 +77,7 @@ window.addEventListener('load', function() {
 /* ─── SCROLL-BASED NAV ACTIVE STATE ──────────────────────────── */
 (function initScrollNav() {
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-  const sectionIds = ['recent', 'clients', 'brands', 'events', 'strategy', 'about'];
+  const sectionIds = ['clients', 'brands', 'events', 'strategy', 'about'];
   const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
   if (!sections.length || !navLinks.length) return;
@@ -717,34 +717,60 @@ const brandDetails = {
   if (brandClose) brandClose.addEventListener('click', closeBrandPanel);
 })();
 
-/* ─── RECENT FEED ────────────────────────────────────────────── */
-function renderRecentFeed() {
-  const feed = document.getElementById('recentFeed');
-  if (!feed) return;
-  const sorted = [...recentUpdates]
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 5);
-  feed.innerHTML = '';
-  sorted.forEach(update => {
-    const formatted = new Date(update.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    const item = document.createElement('div');
-    item.className = 'recent-item';
-    item.innerHTML = `
-      <div class="recent-item-date">${formatted}</div>
-      <div class="recent-item-body">
-        <div class="recent-item-client">${update.client}</div>
-        <div class="recent-item-headline">${update.headline}</div>
-      </div>
-      <span class="recent-item-tag">${update.tag}</span>`;
-    item.addEventListener('click', () => {
-      if (update.link) {
-        window.open(update.link, '_blank', 'noopener noreferrer');
-      } else {
-        openModal(update.cardKey);
-      }
-    });
-    feed.appendChild(item);
+/* ─── ROTATING UPDATE BANNER ─────────────────────────────────── */
+function initUpdateBanner() {
+  const banner = document.getElementById('updateBanner');
+  const textEl = document.getElementById('updateBannerText');
+  if (!banner || !textEl || !recentUpdates.length) return;
+
+  const sorted = [...recentUpdates].sort((a, b) => new Date(b.date) - new Date(a.date));
+  let currentIndex = 0;
+  let rotationInterval;
+
+  function formatBannerText(update) {
+    const date = new Date(update.date).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    return `${update.client} · ${update.headline} · ${date}`;
+  }
+
+  function showUpdate(index) {
+    textEl.classList.add('fade-out');
+    textEl.classList.remove('visible');
+    setTimeout(() => {
+      textEl.textContent = formatBannerText(sorted[index]);
+      textEl.classList.remove('fade-out');
+      textEl.classList.add('fade-in');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          textEl.classList.remove('fade-in');
+          textEl.classList.add('visible');
+        });
+      });
+    }, 300);
+  }
+
+  textEl.textContent = formatBannerText(sorted[0]);
+  textEl.classList.add('visible');
+
+  function startRotation() {
+    rotationInterval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % sorted.length;
+      showUpdate(currentIndex);
+    }, 4000);
+  }
+
+  startRotation();
+
+  banner.addEventListener('click', () => {
+    const current = sorted[currentIndex];
+    if (current.link) {
+      window.open(current.link, '_blank', 'noopener noreferrer');
+    } else {
+      openModal(current.cardKey);
+    }
   });
+
+  banner.addEventListener('mouseenter', () => clearInterval(rotationInterval));
+  banner.addEventListener('mouseleave', startRotation);
 }
 
 /* ─── NEW BADGES ─────────────────────────────────────────────── */
@@ -774,7 +800,7 @@ function applyNewBadges() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', renderRecentFeed);
+document.addEventListener('DOMContentLoaded', initUpdateBanner);
 document.addEventListener('DOMContentLoaded', applyNewBadges);
 
 // Auto-open Audi panel on load to signal interactivity

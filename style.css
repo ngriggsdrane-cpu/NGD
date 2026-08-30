@@ -473,103 +473,69 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .reveal-from-right.visible { opacity: 1; transform: none; }
 
 /* ══════════════════════════════════════════════════════════════
-   RECENT WORK FEED
+   ROTATING UPDATE BANNER
    ══════════════════════════════════════════════════════════════ */
-.recent-section {
-  background: var(--white);
+.update-banner {
+  background: var(--paper-warm);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 36px 0;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  overflow: hidden;
 }
-.recent-inner {
+.update-banner:hover { background: var(--orange-pale); }
+.update-banner-inner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 48px;
-}
-.recent-header {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 16px;
 }
-.recent-title {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink);
-  margin: 0;
-}
-.recent-live-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--orange);
-  display: inline-block;
-  animation: livePulse 2s ease-in-out infinite;
-}
-@keyframes livePulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.4; transform: scale(0.8); }
-}
-.recent-feed {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-.recent-item {
-  display: grid;
-  grid-template-columns: 90px 1fr auto;
-  align-items: center;
-  gap: 20px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.recent-item:last-child { border-bottom: none; }
-.recent-item:hover {
-  background: var(--orange-pale);
-  margin: 0 -48px;
-  padding-left: 48px;
-  padding-right: 48px;
-}
-.recent-item-date {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: 11px;
-  color: var(--warm-grey);
-  letter-spacing: 0.04em;
-  white-space: nowrap;
-}
-.recent-item-client {
+.update-banner-label {
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
-  font-size: 13px;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  margin-bottom: 2px;
-}
-.recent-item-headline {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  font-size: 12px;
-  color: var(--warm-grey);
-  letter-spacing: 0.01em;
-}
-.recent-item-tag {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 400;
   font-size: 9px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--orange);
-  border: 1px solid rgba(232,80,10,0.3);
-  padding: 3px 10px;
-  border-radius: 999px;
-  white-space: nowrap;
   flex-shrink: 0;
+  padding-right: 16px;
+  border-right: 1px solid var(--border-strong);
+}
+.update-banner-track {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.update-banner-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.update-banner-text.fade-out { opacity: 0; transform: translateY(-6px); }
+.update-banner-text.fade-in  { opacity: 0; transform: translateY(6px); }
+.update-banner-text.visible  { opacity: 1; transform: translateY(0); }
+.update-banner-arrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--orange);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.update-banner:hover .update-banner-arrow { transform: translateX(4px); }
+@media (max-width: 768px) {
+  .update-banner-inner { padding: 0 24px; gap: 10px; }
 }
 /* NEW badge on work cards */
 .case-new-badge {
@@ -634,20 +600,6 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   border-bottom: 1px solid rgba(232,80,10,0.3);
   padding-bottom: 1px;
 }
-@media (max-width: 768px) {
-  .recent-section { padding: 28px 0; }
-  .recent-inner { padding: 0 24px; }
-  .recent-item {
-    grid-template-columns: 70px 1fr auto;
-    gap: 12px;
-  }
-  .recent-item:hover {
-    margin: 0 -24px;
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
 /* ══════════════════════════════════════════════════════════════
    CLIENTS — work + talent merged
    ══════════════════════════════════════════════════════════════ */
