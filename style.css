@@ -26,6 +26,7 @@ ul, ol { list-style: none; }
   --orange:        #E8500A;
   --orange-dark:   #C43D00;
   --orange-light:  #F2854A;
+  --modal-accent:  #E8500A;
   --orange-pale:   #FDF0E8;
   --orange-wash:   #FBE9DC;
 
@@ -1430,7 +1431,7 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   font-weight: 500;
   font-size: 26px;
   letter-spacing: -0.02em;
-  color: #E8500A;
+  color: var(--modal-accent, #E8500A);
   line-height: 1;
   margin-bottom: 4px;
 }
@@ -1456,5 +1457,5 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
   transition: background 0.15s, color 0.15s, border-color 0.15s;
   display: inline-block;
 }
-.modal-press-btn:hover { background: #E8500A; border-color: #E8500A; color: #fff; }
+.modal-press-btn:hover { background: var(--modal-accent, #E8500A); border-color: var(--modal-accent, #E8500A); color: #fff; }
 .modal-gallery-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }

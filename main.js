@@ -114,6 +114,15 @@ window.addEventListener('load', function() {
 */
 const recentUpdates = [
   {
+    date: '2026-08-30',
+    client: 'Sam Smith',
+    cardKey: 'sam',
+    headline: 'The Pink House Foundation relaunches with 5 grantee partners',
+    desc: 'The Pink House Foundation relaunches supporting AKT, Ali Forney Center, Courage+, Manos Amigues, and Stonewall Housing — organisations providing safe spaces, housing, and community for LGBTQIA+ youth across the UK and US.',
+    tag: 'Foundation',
+    link: 'https://thepinkhousefoundation.com/'
+  },
+  {
     date: '2026-07-01',
     client: 'WME Fashion Incubator',
     cardKey: 'incubator',
@@ -249,11 +258,23 @@ const caseStudies = {
   sam: {
     eyebrow: 'Sam Smith',
     title: 'The Pink House Foundation',
-    desc: 'Launched The Pink House Foundation to support and uplift LGBTQ+ communities, activating their platform to drive funding and visibility for grassroots organizations. Through a network of fundraisers and community partners, the foundation has leveraged residencies in New York and San Francisco to raise capital and amplify local LGBTQ+ organizations.',
-    hero: { type: 'image', src: 'images/sam-smith.jpg', position: 'center top' },
-    stats: [],
+    desc: "Launched The Pink House Foundation to support LGBTQIA+ organisations and spaces that allow Queer youth to find their sanctuary, discover community and let the walls they've built crumble until only their truest selves remain. For founder Sam Smith, the Pink House was their real home in the English countryside — a space of total warmth and love, and somewhere they felt safe enough to find their voice and discover who they were. The foundation supports and partners with organisations changing Queer lives every day across the UK and US, with grants supporting housing, mental health, and community building for LGBTQIA+ youth.",
+    hero: { type: 'image', src: 'https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9290384c-0d9f-475c-afa7-40361d8da108/id-preview-8f38d949--3778a640-f6eb-4f34-bc06-6630f5d524e2.lovable.app-1785765376660.png', position: 'center top' },
+    stats: [
+      { number: '5', label: 'Partner charities supported' },
+      { number: '2', label: 'Countries — UK and US' }
+    ],
     gallery: [],
-    press: []
+    press: [
+      { name: 'The Pink House Foundation', url: 'https://thepinkhousefoundation.com/' },
+      { name: 'Donate', url: 'https://donate.supportedgiving.com/the-pink-house-foundation-social-media?qrCode=aisYtegl3Ova&visitor=c87260ea-2f4a-4121-ba5b-6efa053d0052&utm_source=ig&utm_medium=social&utm_content=link_in_bio' },
+      { name: 'AKT', url: 'https://www.akt.org.uk/' },
+      { name: 'Ali Forney Center', url: 'https://www.aliforneycenter.org/' },
+      { name: 'Courage+', url: 'https://courageplus.org/' },
+      { name: 'Manos Amigues', url: 'https://www.manosamigues.org/' },
+      { name: 'Stonewall Housing', url: 'https://stonewallhousing.org/' }
+    ],
+    accentColor: '#E8A0B0'
   },
 
   venus: {
@@ -473,6 +494,10 @@ function openModal(key) {
 
   scroll.scrollTop = 0;
 
+  // Apply accent color if defined (resets to orange on closeModal)
+  const accentColor = data.accentColor || '#E8500A';
+  document.documentElement.style.setProperty('--modal-accent', accentColor);
+
   document.getElementById('modalEyebrow').textContent = data.eyebrow || '';
   document.getElementById('modalTitle').textContent   = data.title   || '';
   document.getElementById('modalDesc').textContent    = data.desc    || '';
@@ -576,6 +601,7 @@ function closeModal() {
   backdrop.classList.remove('modal-open');
   modal.classList.remove('modal-open');
   document.body.style.overflow = '';
+  document.documentElement.style.setProperty('--modal-accent', '#E8500A');
 
   setTimeout(() => {
     backdrop.style.display = 'none';
