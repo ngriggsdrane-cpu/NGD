@@ -473,6 +473,182 @@ body { font-family: 'DM Sans', system-ui, sans-serif; font-weight: 300; line-hei
 .reveal-from-right.visible { opacity: 1; transform: none; }
 
 /* ══════════════════════════════════════════════════════════════
+   RECENT WORK FEED
+   ══════════════════════════════════════════════════════════════ */
+.recent-section {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 36px 0;
+}
+.recent-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.recent-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.recent-title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0;
+}
+.recent-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+  display: inline-block;
+  animation: livePulse 2s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+.recent-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.recent-item {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.recent-item:last-child { border-bottom: none; }
+.recent-item:hover {
+  background: var(--orange-pale);
+  margin: 0 -48px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.recent-item-date {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  color: var(--warm-grey);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.recent-item-client {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 2px;
+}
+.recent-item-headline {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--warm-grey);
+  letter-spacing: 0.01em;
+}
+.recent-item-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid rgba(232,80,10,0.3);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+/* NEW badge on work cards */
+.case-new-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--orange);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 5;
+  animation: badgePulse 2.5s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+/* Modal recent activity */
+.modal-recent-item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.modal-recent-item:last-child { border-bottom: none; }
+.modal-recent-date {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  color: var(--warm-grey);
+}
+.modal-recent-headline {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.modal-recent-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--warm-grey);
+  line-height: 1.6;
+}
+.modal-recent-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232,80,10,0.3);
+  padding-bottom: 1px;
+}
+@media (max-width: 768px) {
+  .recent-section { padding: 28px 0; }
+  .recent-inner { padding: 0 24px; }
+  .recent-item {
+    grid-template-columns: 70px 1fr auto;
+    gap: 12px;
+  }
+  .recent-item:hover {
+    margin: 0 -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
    CLIENTS — work + talent merged
    ══════════════════════════════════════════════════════════════ */
 #clients { background: var(--cream); }

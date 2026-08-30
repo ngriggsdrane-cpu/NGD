@@ -77,7 +77,7 @@ window.addEventListener('load', function() {
 /* ─── SCROLL-BASED NAV ACTIVE STATE ──────────────────────────── */
 (function initScrollNav() {
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-  const sectionIds = ['clients', 'brands', 'events', 'strategy', 'about'];
+  const sectionIds = ['recent', 'clients', 'brands', 'events', 'strategy', 'about'];
   const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
   if (!sections.length || !navLinks.length) return;
@@ -94,6 +94,62 @@ window.addEventListener('load', function() {
 
   sections.forEach(s => observer.observe(s));
 })();
+
+/* ─── RECENT UPDATES DATA ────────────────────────────────────── */
+/*
+  HOW TO ADD AN UPDATE:
+  Add one object to the top of this array.
+  cardKey must match a key in the caseStudies object.
+  All three surfaces (feed, badge, modal) update automatically.
+
+  {
+    date: 'YYYY-MM-DD',
+    client: 'Display name',
+    cardKey: 'matchingCaseStudiesKey',
+    headline: 'Short headline',
+    desc: 'One or two sentence description.',
+    tag: 'One word category',
+    link: 'https://... or null'
+  }
+*/
+const recentUpdates = [
+  {
+    date: '2025-08-24',
+    client: 'Paige Lorenze and Tommy Paul',
+    cardKey: 'kids',
+    headline: 'US Open Activation with NYJTL',
+    desc: '10 student athletes aged 16 to 18 experienced the US Open with Tommy Paul — practice sessions, Players Lounge tour, and lunch at Arthur Ashe Stadium.',
+    tag: 'Activation',
+    link: null
+  },
+  {
+    date: '2026-04-23',
+    client: 'Taylor Rooks Foundation',
+    cardKey: 'taylor',
+    headline: '$2.1M in Medical Debt Relieved',
+    desc: 'Partnership with Undue Medical Debt erased debt for 1,805 residents in Gwinnett County, Georgia.',
+    tag: 'Foundation',
+    link: null
+  },
+  {
+    date: '2026-05-12',
+    client: 'Joe Santagato',
+    cardKey: 'joe',
+    headline: 'The Happy Cry Fund Launches',
+    desc: '$100,000 personal commitment plus $1 from every tour ticket sold via PLUS1 partnership.',
+    tag: 'Foundation Launch',
+    link: null
+  },
+  {
+    date: '2026-08-30',
+    client: 'Paige Lorenze and Tommy Paul',
+    cardKey: 'kids',
+    headline: 'Kids Outdoors Foundation Reel Hits 866K Views',
+    desc: 'Foundation content goes viral with 866,000 views on Instagram.',
+    tag: 'Social',
+    link: 'https://www.instagram.com/reel/Dcee363B0U0/'
+  }
+];
 
 /* ─── CASE STUDY DATA ────────────────────────────────────────── */
 const caseStudies = {
@@ -415,6 +471,36 @@ function openModal(key) {
     pressWrap.style.display = 'none';
   }
 
+  // Recent Activity
+  const recentWrap = document.getElementById('modalRecentWrap');
+  const recentEl   = document.getElementById('modalRecent');
+  if (recentWrap && recentEl) {
+    const matching = recentUpdates
+      .filter(u => u.cardKey === key)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+    if (matching.length > 0) {
+      recentWrap.style.display = 'block';
+      recentEl.innerHTML = '';
+      matching.forEach(u => {
+        const dateStr = new Date(u.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const linkHtml = u.link
+          ? `<a href="${u.link}" target="_blank" rel="noopener noreferrer" class="modal-recent-link">View →</a>`
+          : '';
+        recentEl.innerHTML += `
+          <div class="modal-recent-item">
+            <div class="modal-recent-date">${dateStr}</div>
+            <div>
+              <div class="modal-recent-headline">${u.headline}</div>
+              <div class="modal-recent-desc">${u.desc}</div>
+              ${linkHtml}
+            </div>
+          </div>`;
+      });
+    } else {
+      recentWrap.style.display = 'none';
+    }
+  }
+
   backdrop.style.display = 'block';
   modal.style.display    = 'flex';
   document.body.style.overflow = 'hidden';
@@ -630,6 +716,66 @@ const brandDetails = {
 
   if (brandClose) brandClose.addEventListener('click', closeBrandPanel);
 })();
+
+/* ─── RECENT FEED ────────────────────────────────────────────── */
+function renderRecentFeed() {
+  const feed = document.getElementById('recentFeed');
+  if (!feed) return;
+  const sorted = [...recentUpdates]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 5);
+  feed.innerHTML = '';
+  sorted.forEach(update => {
+    const formatted = new Date(update.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    const item = document.createElement('div');
+    item.className = 'recent-item';
+    item.innerHTML = `
+      <div class="recent-item-date">${formatted}</div>
+      <div class="recent-item-body">
+        <div class="recent-item-client">${update.client}</div>
+        <div class="recent-item-headline">${update.headline}</div>
+      </div>
+      <span class="recent-item-tag">${update.tag}</span>`;
+    item.addEventListener('click', () => {
+      if (update.link) {
+        window.open(update.link, '_blank', 'noopener noreferrer');
+      } else {
+        openModal(update.cardKey);
+      }
+    });
+    feed.appendChild(item);
+  });
+}
+
+/* ─── NEW BADGES ─────────────────────────────────────────────── */
+function applyNewBadges() {
+  const now = new Date();
+  const ninetyDays = 90 * 24 * 60 * 60 * 1000;
+  const recentKeys = new Set(
+    recentUpdates
+      .filter(u => (now - new Date(u.date)) < ninetyDays)
+      .map(u => u.cardKey)
+  );
+  document.querySelectorAll('[onclick]').forEach(card => {
+    const onclickVal = card.getAttribute('onclick') || '';
+    const match = onclickVal.match(/openModal\(['"](\w+)['"]\)/);
+    if (match && recentKeys.has(match[1])) {
+      if (!card.querySelector('.case-new-badge')) {
+        const badge = document.createElement('div');
+        badge.className = 'case-new-badge';
+        badge.textContent = 'Updated';
+        const imgDiv = card.querySelector('.card-img');
+        if (imgDiv) {
+          imgDiv.style.position = 'relative';
+          imgDiv.appendChild(badge);
+        }
+      }
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', renderRecentFeed);
+document.addEventListener('DOMContentLoaded', applyNewBadges);
 
 // Auto-open Audi panel on load to signal interactivity
 let suppressScroll = true;

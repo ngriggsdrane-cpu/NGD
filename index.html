@@ -81,6 +81,7 @@
   <a href="index.html" class="nav-logo">NGD</a>
 
   <div class="nav-links">
+    <a href="#recent"   class="nav-link">Recent</a>
     <a href="#clients"  class="nav-link">Clients</a>
     <a href="#brands"   class="nav-link">Brands</a>
     <a href="#events"   class="nav-link">Events</a>
@@ -96,6 +97,7 @@
 
 <!-- Mobile nav -->
 <nav id="mobile-nav">
+  <a href="#recent"   class="mobile-nav-item">Recent</a>
   <a href="#clients"  class="mobile-nav-item">Clients</a>
   <a href="#brands" class="mobile-nav-item">Brands</a>
   <a href="#events" class="mobile-nav-item">Events</a>
@@ -131,6 +133,16 @@
 </section>
 
 <!-- ─── CLIENTS ─────────────────────────────────────────────────── -->
+<section id="recent" class="recent-section">
+  <div class="recent-inner">
+    <div class="recent-header">
+      <h2 class="recent-title">Recent Work</h2>
+      <span class="recent-live-dot"></span>
+    </div>
+    <div class="recent-feed" id="recentFeed"></div>
+  </div>
+</section>
+
 <div class="geo-divider"></div>
 <section id="clients">
 
@@ -990,6 +1002,11 @@
       <div id="modalPressWrap" style="display:none;">
         <div style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#9A948C; margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid rgba(15,15,15,0.1);">Press</div>
         <div id="modalPress" style="display:flex; flex-wrap:wrap; gap:8px;"></div>
+      </div>
+
+      <div id="modalRecentWrap" style="display:none; margin-top:28px;">
+        <div style="font-family:'DM Sans',sans-serif; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#9A948C; margin-bottom:12px; padding-bottom:10px; border-bottom:1px solid rgba(15,15,15,0.08);">Recent Activity</div>
+        <div id="modalRecent"></div>
       </div>
 
     </div>
