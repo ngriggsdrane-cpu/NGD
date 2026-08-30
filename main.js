@@ -259,7 +259,7 @@ const caseStudies = {
     eyebrow: 'Sam Smith',
     title: 'The Pink House Foundation',
     desc: "Launched The Pink House Foundation to support LGBTQIA+ organisations and spaces that allow Queer youth to find their sanctuary, discover community and let the walls they've built crumble until only their truest selves remain. For founder Sam Smith, the Pink House was their real home in the English countryside — a space of total warmth and love, and somewhere they felt safe enough to find their voice and discover who they were. The foundation supports and partners with organisations changing Queer lives every day across the UK and US, with grants supporting housing, mental health, and community building for LGBTQIA+ youth.",
-    hero: { type: 'image', src: 'https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9290384c-0d9f-475c-afa7-40361d8da108/id-preview-8f38d949--3778a640-f6eb-4f34-bc06-6630f5d524e2.lovable.app-1785765376660.png', position: 'center top' },
+    hero: { type: 'image', src: 'images/p1-017.png', position: 'center top', overlay: 'rgba(232,100,140,0.45)', logoOverlay: 'https://thepinkhousefoundation.com/__l5e/assets-v1/4d693064-957b-4329-819b-0c73252ce376/ph-logo.png' },
     stats: [
       { number: '5', label: 'Partner charities supported' },
       { number: '2', label: 'Countries — UK and US' }
@@ -514,6 +514,20 @@ function openModal(key) {
     hero.style.backgroundImage  = src ? `url('${src}')` : '';
     hero.style.backgroundPosition = data.hero.position || 'center top';
     hero.style.backgroundSize   = 'cover';
+
+    if (data.hero.overlay) {
+      const overlayDiv = document.createElement('div');
+      overlayDiv.style.cssText = `position:absolute;inset:0;background:${data.hero.overlay};z-index:1;pointer-events:none;`;
+      hero.appendChild(overlayDiv);
+    }
+
+    if (data.hero.logoOverlay) {
+      const logoImg = document.createElement('img');
+      logoImg.src = data.hero.logoOverlay;
+      logoImg.alt = 'Foundation logo';
+      logoImg.style.cssText = 'position:absolute;bottom:50%;left:50%;transform:translate(-50%,50%);width:100px;z-index:2;opacity:0.95;filter:brightness(0) invert(1);pointer-events:none;';
+      hero.appendChild(logoImg);
+    }
   }
 
   const statsEl = document.getElementById('modalStats');
