@@ -117,10 +117,19 @@ const recentUpdates = [
     date: '2026-08-29',
     client: "Lupita Nyong'o",
     cardKey: 'lupita',
-    headline: 'Vogue feature alongside Senator Angela Alsobrooks',
-    desc: "Vogue explores Lupita's personal fibroid journey and the systemic inequities surrounding women's pain, spotlighting the bipartisan U-FIGHT Act. Lupita has also woven fibroid advocacy into major coverage with Elle and Who What Wear, and was honored by The White Dress Project in Atlanta for her Make Fibroids Count campaign.",
-    tag: 'Press',
-    link: 'https://www.vogue.com'
+    headline: 'Honored by The White Dress Project in Atlanta',
+    desc: 'Lupita was honored by The White Dress Project in recognition of her Make Fibroids Count campaign and her continued efforts to raise awareness and unlock greater funding for uterine fibroid research.',
+    tag: 'Recognition',
+    link: null
+  },
+  {
+    date: '2026-08-28',
+    client: "Lupita Nyong'o",
+    cardKey: 'lupita',
+    headline: 'Fibroid advocacy woven into The Odyssey press tour',
+    desc: 'Alongside The Odyssey press tour, Lupita has intentionally embedded fibroid advocacy into major coverage including cover stories with Elle, Who What Wear, and a Vogue feature alongside US Senator Angela Alsobrooks spotlighting the bipartisan U-FIGHT Act.',
+    tag: 'Campaign',
+    link: null
   },
   {
     date: '2025-08-24',
