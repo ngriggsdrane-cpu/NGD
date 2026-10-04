@@ -463,7 +463,7 @@ const caseStudies = {
     stats: [],
     gallery: [],
     partners: [
-      { name: 'UNICEF USA', url: 'https://www.unicefusa.org/' }
+      { name: 'UNICEF USA', url: 'https://www.unicefusa.org/', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/United-nations-childrens-fund-unicef-logo.png' }
     ],
     press: []
   },
