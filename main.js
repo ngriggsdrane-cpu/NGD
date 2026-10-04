@@ -340,6 +340,9 @@ const caseStudies = {
     hero: { type: 'image', src: 'images/winnie-harlow/Winnie Harlow BBR 2.jpeg copy.jpg', position: 'left 20% top 0%' },
     stats: [],
     gallery: [],
+    partners: [
+      { name: 'Black Beauty Roster', url: 'https://www.blackbeautyroster.com/' }
+    ],
     press: []
   },
 
