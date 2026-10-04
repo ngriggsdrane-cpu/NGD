@@ -222,7 +222,7 @@ const caseStudies = {
     eyebrow: 'Joy Reid × When We All Vote',
     title: 'Party at the Polls Coalition Call',
     desc: "Booked Joy Reid to headline When We All Vote's Party at the Polls coalition call, rallying hosts, partners and volunteers from across the country ahead of early voting. Party at the Polls is When We All Vote's largest program to date, working to reach more than 20 million voters through over 5,000 nonpartisan community events at or near polling locations.",
-    hero: { type: 'image', src: 'images/joy-reid.jpg', position: '45% 30%', badge: 'images/events/logos/when-we-all-vote.png' },
+    hero: { type: 'image', src: 'images/joy-reid.jpg', position: '45% 30%' },
     stats: [
       { number: '300+', label: 'Registered attendees' },
       { number: '20M+', label: 'Voters targeted' }
