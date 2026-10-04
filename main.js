@@ -562,7 +562,7 @@ const caseStudies = {
     ],
     partners: [
       { name: 'Sharing Excess', url: 'https://www.sharingexcess.com/', logo: 'https://cdn.prod.website-files.com/67d1d2d9c708819c5185d49c/687a640339afb6f59498f646_open_graph.png' },
-      { name: 'PLUS1', url: 'https://www.plus1.org/' }
+      { name: 'PLUS1', url: 'https://www.plus1.org/', logo: 'images/partners/plus1.png' }
     ],
     press: [
       { name: 'People', url: 'https://people.com' },
