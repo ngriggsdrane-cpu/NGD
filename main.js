@@ -230,8 +230,7 @@ const caseStudies = {
     gallery: [],
     press: [
       { name: 'The Hollywood Reporter', url: 'https://www.hollywoodreporter.com/news/general-news/ryan-reynolds-group-effort-initiative-wme-nxt-sessions-2025-1236403308/' },
-      { name: 'Variety — NYFW: NXT', url: 'https://variety.com/2020/digital/news/nyfw-nxt-virtual-training-program-1234784247/' },
-      { name: 'TheWrap', url: 'https://www.thewrap.com/industry-news/business/idris-elba-wme-nxt-hope-foundation-creative-futures-initiative-expansion/' }
+      { name: 'Variety — NYFW: NXT', url: 'https://variety.com/2020/digital/news/nyfw-nxt-virtual-training-program-1234784247/' }
     ]
   },
 
