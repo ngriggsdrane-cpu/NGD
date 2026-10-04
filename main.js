@@ -222,7 +222,7 @@ const caseStudies = {
     eyebrow: 'William Goodge × Stand Up To Cancer',
     title: 'Mission America',
     desc: 'William Goodge will attempt to complete 50 marathons across 50 states in 24 days in support of Stand Up To Cancer, with a $250,000 fundraising goal. The Guinness World Record attempt starts October 9 in Honolulu and finishes with marathon 50 in New York City, run in memory of his mother, Amanda, who passed away from cancer in 2018. Powered by Goodwin as the first chapter of the Goodwin Endurance Series, with private aviation, commercial flights and an RV fleet moving William between states. William previously ran from Los Angeles to New York in 55 days and across Australia in 35 days.',
-    hero: { type: 'image', src: 'https://missionamerica50.org/wp-content/uploads/2026/08/mission-america-william-goodge-thumbnail-bg.jpg', position: 'center' },
+    hero: { type: 'image', src: 'https://missionamerica50.org/wp-content/uploads/2026/08/mission-america-william-goodge-thumbnail-bg.jpg', position: '50% 82%', size: '180%' },
     stats: [
       { number: '50', label: 'Marathons' },
       { number: '50', label: 'States' },
@@ -596,7 +596,7 @@ function openModal(key) {
     const src = data.hero.src ? data.hero.src.replace(/ /g, '%20') : '';
     hero.style.backgroundImage  = src ? `url('${src}')` : '';
     hero.style.backgroundPosition = data.hero.position || 'center top';
-    hero.style.backgroundSize   = 'cover';
+    hero.style.backgroundSize   = data.hero.size || 'cover';
 
     if (data.hero.overlay) {
       const overlayDiv = document.createElement('div');
