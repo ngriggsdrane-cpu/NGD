@@ -114,6 +114,15 @@ window.addEventListener('load', function() {
 */
 const recentUpdates = [
   {
+    date: '2026-10-04',
+    client: 'William Goodge',
+    cardKey: 'william',
+    headline: 'Mission America is live ahead of the October 9 start',
+    desc: 'Donations are coming in as William Goodge prepares to attempt 50 marathons across 50 states in 24 days in support of Stand Up To Cancer, with a $250,000 fundraising goal.',
+    tag: 'Launch',
+    link: 'https://missionamerica50.org/'
+  },
+  {
     date: '2026-09-22',
     client: "Lupita Nyong'o",
     cardKey: 'lupita',
@@ -199,6 +208,27 @@ const recentUpdates = [
 
 /* ─── CASE STUDY DATA ────────────────────────────────────────── */
 const caseStudies = {
+  william: {
+    eyebrow: 'William Goodge × Stand Up To Cancer',
+    title: 'Mission America',
+    desc: 'William Goodge will attempt to complete 50 marathons across 50 states in 24 days in support of Stand Up To Cancer, with a $250,000 fundraising goal. The Guinness World Record attempt begins October 9 and is run in memory of his mother, Amanda, who passed away from cancer in 2018. Mission America is now live, with donations already coming in ahead of the start.',
+    hero: { type: 'image', src: 'https://missionamerica50.org/wp-content/uploads/2026/08/william-goodge-mission-america-goodwin-generated-stand-up-to-cancer-50-marathons-in-24-days-featured-image.jpg', position: 'center' },
+    stats: [
+      { number: '50', label: 'Marathons' },
+      { number: '50', label: 'States' },
+      { number: '24', label: 'Days' },
+      { number: '$250K', label: 'Fundraising goal' }
+    ],
+    gallery: [],
+    partners: [
+      { name: 'Stand Up To Cancer', url: 'https://standuptocancer.org/' }
+    ],
+    press: [
+      { name: 'Mission America', url: 'https://missionamerica50.org/' },
+      { name: 'RUN247', url: 'https://run247.com/running-news/ultramarathon-news/william-goodge-mission-america-announcement-2026' }
+    ]
+  },
+
 
   lupita: {
     eyebrow: "Lupita Nyong’o \xd7 Foundation for Women’s Health",
@@ -642,7 +672,7 @@ function openModal(key) {
       recentWrap.style.display = 'block';
       recentEl.innerHTML = '';
       matching.forEach(u => {
-        const dateStr = new Date(u.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        const dateStr = new Date(u.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
         const linkHtml = u.link
           ? `<a href="${u.link}" target="_blank" rel="noopener noreferrer" class="modal-recent-link">View →</a>`
           : '';
