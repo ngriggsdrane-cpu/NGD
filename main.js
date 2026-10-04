@@ -114,6 +114,15 @@ window.addEventListener('load', function() {
 */
 const recentUpdates = [
   {
+    date: '2026-09-22',
+    client: "Lupita Nyong'o",
+    cardKey: 'lupita',
+    headline: 'Takes the stage at the 2026 Clinton Global Initiative',
+    desc: "Lupita joined Chelsea Clinton and Katy Brodsky Falco on stage at CGI 2026 to advocate for increased medical research, more treatment options, and expanded funding for women's health. Sharing her own fibroids diagnosis, she noted that 26 million women in the U.S. have fibroids and that women in their 20s are still told a hysterectomy is the answer: \"This thing is too pervasive for us to be so casual about it.\"",
+    tag: 'Speaking',
+    link: 'https://youtu.be/dMBh0UW-QRY'
+  },
+  {
     date: '2026-08-30',
     client: 'Sam Smith',
     cardKey: 'sam',
