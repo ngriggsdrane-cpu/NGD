@@ -211,8 +211,8 @@ const caseStudies = {
   william: {
     eyebrow: 'William Goodge × Stand Up To Cancer',
     title: 'Mission America',
-    desc: 'William Goodge will attempt to complete 50 marathons across 50 states in 24 days in support of Stand Up To Cancer, with a $250,000 fundraising goal. The Guinness World Record attempt begins October 9 and is run in memory of his mother, Amanda, who passed away from cancer in 2018. Mission America is now live, with donations already coming in ahead of the start.',
-    hero: { type: 'image', src: 'https://missionamerica50.org/wp-content/uploads/2026/08/william-goodge-mission-america-goodwin-generated-stand-up-to-cancer-50-marathons-in-24-days-featured-image.jpg', position: 'center' },
+    desc: 'William Goodge will attempt to complete 50 marathons across 50 states in 24 days in support of Stand Up To Cancer, with a $250,000 fundraising goal. The Guinness World Record attempt starts October 9 in Honolulu and finishes with marathon 50 in New York City, run in memory of his mother, Amanda, who passed away from cancer in 2018. Powered by Goodwin as the first chapter of the Goodwin Endurance Series, with private aviation, commercial flights and an RV fleet moving William between states. William previously ran from Los Angeles to New York in 55 days and across Australia in 35 days.',
+    hero: { type: 'image', src: 'https://missionamerica50.org/wp-content/uploads/2026/08/mission-america-william-goodge-thumbnail-bg.jpg', position: 'center' },
     stats: [
       { number: '50', label: 'Marathons' },
       { number: '50', label: 'States' },
@@ -225,7 +225,9 @@ const caseStudies = {
     ],
     press: [
       { name: 'Mission America', url: 'https://missionamerica50.org/' },
-      { name: 'RUN247', url: 'https://run247.com/running-news/ultramarathon-news/william-goodge-mission-america-announcement-2026' }
+      { name: 'Goodwin x Goodge', url: 'https://www.goodwingoodge.com/' },
+      { name: 'RUN247', url: 'https://run247.com/running-news/ultramarathon-news/william-goodge-mission-america-announcement-2026' },
+      { name: 'The Rich Roll Podcast', url: 'https://open.spotify.com/episode/4Mwm65VFaSe7ekU01fA1Z0' }
     ]
   },
 
