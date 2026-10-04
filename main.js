@@ -345,8 +345,8 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'akt', url: 'https://www.akt.org.uk/', logo: 'https://www.akt.org.uk/wp-content/themes/akt/assets//images/logo.png' },
-      { name: 'Ali Forney Center', url: 'https://www.aliforneycenter.org/', logo: 'images/events/logos/ali-forney-center.svg' },
+      { name: 'akt', url: 'https://www.akt.org.uk/' },
+      { name: 'Ali Forney Center', url: 'https://www.aliforneycenter.org/', logo: 'https://static.wixstatic.com/media/8fd74d_a44df7e475014926b0e7873e59619c3a~mv2.png' },
       { name: 'Courage+', url: 'https://courageplus.org/' },
       { name: 'Manos Amigues', url: 'https://www.manosamigues.org/', logo: 'https://images.squarespace-cdn.com/content/v1/68b88fddfa555011b29954f7/669e96e8-4fb1-4d87-aa3f-f371ab89d6f6/MANOS+AMIGUES_Mesa+de+trabajo+1%281%29.png?format=750w' },
       { name: 'Stonewall Housing', url: 'https://stonewallhousing.org/', logo: 'https://stonewallhousing.org/wp-content/uploads/2022/06/logo3_red.png' }
@@ -366,7 +366,7 @@ const caseStudies = {
     stats: [],
     gallery: [],
     partners: [
-      { name: 'Saving Mothers', url: 'https://www.savingmothers.org/' }
+      { name: 'Saving Mothers', url: 'https://www.savingmothers.org/', logo: 'images/partners/saving-mothers.png' }
     ],
     press: []
   },
