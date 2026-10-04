@@ -114,6 +114,16 @@ window.addEventListener('load', function() {
 */
 const recentUpdates = [
   {
+    date: '2026-09-17',
+    client: 'William Goodge',
+    cardKey: 'william',
+    headline: 'Previews Mission America on The Rich Roll Podcast',
+    desc: 'William returned to The Rich Roll Podcast to break down the challenge of 50 marathons in 50 states in 24 days, from fueling 9,000 calories a day on the move to processing grief through running.',
+    tag: 'Media',
+    link: 'https://richroll.com/podcast/william-goodge-1014/',
+    showInBanner: false
+  },
+  {
     date: '2026-10-04',
     client: 'William Goodge',
     cardKey: 'william',
@@ -227,7 +237,7 @@ const caseStudies = {
       { name: 'Mission America', url: 'https://missionamerica50.org/' },
       { name: 'Goodwin x Goodge', url: 'https://www.goodwingoodge.com/' },
       { name: 'RUN247', url: 'https://run247.com/running-news/ultramarathon-news/william-goodge-mission-america-announcement-2026' },
-      { name: 'The Rich Roll Podcast', url: 'https://open.spotify.com/episode/4Mwm65VFaSe7ekU01fA1Z0' }
+      { name: 'The Rich Roll Podcast', url: 'https://richroll.com/podcast/william-goodge-1014/' }
     ]
   },
 
