@@ -172,9 +172,9 @@ const recentUpdates = [
     client: 'Paige Lorenze and Tommy Paul',
     cardKey: 'kids',
     headline: 'US Open Activation with NYJTL',
-    desc: '10 student athletes aged 16 to 18 experienced the US Open with Tommy Paul — practice sessions, Players Lounge tour, and lunch at Arthur Ashe Stadium.',
+    desc: '10 student athletes aged 16 to 18 experienced the US Open with Tommy Paul, including practice sessions, a Players Lounge tour, and lunch at Arthur Ashe Stadium. The reel has garnered over 1 million views on Instagram.',
     tag: 'Activation',
-    link: null
+    link: 'https://www.instagram.com/reel/Dcee363B0U0/'
   },
   {
     date: '2026-04-23',
@@ -195,16 +195,6 @@ const recentUpdates = [
     link: null,
     showInBanner: false
   },
-  {
-    date: '2026-08-30',
-    client: 'Paige Lorenze and Tommy Paul',
-    cardKey: 'kids',
-    headline: 'Kids Outdoors Foundation Reel Hits 866K Views',
-    desc: 'Foundation content goes viral with 866,000 views on Instagram.',
-    tag: 'Social',
-    link: 'https://www.instagram.com/reel/Dcee363B0U0/',
-    showInBanner: false
-  }
 ];
 
 /* ─── CASE STUDY DATA ────────────────────────────────────────── */
@@ -347,7 +337,9 @@ const caseStudies = {
     title: 'Kids Outdoors Foundation',
     desc: 'Launched the Kids Outdoors Foundation, expanding access to high-barrier sports like tennis, skiing, and horseback riding. Rooted in their athletic backgrounds, the foundation will fund existing programs and host community-driven events, reflecting their shared belief that sport builds confidence, resilience, and opportunity for the next generation.',
     hero: { type: 'image', src: 'images/kids-outdoors/KidsOutdoors Announcement.jpg.avif', position: 'center top 5%' },
-    stats: [],
+    stats: [
+      { number: '1M+', label: 'Instagram views on the US Open reel' }
+    ],
     gallery: [],
     press: [
       { name: 'Town and Country', url: 'https://www.townandcountrymag.com/leisure/sporting/a69977323/tommy-paul-paige-lorenze-kids-outdoors-foundation-launch/' },
