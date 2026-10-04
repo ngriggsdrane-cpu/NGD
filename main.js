@@ -136,7 +136,7 @@ const recentUpdates = [
     client: 'Joe Santagato',
     cardKey: 'joe',
     headline: 'Happy Cry Fund partners with Sharing Excess — 250,000+ meals provided',
-    desc: 'The Happy Cry Fund partnered with Sharing Excess to spotlight food waste and food insecurity across America. Joe Santagato and The Basement Yard crew joined the national food rescue nonprofit for a day of volunteering. The partnership included a donation helping Sharing Excess provide 250,000+ meals to communities in need.',
+    desc: 'The Happy Cry Fund partnered with Sharing Excess to spotlight food waste and food insecurity across America. Joe Santagato and The Basement Yard crew joined the national food rescue nonprofit for a day of volunteering. The partnership included a donation helping Sharing Excess provide 250,000+ meals to communities in need. The reel has garnered over 650,000 views.',
     tag: 'Partnership',
     link: 'https://www.instagram.com/joesantagato/reel/DbEEa_fxMPU/'
   },
@@ -443,14 +443,15 @@ const caseStudies = {
     stats: [
       { number: '$100K', label: 'Personal launch donation' },
       { number: '$1', label: 'Per ticket sold on tour via PLUS1' },
-      { number: '250K+', label: 'Meals provided via Sharing Excess' }
+      { number: '250K+', label: 'Meals provided via Sharing Excess' },
+      { number: '650K+', label: 'Instagram views on the Sharing Excess reel' }
     ],
     gallery: [
       { src: 'images/joe-santagato-sharing-excess.png', alt: 'Joe Santagato x Sharing Excess — Happy Cry Fund volunteering day' }
     ],
     press: [
       { name: 'People', url: 'https://people.com' },
-      { name: 'Instagram — 639K views', url: 'https://www.instagram.com/joesantagato/reel/DbEEa_fxMPU/' },
+      { name: 'Instagram — 650K+ views', url: 'https://www.instagram.com/joesantagato/reel/DbEEa_fxMPU/' },
       { name: 'Sharing Excess', url: 'https://sharingexcess.com' },
       { name: 'Happy Cry Fund', url: 'https://happycry.org' }
     ]
