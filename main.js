@@ -415,7 +415,7 @@ const caseStudies = {
     stats: [],
     gallery: [],
     partners: [
-      { name: 'Black Beauty Roster', url: 'https://www.blackbeautyroster.com/' }
+      { name: 'Black Beauty Roster', url: 'https://www.blackbeautyroster.com/', logo: 'images/partners/black-beauty-roster.jpg' }
     ],
     press: []
   },
@@ -478,7 +478,7 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'Save the Children', url: 'https://www.savethechildren.org/' }
+      { name: 'Save the Children', url: 'https://www.savethechildren.org/', logo: 'images/partners/save-the-children.png' }
     ],
     press: []
   },
@@ -491,7 +491,7 @@ const caseStudies = {
     stats: [],
     gallery: [],
     partners: [
-      { name: 'Girls Inc.', url: 'https://girlsinc.org/', logo: 'https://www.girlsinc.org/wp-content/themes/ninetwentytwentythree/assets/imgs/logo-pink.svg' }
+      { name: 'Girls Inc.', url: 'https://girlsinc.org/', logo: 'images/partners/girls-inc.png' }
     ],
     press: []
   },
@@ -504,7 +504,7 @@ const caseStudies = {
     stats: [],
     gallery: [],
     partners: [
-      { name: 'Child Rescue Coalition', url: 'https://childrescuecoalition.org/' }
+      { name: 'Child Rescue Coalition', url: 'https://childrescuecoalition.org/', logo: 'images/partners/child-rescue-coalition.png' }
     ],
     press: []
   },
