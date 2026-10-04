@@ -263,7 +263,7 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'Stand Up To Cancer', url: 'https://standuptocancer.org/' }
+      { name: 'Stand Up To Cancer', url: 'https://standuptocancer.org/', logo: 'https://standuptocancer.org/wp-content/uploads/stand-up-to-cancer-logo.png' }
     ],
     press: [
       { name: 'Mission America', url: 'https://missionamerica50.org/' },
@@ -320,7 +320,7 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'Undue Medical Debt', url: 'https://unduemedicaldebt.org/' }
+      { name: 'Undue Medical Debt', url: 'https://unduemedicaldebt.org/', logo: 'https://unduemedicaldebt.org/wp-content/uploads/2024/01/LOGO_WEB.png' }
     ],
     press: [
       { name: 'Rolling Out', url: 'https://rollingout.com/2026/04/23/taylor-rooks-stuns-hometown-with/' },
@@ -345,11 +345,11 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'akt', url: 'https://www.akt.org.uk/' },
-      { name: 'Ali Forney Center', url: 'https://www.aliforneycenter.org/' },
+      { name: 'akt', url: 'https://www.akt.org.uk/', logo: 'https://www.akt.org.uk/wp-content/themes/akt/assets//images/logo.png' },
+      { name: 'Ali Forney Center', url: 'https://www.aliforneycenter.org/', logo: 'images/events/logos/ali-forney-center.svg' },
       { name: 'Courage+', url: 'https://courageplus.org/' },
-      { name: 'Manos Amigues', url: 'https://www.manosamigues.org/' },
-      { name: 'Stonewall Housing', url: 'https://stonewallhousing.org/' }
+      { name: 'Manos Amigues', url: 'https://www.manosamigues.org/', logo: 'https://images.squarespace-cdn.com/content/v1/68b88fddfa555011b29954f7/669e96e8-4fb1-4d87-aa3f-f371ab89d6f6/MANOS+AMIGUES_Mesa+de+trabajo+1%281%29.png?format=750w' },
+      { name: 'Stonewall Housing', url: 'https://stonewallhousing.org/', logo: 'https://stonewallhousing.org/wp-content/uploads/2022/06/logo3_red.png' }
     ],
     press: [
       { name: 'The Pink House Foundation', url: 'https://thepinkhousefoundation.com/' },
@@ -449,8 +449,8 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'Everytown for Gun Safety', url: 'https://www.everytown.org/' },
-      { name: 'MusiCares', url: 'https://www.musicares.org/' }
+      { name: 'Everytown for Gun Safety', url: 'https://www.everytown.org/', logo: 'https://www.everytown.org/wp-content/themes/everytownaction/static/img/everytown-logo.svg' },
+      { name: 'MusiCares', url: 'https://www.musicares.org/', logo: 'https://media-musicares.grammy.net/uploads/2026/06/logo-musicares-1-150x35.avif' }
     ],
     press: []
   },
@@ -491,7 +491,7 @@ const caseStudies = {
     stats: [],
     gallery: [],
     partners: [
-      { name: 'Girls Inc.', url: 'https://girlsinc.org/' }
+      { name: 'Girls Inc.', url: 'https://girlsinc.org/', logo: 'https://www.girlsinc.org/wp-content/themes/ninetwentytwentythree/assets/imgs/logo-pink.svg' }
     ],
     press: []
   },
@@ -541,7 +541,7 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'Safar Global Foundation', url: 'https://www.safarglobalfoundation.org/' }
+      { name: 'Safar Global Foundation', url: 'https://www.safarglobalfoundation.org/', logo: 'https://images.squarespace-cdn.com/content/v1/670e870bb27d301f58651a38/60aded9f-3205-4243-8c84-f1770e4cdf3a/Safar_Jacko.png?format=750w' }
     ],
     press: []
   },
