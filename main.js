@@ -287,7 +287,7 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'Foundation for Women\'s Health', url: 'https://www.foundationwomenshealth.org/' }
+      { name: 'Foundation for Women\'s Health', url: 'https://www.foundationwomenshealth.org/', logo: 'https://images.squarespace-cdn.com/content/v1/655650f04a21be1e39e53e84/f70d65f6-635f-4bab-a422-19f296ef1dee/FHW+LOGO+.png' }
     ],
     press: [
       { name: 'TODAY Show', url: 'https://www.today.com/health/womens-health/lupita-nyongo-fibroids-rcna260617' },
