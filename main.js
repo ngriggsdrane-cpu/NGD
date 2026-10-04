@@ -212,6 +212,9 @@ const caseStudies = {
       { number: '26M', label: 'Women affected by fibroids' }
     ],
     gallery: [],
+    partners: [
+      { name: 'Foundation for Women\'s Health', url: 'https://www.foundationwomenshealth.org/' }
+    ],
     press: [
       { name: 'TODAY Show', url: 'https://www.today.com/health/womens-health/lupita-nyongo-fibroids-rcna260617' },
       { name: 'ABC News', url: 'https://abcnews.com/video/131335681/' },
@@ -242,6 +245,9 @@ const caseStudies = {
       { number: '22.5M', label: 'Total estimated impressions' }
     ],
     gallery: [],
+    partners: [
+      { name: 'Undue Medical Debt', url: 'https://unduemedicaldebt.org/' }
+    ],
     press: [
       { name: 'Rolling Out', url: 'https://rollingout.com/2026/04/23/taylor-rooks-stuns-hometown-with/' },
       { name: 'The Grio', url: 'https://thegrio.com/2026/04/22/taylor-rooks-foundation-medical-debt-gwinnett-county/' },
@@ -264,14 +270,16 @@ const caseStudies = {
       { number: '2', label: 'Countries — UK and US' }
     ],
     gallery: [],
-    press: [
-      { name: 'The Pink House Foundation', url: 'https://thepinkhousefoundation.com/' },
-      { name: 'Donate', url: 'https://donate.supportedgiving.com/the-pink-house-foundation-social-media?qrCode=aisYtegl3Ova&visitor=c87260ea-2f4a-4121-ba5b-6efa053d0052&utm_source=ig&utm_medium=social&utm_content=link_in_bio' },
-      { name: 'AKT', url: 'https://www.akt.org.uk/' },
+    partners: [
+      { name: 'akt', url: 'https://www.akt.org.uk/' },
       { name: 'Ali Forney Center', url: 'https://www.aliforneycenter.org/' },
       { name: 'Courage+', url: 'https://courageplus.org/' },
       { name: 'Manos Amigues', url: 'https://www.manosamigues.org/' },
       { name: 'Stonewall Housing', url: 'https://stonewallhousing.org/' }
+    ],
+    press: [
+      { name: 'The Pink House Foundation', url: 'https://thepinkhousefoundation.com/' },
+      { name: 'Donate', url: 'https://donate.supportedgiving.com/the-pink-house-foundation-social-media?qrCode=aisYtegl3Ova&visitor=c87260ea-2f4a-4121-ba5b-6efa053d0052&utm_source=ig&utm_medium=social&utm_content=link_in_bio' }
     ],
     accentColor: '#E8A0B0'
   },
@@ -283,6 +291,9 @@ const caseStudies = {
     hero: { type: 'image', src: 'images/venus-williams/Venus Headshot_Credit to Laura Metzler Photography.jpg', position: 'center top' },
     stats: [],
     gallery: [],
+    partners: [
+      { name: 'Saving Mothers', url: 'https://www.savingmothers.org/' }
+    ],
     press: []
   },
 
@@ -341,6 +352,9 @@ const caseStudies = {
       { number: '1M+', label: 'Instagram views on the US Open reel' }
     ],
     gallery: [],
+    partners: [
+      { name: 'NYJTL', url: 'https://www.nyjtl.org/' }
+    ],
     press: [
       { name: 'Town and Country', url: 'https://www.townandcountrymag.com/leisure/sporting/a69977323/tommy-paul-paige-lorenze-kids-outdoors-foundation-launch/' },
       { name: 'ATP Tour', url: 'https://www.atptour.com/en/news/paul-australian-open-2026-foundation-feature' },
@@ -357,6 +371,10 @@ const caseStudies = {
       { number: '$30K+', label: 'Raised for Everytown and MusiCares' }
     ],
     gallery: [],
+    partners: [
+      { name: 'Everytown for Gun Safety', url: 'https://www.everytown.org/' },
+      { name: 'MusiCares', url: 'https://www.musicares.org/' }
+    ],
     press: []
   },
 
@@ -367,6 +385,9 @@ const caseStudies = {
     hero: { type: 'image', src: 'images/pokimane/pokimane.avif', position: 'center top' },
     stats: [],
     gallery: [],
+    partners: [
+      { name: 'UNICEF USA', url: 'https://www.unicefusa.org/' }
+    ],
     press: []
   },
 
@@ -379,6 +400,9 @@ const caseStudies = {
       { number: '$30K+', label: 'Raised for Save the Children' }
     ],
     gallery: [],
+    partners: [
+      { name: 'Save the Children', url: 'https://www.savethechildren.org/' }
+    ],
     press: []
   },
 
@@ -389,6 +413,9 @@ const caseStudies = {
     hero: { type: 'image', src: 'images/coco-jones/coco-jones-Header.png.webp', position: 'center top' },
     stats: [],
     gallery: [],
+    partners: [
+      { name: 'Girls Inc.', url: 'https://girlsinc.org/' }
+    ],
     press: []
   },
 
@@ -399,6 +426,9 @@ const caseStudies = {
     hero: { type: 'image', src: 'images/annie-elise/Annie Elise.jpg.webp', position: 'center top' },
     stats: [],
     gallery: [],
+    partners: [
+      { name: 'Child Rescue Coalition', url: 'https://childrescuecoalition.org/' }
+    ],
     press: []
   },
 
@@ -433,6 +463,9 @@ const caseStudies = {
       { number: '$15K', label: 'Raised in one evening' }
     ],
     gallery: [],
+    partners: [
+      { name: 'Safar Global Foundation', url: 'https://www.safarglobalfoundation.org/' }
+    ],
     press: []
   },
 
@@ -450,10 +483,13 @@ const caseStudies = {
     gallery: [
       { src: 'images/joe-santagato-sharing-excess.png', alt: 'Joe Santagato x Sharing Excess — Happy Cry Fund volunteering day' }
     ],
+    partners: [
+      { name: 'Sharing Excess', url: 'https://www.sharingexcess.com/' },
+      { name: 'PLUS1', url: 'https://www.plus1.org/' }
+    ],
     press: [
       { name: 'People', url: 'https://people.com' },
       { name: 'Instagram — 650K+ views', url: 'https://www.instagram.com/joesantagato/reel/DbEEa_fxMPU/' },
-      { name: 'Sharing Excess', url: 'https://sharingexcess.com' },
       { name: 'Happy Cry Fund', url: 'https://happycry.org' }
     ]
   },
@@ -555,6 +591,29 @@ function openModal(key) {
     });
   } else {
     galleryWrap.style.display = 'none';
+  }
+
+  // Nonprofit Partners: logo tile when a logo file is set, wordmark otherwise
+  const partnersWrap = document.getElementById('modalPartnersWrap');
+  const partnersEl   = document.getElementById('modalPartners');
+  if (partnersWrap && partnersEl) {
+    partnersEl.innerHTML = '';
+    if (data.partners && data.partners.length > 0) {
+      partnersWrap.style.display = 'block';
+      data.partners.forEach(p => {
+        const logo = p.logo
+          ? `<img src="${p.logo.replace(/ /g, '%20')}" alt="${p.name} logo" class="modal-partner-logo" loading="lazy" onerror="this.parentElement.classList.add('no-logo'); this.remove();">`
+          : '';
+        partnersEl.innerHTML += `
+          <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="modal-partner${p.logo ? '' : ' no-logo'}" aria-label="${p.name} (opens in a new tab)">
+            ${logo}
+            <span class="modal-partner-name">${p.name}</span>
+            <span class="modal-partner-arrow" aria-hidden="true">↗</span>
+          </a>`;
+      });
+    } else {
+      partnersWrap.style.display = 'none';
+    }
   }
 
   const pressWrap = document.getElementById('modalPressWrap');
