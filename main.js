@@ -266,7 +266,7 @@ const caseStudies = {
       { name: 'Stand Up To Cancer', url: 'https://standuptocancer.org/', logo: 'https://standuptocancer.org/wp-content/uploads/stand-up-to-cancer-logo.png' }
     ],
     platformPartners: [
-      { name: 'GoFundMe', url: 'https://www.gofundme.com/', logo: 'images/partners/gofundme.png' }
+      { name: 'GoFundMe', url: 'https://www.gofundme.com/', logo: 'images/partners/gofundme-logo.png' }
     ],
     press: [
       { name: 'Mission America', url: 'https://missionamerica50.org/' },
@@ -293,7 +293,7 @@ const caseStudies = {
       { name: 'Foundation for Women\'s Health', url: 'https://www.foundationwomenshealth.org/', logo: 'https://images.squarespace-cdn.com/content/v1/655650f04a21be1e39e53e84/f70d65f6-635f-4bab-a422-19f296ef1dee/FHW+LOGO+.png' }
     ],
     platformPartners: [
-      { name: 'GoFundMe', url: 'https://www.gofundme.com/', logo: 'images/partners/gofundme.png' }
+      { name: 'GoFundMe', url: 'https://www.gofundme.com/', logo: 'images/partners/gofundme-logo.png' }
     ],
     press: [
       { name: 'TODAY Show', url: 'https://www.today.com/health/womens-health/lupita-nyongo-fibroids-rcna260617' },
@@ -706,8 +706,11 @@ function openModal(key) {
         </a>`;
     });
   };
-  renderPartners('modalPartnersWrap', 'modalPartners', data.partners);
-  renderPartners('modalPlatformWrap', 'modalPlatform', data.platformPartners);
+  // One partner section: 'Partners' when non-nonprofit partners are included, 'Nonprofit Partners' otherwise
+  const allPartners = [...(data.partners || []), ...(data.platformPartners || [])];
+  const partnersLabel = document.getElementById('modalPartnersLabel');
+  if (partnersLabel) partnersLabel.textContent = (data.platformPartners && data.platformPartners.length) ? 'Partners' : 'Nonprofit Partners';
+  renderPartners('modalPartnersWrap', 'modalPartners', allPartners);
 
   const pressWrap = document.getElementById('modalPressWrap');
   const press     = document.getElementById('modalPress');
