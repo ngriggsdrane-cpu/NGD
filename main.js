@@ -430,7 +430,7 @@ const caseStudies = {
     ],
     gallery: [],
     partners: [
-      { name: 'NYJTL', url: 'https://www.nyjtl.org/' }
+      { name: 'NYJTL', url: 'https://www.nyjtl.org/', logo: 'https://www.nyjtl.org/wp-content/uploads/logo-Full.jpg' }
     ],
     press: [
       { name: 'Town and Country', url: 'https://www.townandcountrymag.com/leisure/sporting/a69977323/tommy-paul-paige-lorenze-kids-outdoors-foundation-launch/' },
