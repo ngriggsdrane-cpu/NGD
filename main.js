@@ -218,6 +218,22 @@ const recentUpdates = [
 
 /* ─── CASE STUDY DATA ────────────────────────────────────────── */
 const caseStudies = {
+  joy: {
+    eyebrow: 'Joy Reid × When We All Vote',
+    title: 'Party at the Polls Coalition Call',
+    desc: "Booked Joy Reid to headline When We All Vote's Party at the Polls coalition call, rallying hosts, partners and volunteers from across the country ahead of early voting. Party at the Polls is When We All Vote's largest program to date, working to reach more than 20 million voters through over 5,000 nonpartisan community events at or near polling locations.",
+    hero: { type: 'image', src: 'images/events/logos/when-we-all-vote.png', position: 'center', size: 'auto 55%', bg: '#fff' },
+    stats: [
+      { number: '300+', label: 'Registered attendees' },
+      { number: '20M+', label: 'Voters targeted' }
+    ],
+    gallery: [],
+    partners: [
+      { name: 'When We All Vote', url: 'https://whenweallvote.org/', logo: 'images/events/logos/when-we-all-vote.png' }
+    ],
+    press: []
+  },
+
   william: {
     eyebrow: 'William Goodge × Stand Up To Cancer',
     title: 'Mission America',
@@ -597,6 +613,8 @@ function openModal(key) {
     hero.style.backgroundImage  = src ? `url('${src}')` : '';
     hero.style.backgroundPosition = data.hero.position || 'center top';
     hero.style.backgroundSize   = data.hero.size || 'cover';
+    hero.style.backgroundRepeat = 'no-repeat';
+    hero.style.backgroundColor  = data.hero.bg || '';
 
     if (data.hero.overlay) {
       const overlayDiv = document.createElement('div');
