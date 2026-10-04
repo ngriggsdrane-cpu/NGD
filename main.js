@@ -561,7 +561,7 @@ const caseStudies = {
       { src: 'images/joe-santagato-sharing-excess.png', alt: 'Joe Santagato x Sharing Excess — Happy Cry Fund volunteering day' }
     ],
     partners: [
-      { name: 'Sharing Excess', url: 'https://www.sharingexcess.com/' },
+      { name: 'Sharing Excess', url: 'https://www.sharingexcess.com/', logo: 'https://cdn.prod.website-files.com/67d1d2d9c708819c5185d49c/687a640339afb6f59498f646_open_graph.png' },
       { name: 'PLUS1', url: 'https://www.plus1.org/' }
     ],
     press: [
