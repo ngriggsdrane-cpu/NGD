@@ -114,6 +114,15 @@ window.addEventListener('load', function() {
 */
 const recentUpdates = [
   {
+    date: '2026-09-11',
+    client: 'Vic Blends',
+    cardKey: 'vic',
+    headline: 'Joins Cantor Fitzgerald Charity Day, securing $60K for the Two-Six Project',
+    desc: "Vic Blends joined the trading floor for Cantor Fitzgerald's annual Charity Day, securing a $60,000 donation for the Two-Six Project and its work with under-resourced youth.",
+    tag: 'Fundraising',
+    link: null
+  },
+  {
     date: '2026-09-17',
     client: 'William Goodge',
     cardKey: 'william',
@@ -218,6 +227,23 @@ const recentUpdates = [
 
 /* ─── CASE STUDY DATA ────────────────────────────────────────── */
 const caseStudies = {
+  vic: {
+    eyebrow: 'Vic Blends × Two-Six Project',
+    title: 'Cantor Fitzgerald Charity Day',
+    desc: "Brought Vic Blends to the trading floor for Cantor Fitzgerald's annual Charity Day on September 11, where Cantor Fitzgerald and BGC Group donate a day's revenue in honor of the 658 Cantor Fitzgerald colleagues lost on 9/11. Vic's participation secured a $60,000 donation for the Two-Six Project, which supports under-resourced youth through mentorship, early literacy, STEAM programs and scholarships.",
+    hero: { type: 'image', src: 'images/vic-blends.jpg', position: 'center 20%' },
+    stats: [
+      { number: '$60K', label: 'Donated to the Two-Six Project' }
+    ],
+    gallery: [],
+    partners: [
+      { name: 'Two-Six Project', url: 'https://www.twosixproject.com/', logo: 'https://images.squarespace-cdn.com/content/v1/6920b382e478d8416df3aecb/6171da3c-a01b-4e43-b517-8aa706bcc16d/two+six+logo.png?format=750w' }
+    ],
+    press: [
+      { name: 'Cantor Fitzgerald Charity Day', url: 'https://www.cantorrelief.org/charity-day/' }
+    ]
+  },
+
   nxt: {
     eyebrow: 'Industry Access Program',
     title: 'WME NXT',
