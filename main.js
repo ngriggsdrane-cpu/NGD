@@ -265,6 +265,9 @@ const caseStudies = {
     partners: [
       { name: 'Stand Up To Cancer', url: 'https://standuptocancer.org/', logo: 'https://standuptocancer.org/wp-content/uploads/stand-up-to-cancer-logo.png' }
     ],
+    platformPartners: [
+      { name: 'GoFundMe', url: 'https://www.gofundme.com/', logo: 'images/partners/gofundme.png' }
+    ],
     press: [
       { name: 'Mission America', url: 'https://missionamerica50.org/' },
       { name: 'Goodwin x Goodge', url: 'https://www.goodwingoodge.com/' },
@@ -288,6 +291,9 @@ const caseStudies = {
     gallery: [],
     partners: [
       { name: 'Foundation for Women\'s Health', url: 'https://www.foundationwomenshealth.org/', logo: 'https://images.squarespace-cdn.com/content/v1/655650f04a21be1e39e53e84/f70d65f6-635f-4bab-a422-19f296ef1dee/FHW+LOGO+.png' }
+    ],
+    platformPartners: [
+      { name: 'GoFundMe', url: 'https://www.gofundme.com/', logo: 'images/partners/gofundme.png' }
     ],
     press: [
       { name: 'TODAY Show', url: 'https://www.today.com/health/womens-health/lupita-nyongo-fibroids-rcna260617' },
@@ -680,28 +686,28 @@ function openModal(key) {
     galleryWrap.style.display = 'none';
   }
 
-  // Nonprofit Partners: logo tile when a logo file is set, wordmark otherwise
-  const partnersWrap = document.getElementById('modalPartnersWrap');
-  const partnersEl   = document.getElementById('modalPartners');
-  if (partnersWrap && partnersEl) {
-    partnersEl.innerHTML = '';
-    if (data.partners && data.partners.length > 0) {
-      partnersWrap.style.display = 'block';
-      data.partners.forEach(p => {
-        const logo = p.logo
-          ? `<img src="${p.logo.replace(/ /g, '%20')}" alt="${p.name} logo" class="modal-partner-logo" loading="lazy" onerror="this.parentElement.classList.add('no-logo'); this.remove();">`
-          : '';
-        partnersEl.innerHTML += `
-          <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="modal-partner${p.logo ? '' : ' no-logo'}" aria-label="${p.name} (opens in a new tab)">
-            ${logo}
-            <span class="modal-partner-name">${p.name}</span>
-            <span class="modal-partner-arrow" aria-hidden="true">↗</span>
-          </a>`;
-      });
-    } else {
-      partnersWrap.style.display = 'none';
-    }
-  }
+  // Partner sections: logo tile when a logo file is set, wordmark otherwise
+  const renderPartners = (wrapId, listId, list) => {
+    const wrap = document.getElementById(wrapId);
+    const el   = document.getElementById(listId);
+    if (!wrap || !el) return;
+    el.innerHTML = '';
+    if (!list || list.length === 0) { wrap.style.display = 'none'; return; }
+    wrap.style.display = 'block';
+    list.forEach(p => {
+      const logo = p.logo
+        ? `<img src="${p.logo.replace(/ /g, '%20')}" alt="${p.name} logo" class="modal-partner-logo" loading="lazy" onerror="this.parentElement.classList.add('no-logo'); this.remove();">`
+        : '';
+      el.innerHTML += `
+        <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="modal-partner${p.logo ? '' : ' no-logo'}" aria-label="${p.name} (opens in a new tab)">
+          ${logo}
+          <span class="modal-partner-name">${p.name}</span>
+          <span class="modal-partner-arrow" aria-hidden="true">↗</span>
+        </a>`;
+    });
+  };
+  renderPartners('modalPartnersWrap', 'modalPartners', data.partners);
+  renderPartners('modalPlatformWrap', 'modalPlatform', data.platformPartners);
 
   const pressWrap = document.getElementById('modalPressWrap');
   const press     = document.getElementById('modalPress');
