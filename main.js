@@ -218,6 +218,22 @@ const recentUpdates = [
 
 /* ─── CASE STUDY DATA ────────────────────────────────────────── */
 const caseStudies = {
+  nxt: {
+    eyebrow: 'WME NXT × Group Effort Initiative',
+    title: 'WME NXT Industry Sessions 2025',
+    desc: "Helped shape the evolution of WME NXT, a free professional development program broadening access to the entertainment industry. The 2025 NXT Industry Sessions, presented with Ryan Reynolds' Group Effort Initiative, ran from October 27 to November 21 as a free online course of video lectures, weekly readings and assignments, giving emerging talent direct perspective from agents, producers and managers. Since launching in 2020, WME NXT has reached more than 27,000 participants and led to 60 hires across WME and its affiliates, with further placements at Disney, HBO and MACRO.",
+    hero: { type: 'image', src: 'images/events/logos/WME.webp', position: 'center', size: 'auto 34%', bg: '#fff' },
+    stats: [
+      { number: '27,000+', label: 'Participants since 2020' },
+      { number: '60', label: 'Hires across WME and affiliates' }
+    ],
+    gallery: [],
+    press: [
+      { name: 'The Hollywood Reporter', url: 'https://www.hollywoodreporter.com/news/general-news/ryan-reynolds-group-effort-initiative-wme-nxt-sessions-2025-1236403308/' },
+      { name: 'TheWrap', url: 'https://www.thewrap.com/industry-news/business/idris-elba-wme-nxt-hope-foundation-creative-futures-initiative-expansion/' }
+    ]
+  },
+
   joy: {
     eyebrow: 'Joy Reid × When We All Vote',
     title: 'Party at the Polls Coalition Call',
