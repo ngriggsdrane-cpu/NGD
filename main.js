@@ -347,7 +347,7 @@ const caseStudies = {
     partners: [
       { name: 'akt', url: 'https://www.akt.org.uk/', logo: 'https://www.informationnow.org.uk/wp-content/uploads/2023/04/AKT-logo.png' },
       { name: 'Ali Forney Center', url: 'https://www.aliforneycenter.org/', logo: 'https://static.wixstatic.com/media/8fd74d_a44df7e475014926b0e7873e59619c3a~mv2.png' },
-      { name: 'Courage+', url: 'https://courageplus.org/' },
+      { name: 'Courage+', url: 'https://courageplus.org/', logo: 'images/partners/courage-plus.jpg' },
       { name: 'Manos Amigues', url: 'https://www.manosamigues.org/', logo: 'https://images.squarespace-cdn.com/content/v1/68b88fddfa555011b29954f7/669e96e8-4fb1-4d87-aa3f-f371ab89d6f6/MANOS+AMIGUES_Mesa+de+trabajo+1%281%29.png?format=750w' },
       { name: 'Stonewall Housing', url: 'https://stonewallhousing.org/', logo: 'https://stonewallhousing.org/wp-content/uploads/2022/06/logo3_red.png' }
     ],
